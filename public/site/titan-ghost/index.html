@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titan Ghost — Why Not? · GYW1313</title>
+<meta name="description" content="XDLC: Liquidity for every market. Why should any XRP Ledger market go without liquidity? Titan Ghost is autonomous market-making infrastructure from GYW1313, built on the XRP Ledger.">
+<meta name="theme-color" content="#070a10">
+<link rel="canonical" href="https://gyw1313.com/titan-ghost">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GYW1313 Family Office">
+<meta property="og:title" content="Titan Ghost — Why Not?">
+<meta property="og:description" content="XDLC: Liquidity for every market. Why should any XRP Ledger market go without liquidity? Autonomous market-making infrastructure from GYW1313, built on the XRP Ledger.">
+<meta property="og:url" content="https://gyw1313.com/titan-ghost">
+<meta property="og:image" content="https://gyw1313.com/titan-ghost/assets/og-titan-ghost.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Titan Ghost — Why should any XRP Ledger market go without liquidity?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Titan Ghost — Why Not?">
+<meta name="twitter:description" content="XDLC: Liquidity for every market. Autonomous market-making infrastructure from GYW1313, built on the XRP Ledger.">
+<meta name="twitter:image" content="https://gyw1313.com/titan-ghost/assets/og-titan-ghost.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 L42 13.5 V34.5 L24 45 L6 34.5 V13.5 Z' fill='%23070a10' stroke='%23e9c46a' stroke-width='2.5'/%3E%3Crect x='13.5' y='27' width='3.2' height='7' rx='1.4' fill='%23e9c46a'/%3E%3Crect x='18' y='24' width='3.2' height='10' rx='1.4' fill='%23e9c46a'/%3E%3Crect x='22.5' y='21' width='3.2' height='13' rx='1.4' fill='%23b9c98a'/%3E%3Crect x='27' y='18' width='3.2' height='16' rx='1.4' fill='%237fc6c0'/%3E%3Crect x='31.5' y='15' width='3.2' height='19' rx='1.4' fill='%234cc4f0'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --ink:#070a10;--panel:#0d121b;--panel2:#111927;--foam:#e9eef6;--mute:#9ca3af;--mute2:#8b95a7;
+  --gold:#e9c46a;--gold2:#f3dda7;--cyan:#4cc4f0;--rose:#fb7185;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  --max:1180px;--gut:24px;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--foam);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+h1,h2,h3,h4,p,figure,ul,ol{margin:0}ul,ol{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--foam);color:var(--ink);padding:8px 14px;border-radius:999px;z-index:100}
+.skip:focus{left:16px}
+.bg-grid{background-image:radial-gradient(60rem 60rem at 75% -10%,rgba(76,196,240,.10),transparent 60%),radial-gradient(50rem 50rem at 10% 10%,rgba(233,196,106,.08),transparent 60%),linear-gradient(rgba(255,255,255,.025) 1px,transparent 0),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 0);background-size:100% 100%,100% 100%,44px 44px,44px 44px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+.mono{font-family:var(--mono)}
+.text-gradient{background:linear-gradient(100deg,var(--gold),var(--gold2) 35%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.3em;margin-bottom:16px}
+.gold{color:var(--gold)}.cyan{color:var(--cyan)}.foam{color:var(--foam)}.mute{color:var(--mute)}
+.h2{font-size:clamp(1.875rem,3.6vw,3rem);font-weight:600;letter-spacing:-.025em;line-height:1.1;max-width:24ch}
+.lede{margin-top:20px;max-width:40rem;font-size:1.0625rem;color:var(--mute);line-height:1.65}
+.section{padding-top:96px;padding-bottom:96px}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(13,18,27,.4)}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--foam)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex:none}
+.dot.g{background:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 24px;font-weight:500;transition:background-color .15s,border-color .15s,color .15s}
+.btn-solid{background:var(--foam);color:var(--ink)}.btn-solid:hover{background:#fff}
+.btn-ghost{border:1px solid var(--line);color:var(--foam)}.btn-ghost:hover{border-color:rgba(233,238,246,.4)}
+.card{border:1px solid var(--line);border-radius:16px;background:rgba(13,18,27,.6);transition:transform .3s,border-color .3s,background-color .3s}
+.card:hover{border-color:rgba(233,196,106,.4);background:rgba(17,25,39,.7)}
+/* header — mirrors gyw1313.com */
+.site-head{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(7,10,16,.7);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.site-head nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.wordmark{font-family:var(--mono);font-size:14px;letter-spacing:.25em;color:var(--foam)}
+.wordmark span{color:var(--gold)}
+.navlinks{display:none;align-items:center;gap:32px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--mute2)}
+.navlinks a{transition:color .15s}.navlinks a:hover{color:var(--foam)}
+.navlinks a.merchant{color:rgba(76,196,240,.9)}
+.navlinks a[aria-current]{color:var(--gold)}
+.connect{border:1px solid rgba(233,196,106,.5);border-radius:999px;padding:6px 16px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);transition:background-color .15s;white-space:nowrap}
+.connect:hover{background:rgba(233,196,106,.1)}
+@media (min-width:900px){.navlinks{display:flex}}
+/* hero */
+.hero{padding-top:88px;padding-bottom:96px}
+.hero-grid{display:grid;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(233,196,106,.4);background:rgba(233,196,106,.05);border-radius:999px;padding:7px 14px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--gold2);line-height:1.4}
+.hero .kicker{margin-top:26px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.4em;color:var(--mute2)}
+.hero h1{margin-top:14px;font-size:clamp(2.125rem,4.4vw,3.75rem);font-weight:600;line-height:1.05;letter-spacing:-.025em}
+.hero h1 .name{display:block;font-size:.62em;letter-spacing:-.01em;color:var(--foam);margin-bottom:.35em}
+.hero .sub{margin-top:28px;max-width:38rem;font-size:1.125rem;color:var(--mute);line-height:1.65}
+.hero .sub strong{color:var(--foam);font-weight:500}
+.hero .tagline{margin-top:24px;display:inline-flex;align-items:baseline;gap:.5em;padding:10px 18px;border:1px solid rgba(233,196,106,.45);border-radius:999px;background:rgba(233,196,106,.07);font-size:clamp(1rem,1.6vw,1.25rem);font-weight:600;color:#f3dda7;letter-spacing:.01em}
+.hero .tagline b{font-family:var(--mono);color:#e9c46a;letter-spacing:.12em;font-weight:700}
+.ctas{margin-top:36px;display:flex;flex-wrap:wrap;gap:16px}
+.hero-tags{margin-top:48px;display:flex;flex-wrap:wrap;gap:12px 24px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--mute2)}
+.hero-tags span+span::before{content:"/";color:var(--line2);margin-right:24px}
+.hero-art{position:relative}
+.hero-art::before{content:"";position:absolute;inset:-16px;z-index:-1;border-radius:2rem;background:linear-gradient(to bottom right,rgba(233,196,106,.15),rgba(76,196,240,.15));filter:blur(40px)}
+.hero-art img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 25px 50px -12px rgba(0,0,0,.5)}
+.hero-art figcaption{position:absolute;left:16px;bottom:16px;right:16px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.18em;background:rgba(7,10,16,.72);border:1px solid var(--line2);border-radius:999px;padding:6px 12px;color:var(--foam);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+@media (min-width:1024px){.hero-grid{grid-template-columns:1.2fr .8fr;gap:64px}.hero{padding-top:96px;padding-bottom:112px}}
+/* problem */
+.two{display:grid;gap:48px;align-items:start}
+@media (min-width:1024px){.two{grid-template-columns:.85fr 1.15fr;gap:72px}.two.rev{grid-template-columns:1.1fr .9fr}}
+.figure{border:1px solid var(--line);border-radius:16px;background:linear-gradient(to bottom right,rgba(17,25,39,.7),rgba(13,18,27,.3));padding:24px}
+.figure svg{width:100%;height:auto}
+.stat{margin-top:32px;border-top:1px solid var(--line);padding-top:28px}
+.stat-line{font-size:1.125rem;line-height:1.6;color:var(--foam)}
+.stat-line b{font-weight:600}
+.stat-line .f{color:var(--rose)}.stat-line .s{color:var(--cyan)}
+.bars{margin-top:20px;display:grid;gap:14px}
+.bar-row{display:grid;gap:6px}
+.bar-label{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--mute)}
+.bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.05);gap:2px}
+.bar i{display:block;height:100%}
+.observed{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.18em;color:var(--mute2);border:1px dashed var(--line2);border-radius:999px;padding:5px 12px}
+/* engine */
+.rings-wrap{position:relative;max-width:560px;margin:0 auto;width:100%}
+.ring-legend{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ring-legend li{display:flex;align-items:center;gap:10px;font-size:.9375rem;color:var(--foam)}
+.ring-legend .sw{width:22px;height:2px;border-radius:2px;flex:none}
+.ring-legend small{display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--mute2)}
+.existing{margin-top:28px;display:inline-flex}
+.bridge{margin-top:28px;border:1px solid var(--line);border-radius:16px;padding:20px;background:rgba(13,18,27,.5)}
+.bridge p{font-size:.9375rem;color:var(--mute);line-height:1.6}
+.bridge svg{margin-top:14px;width:100%;height:auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinr{to{transform:rotate(-360deg)}}
+.spin{transform-origin:260px 260px;animation:spin 90s linear infinite}
+.spinr{transform-origin:260px 260px;animation:spinr 140s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-40}}
+.flow{animation:flow 2.4s linear infinite}
+/* capabilities */
+.caps{margin-top:56px;display:grid;gap:20px}
+@media (min-width:1024px){.caps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cap{padding:28px;display:flex;flex-direction:column;height:100%}
+.cap .art{border:1px solid var(--line);border-radius:12px;background:rgba(7,10,16,.55);padding:16px;margin-bottom:24px}
+.cap .art svg{width:100%;height:auto}
+.cap .tag{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.25em}
+.cap h3{margin-top:10px;font-size:1.375rem;font-weight:600;letter-spacing:-.02em;line-height:1.25}
+.cap h3 small{display:block;margin-top:6px;font-size:.875rem;font-weight:500;letter-spacing:0;color:var(--mute2)}
+.cap p{margin-top:14px;font-size:.9375rem;color:var(--mute);line-height:1.65}
+.cap p strong{color:var(--foam);font-weight:500}
+.cap ul{margin-top:16px;display:grid;gap:10px}
+.cap li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:.875rem;color:var(--mute);line-height:1.55}
+.cap li b{color:var(--foam);font-weight:500}
+.cap li::before{content:"";width:6px;height:6px;margin-top:8px;border-radius:50%;background:var(--gold)}
+.cap.c li::before{background:var(--cyan)}
+.cap .foot{margin-top:auto;padding-top:22px}
+.cap .rule{height:1px;width:48px;opacity:.5;background:var(--gold);transition:width .3s}
+.cap:hover .rule{width:80px}
+.cap.c .rule{background:var(--cyan)}
+.draft{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--gold2);border:1px dashed rgba(233,196,106,.45);border-radius:999px;padding:5px 12px}
+/* safeguards */
+.guards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:40px}
+.guard{background:var(--ink);padding:28px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.guard svg{width:40px;height:40px}
+.guard h3{font-size:1.0625rem;font-weight:600;letter-spacing:-.01em}
+.guard p{margin-top:6px;font-size:.9375rem;color:var(--mute);line-height:1.6}
+@media (min-width:900px){.guards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* showcase */
+.featured{margin-top:48px;display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.featured{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.featured{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.feat{position:relative;padding:22px;border-color:rgba(233,196,106,.32);background:linear-gradient(to bottom right,rgba(233,196,106,.07),rgba(13,18,27,.6))}
+.feat .ft{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.22em;color:var(--gold)}
+.feat h3{margin-top:12px;font-size:1.0625rem;font-weight:600;letter-spacing:-.01em;line-height:1.3}
+.feat p{margin-top:8px;font-size:.875rem;color:var(--mute);line-height:1.55}
+.grid12{margin-top:14px;display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:640px){.grid12{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.grid12{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.prod{padding:20px}
+.prod .ct{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.22em;color:var(--cyan)}
+.prod h3{margin-top:10px;font-size:1rem;font-weight:600;letter-spacing:-.01em}
+.prod p{margin-top:6px;font-size:.875rem;color:var(--mute);line-height:1.55}
+.count-row{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px}
+.legend-mini{display:flex;flex-wrap:wrap;gap:10px}
+/* partners */
+.partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:32px}
+@media (min-width:768px){.partners{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1100px){.partners{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.partner{background:var(--ink);padding:26px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-height:118px;justify-content:space-between}
+.partner .wm{font-size:1.125rem;font-weight:600;letter-spacing:-.01em;color:var(--foam)}
+.partner .wm small{display:block;margin-top:2px;font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--mute2)}
+.st{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--mute)}
+.st .dot{width:6px;height:6px}
+.st.live{color:#7ee0a8}.st.live .dot{background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.15)}
+.st.conn .dot{background:var(--cyan)}
+.st.ready .dot{background:var(--gold)}
+.st.prog .dot{background:transparent;border:1px solid var(--mute2)}
+/* CTA + footer */
+.cta-box{border:1px solid var(--line);border-radius:16px;background:linear-gradient(to bottom right,rgba(17,25,39,.7),rgba(13,18,27,.3));padding:40px 28px}
+@media (min-width:768px){.cta-box{padding:56px}}
+.cta-box .row{display:flex;flex-direction:column;gap:28px}
+@media (min-width:900px){.cta-box .row{flex-direction:row;align-items:center;justify-content:space-between}}
+.site-foot{border-top:1px solid var(--line)}
+.foot-row{padding:40px 0 24px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:24px;text-align:center}
+@media (min-width:768px){.foot-row{flex-direction:row;text-align:left}}
+.foot-row .tiny{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--mute2)}
+.honesty{border-top:1px solid var(--line);padding:20px 0 40px;font-family:var(--mono);font-size:11px;line-height:1.7;letter-spacing:.04em;color:var(--mute2);text-align:center}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.js .reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .spin,.spinr,.flow,.pulse{animation:none!important}
+  .card{transition:none}
+}
+@keyframes pulse{50%{opacity:.45}}
+.pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+@media (max-width:640px){
+  :root{--gut:16px}
+  .section{padding-top:72px;padding-bottom:72px}
+  .hero{padding-top:48px;padding-bottom:72px}
+  .cap{padding:22px}
+  .guard{padding:22px}
+  .figure{padding:16px}
+  .hero-tags span+span::before{margin-right:12px}
+  .hero-tags{gap:10px 12px}
+  .ring-legend{grid-template-columns:1fr 1fr}
+  .hero-art::before{inset:-12px 0}
+  .bar-label{flex-direction:column;gap:2px}
+  .grid12{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .prod{padding:16px}
+  .prod .ct{font-size:8.5px;letter-spacing:.16em}
+  .prod h3{font-size:.9375rem}
+  .prod p{font-size:.8125rem}
+}
+@media (max-width:1023px){.two.rev > figure{order:2}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg-grid">
+<header class="site-head">
+  <nav class="wrap" aria-label="Primary">
+    <a href="/" class="brand" aria-label="GYW1313 home">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true"><defs><linearGradient id="gyw-grad" x1="6" y1="42" x2="42" y2="6" gradientUnits="userSpaceOnUse"><stop stop-color="#e9c46a"/><stop offset="1" stop-color="#4cc4f0"/></linearGradient></defs><path d="M24 3 L42 13.5 V34.5 L24 45 L6 34.5 V13.5 Z" stroke="url(#gyw-grad)" stroke-width="1.5" stroke-linejoin="round" opacity="0.85"/><rect x="13.5" y="27" width="3.2" height="7" rx="1.4" fill="url(#gyw-grad)"/><rect x="18" y="24" width="3.2" height="10" rx="1.4" fill="url(#gyw-grad)"/><rect x="22.5" y="21" width="3.2" height="13" rx="1.4" fill="url(#gyw-grad)"/><rect x="27" y="18" width="3.2" height="16" rx="1.4" fill="url(#gyw-grad)"/><rect x="31.5" y="15" width="3.2" height="19" rx="1.4" fill="url(#gyw-grad)"/></svg>
+      <span class="wordmark">GYW<span>1313</span></span>
+    </a>
+    <div class="navlinks">
+      <a href="/#mission">Mission</a>
+      <a href="/#pillars">Pillars</a>
+      <a href="/future">Future</a>
+      <a href="/titan-merchant" class="merchant">Merchant</a>
+      <a href="#top" aria-current="page">Titan Ghost</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <a href="/#contact" class="connect">Connect</a>
+  </nav>
+</header>
+
+<main id="main">
+<!-- 1. HERO -->
+<section id="top" class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-grid">
+    <div>
+      <div class="reveal"><span class="badge"><span class="dot g pulse" aria-hidden="true"></span>XRPL Commons AI Hackathon · London · Oct 2026</span></div>
+      <p class="kicker reveal" style="transition-delay:60ms">Why not?</p>
+      <h1 id="hero-title" class="reveal" style="transition-delay:120ms"><span class="name">Titan Ghost</span><span class="text-gradient">Why should any XRP Ledger market go without liquidity?</span></h1>
+      <p class="tagline reveal" style="transition-delay:150ms"><b>XDLC:</b> Liquidity for every market.</p>
+      <p class="sub reveal" style="transition-delay:180ms">Autonomous market-making infrastructure from <strong>GYW1313</strong>, built on the <strong>XRP Ledger</strong>.</p>
+      <div class="ctas reveal" style="transition-delay:240ms">
+        <a class="btn btn-solid" href="#how">See how it works</a>
+        <a class="btn btn-ghost" href="https://gyw1313.com/#contact">Early access</a>
+      </div>
+      <div class="hero-tags reveal" style="transition-delay:300ms" aria-label="Focus areas"><span>Market making</span><span>Lending</span><span>Agentic payments</span><span>Corridors</span></div>
+    </div>
+    <figure class="hero-art reveal" style="transition-delay:200ms">
+      <img src="/gyw1313-hero.png" onerror="this.onerror=null;this.src='/titan-ghost/assets/gyw1313-hero.png'" width="1024" height="1024" alt="GYW1313 — Digital Family Office · Built on the XRP Ledger" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+<!-- 2. THE PROBLEM -->
+<section id="problem" class="band" aria-labelledby="problem-title">
+  <div class="wrap section two">
+    <div class="reveal">
+      <p class="eyebrow gold">The problem</p>
+      <h2 id="problem-title" class="h2">Thin markets lose trades.</h2>
+      <p class="lede">When a payment on the XRP Ledger needs to cross from one currency to another, it needs offers waiting on the other side. Where the order book is thin, there is no path, and the payment simply fails.</p>
+      <div class="stat">
+        <p class="stat-line"><b class="f">133</b> cross-currency payments failed vs <b class="s">79</b> succeeded. The top 5 providers supplied <b class="foam">97%</b> of liquidity.</p>
+        <div class="bars" role="img" aria-label="Of 212 cross-currency payments observed, 133 failed and 79 succeeded. The top 5 liquidity providers supplied 97 percent of liquidity.">
+          <div class="bar-row">
+            <div class="bar-label"><span>Cross-currency payments</span><span><span style="color:var(--rose)">133 failed</span> · <span class="cyan">79 succeeded</span></span></div>
+            <div class="bar"><i style="width:62.7%;background:var(--rose);opacity:.85"></i><i style="flex:1;background:var(--cyan)"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span>Liquidity supplied</span><span><span class="gold">Top 5 · 97%</span> · everyone else · 3%</span></div>
+            <div class="bar"><i style="width:97%;background:var(--gold)"></i><i style="flex:1;background:var(--mute2)"></i></div>
+          </div>
+        </div>
+        <p class="observed"><span class="dot" aria-hidden="true"></span>Observed on XRPL Mainnet (sample) · 33 ledgers · 23 Oct 2026 · read-only</p>
+      </div>
+    </div>
+    <figure class="figure reveal" style="transition-delay:120ms" aria-labelledby="problem-fig">
+      <svg viewBox="0 0 620 420" role="img" aria-labelledby="problem-fig-t">
+        <title id="problem-fig-t">Illustration: a payment through a thin order book fails; the same payment through a deep order book is delivered.</title>
+        <defs>
+          <linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#e9c46a"/><stop offset="1" stop-color="#4cc4f0"/></linearGradient>
+        </defs>
+        <!-- lane 1 -->
+        <text x="20" y="34" fill="#8b95a7" font-family="ui-monospace,Menlo,monospace" font-size="14" letter-spacing="2.5">THIN MARKET</text>
+        <g transform="translate(0,58)">
+          <circle cx="56" cy="70" r="30" fill="#111927" stroke="rgba(255,255,255,.18)"/>
+          <text x="56" y="75" text-anchor="middle" fill="#e9eef6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600">USD</text>
+          <circle cx="564" cy="70" r="30" fill="#111927" stroke="rgba(255,255,255,.18)"/>
+          <text x="564" y="75" text-anchor="middle" fill="#e9eef6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600">EUR</text>
+          <!-- sparse book -->
+          <g fill="#4cc4f0" opacity=".55">
+            <rect x="240" y="40" width="12" height="18" rx="2"/>
+            <rect x="372" y="86" width="12" height="12" rx="2"/>
+          </g>
+          <g stroke="rgba(255,255,255,.10)"><line x1="210" y1="20" x2="210" y2="120"/><line x1="410" y1="20" x2="410" y2="120"/></g>
+          <text x="310" y="138" text-anchor="middle" fill="#8b95a7" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="2">ORDER BOOK</text>
+          <path d="M86 70 H280" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 8" class="flow" fill="none"/>
+          <g transform="translate(304,70)">
+            <circle r="22" fill="rgba(251,113,133,.12)" stroke="#fb7185"/>
+            <path d="M-8 -8 L8 8 M8 -8 L-8 8" stroke="#fb7185" stroke-width="2.4" stroke-linecap="round"/>
+          </g>
+          <path d="M330 70 H534" stroke="rgba(255,255,255,.12)" stroke-width="2" stroke-dasharray="2 8" fill="none"/>
+          <text x="304" y="16" text-anchor="middle" fill="#fb7185" font-family="ui-monospace,Menlo,monospace" font-size="15" letter-spacing="1.5">NO PATH · PAYMENT FAILS</text>
+        </g>
+        <line x1="20" y1="224" x2="600" y2="224" stroke="rgba(255,255,255,.08)"/>
+        <!-- lane 2 -->
+        <text x="20" y="262" fill="#8b95a7" font-family="ui-monospace,Menlo,monospace" font-size="14" letter-spacing="2.5">WITH TITAN GHOST LIQUIDITY</text>
+        <g transform="translate(0,282)">
+          <circle cx="56" cy="62" r="30" fill="#111927" stroke="rgba(255,255,255,.18)"/>
+          <text x="56" y="67" text-anchor="middle" fill="#e9eef6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600">USD</text>
+          <circle cx="564" cy="62" r="30" fill="#111927" stroke="#4cc4f0"/>
+          <text x="564" y="67" text-anchor="middle" fill="#e9eef6" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="600">EUR</text>
+          <g stroke="rgba(255,255,255,.10)"><line x1="210" y1="14" x2="210" y2="110"/><line x1="410" y1="14" x2="410" y2="110"/></g>
+          <!-- deep book: stacked offers -->
+          <g fill="url(#pg)">
+            <rect x="226" y="30" width="12" height="20" rx="2" opacity=".55"/><rect x="246" y="24" width="12" height="26" rx="2" opacity=".7"/><rect x="266" y="18" width="12" height="32" rx="2" opacity=".85"/><rect x="286" y="14" width="12" height="36" rx="2"/>
+            <rect x="322" y="74" width="12" height="36" rx="2"/><rect x="342" y="74" width="12" height="32" rx="2" opacity=".85"/><rect x="362" y="74" width="12" height="26" rx="2" opacity=".7"/><rect x="382" y="74" width="12" height="20" rx="2" opacity=".55"/>
+          </g>
+          <path d="M86 62 H534" stroke="url(#pg)" stroke-width="2.4" stroke-dasharray="10 10" class="flow" fill="none"/>
+          <g transform="translate(600,30)"><circle r="11" fill="#4cc4f0"/><path d="M-5 0 L-1.5 4 L5 -4" stroke="#070a10" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <text x="310" y="132" text-anchor="middle" fill="#4cc4f0" font-family="ui-monospace,Menlo,monospace" font-size="15" letter-spacing="1.5">PATH FOUND · DELIVERED</text>
+        </g>
+      </svg>
+      <figcaption class="mono" id="problem-fig" style="margin-top:12px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute2)">Illustrative · not to scale</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 3. THE ENGINE -->
+<section id="how" class="wrap section" aria-labelledby="engine-title">
+  <div class="two rev" style="align-items:center">
+    <figure class="figure reveal" style="background:radial-gradient(circle at 50% 50%,rgba(76,196,240,.07),transparent 65%),linear-gradient(to bottom right,rgba(17,25,39,.7),rgba(13,18,27,.3))">
+      <div class="rings-wrap">
+        <svg viewBox="0 0 520 520" role="img" aria-labelledby="rings-t rings-d">
+          <title id="rings-t">The six liquidity rings</title>
+          <desc id="rings-d">Six concentric rings around the market price. From the inside out: Velocity, Bridge, Earn, Money, Deep and Ceiling. Inner rings are tight to the price; outer rings are deeper.</desc>
+          <defs>
+            <radialGradient id="core"><stop offset="0" stop-color="#f3dda7"/><stop offset=".55" stop-color="#e9c46a" stop-opacity=".55"/><stop offset="1" stop-color="#e9c46a" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="260" cy="260" r="250" fill="rgba(233,196,106,.025)"/>
+          <!-- rings: inner tight (cyan) → outer deep (gold) -->
+          <g fill="none">
+            <circle cx="260" cy="260" r="56"  stroke="#4cc4f0" stroke-width="2.2"/>
+            <circle cx="260" cy="260" r="84"  stroke="#6fc6dc" stroke-width="2.6"/>
+            <circle cx="260" cy="260" r="116" stroke="#93c8c0" stroke-width="3.2"/>
+            <circle cx="260" cy="260" r="154" stroke="#b5c8a2" stroke-width="4"/>
+            <circle cx="260" cy="260" r="198" stroke="#d3c785" stroke-width="5.2"/>
+            <circle cx="260" cy="260" r="244" stroke="#e9c46a" stroke-width="6.5" stroke-opacity=".9"/>
+          </g>
+          <!-- orbiting offers -->
+          <g class="spin" fill="#4cc4f0">
+            <circle cx="260" cy="204" r="4"/><circle cx="316" cy="260" r="3"/><circle cx="204" cy="260" r="3"/>
+            <circle cx="260" cy="376" r="4" fill="#93c8c0"/><circle cx="378" cy="198" r="3.5" fill="#93c8c0"/>
+          </g>
+          <g class="spinr" fill="#e9c46a">
+            <circle cx="260" cy="16" r="5"/><circle cx="458" cy="260" r="4.5" fill="#d3c785"/><circle cx="62" cy="260" r="4.5" fill="#d3c785"/><circle cx="148" cy="134" r="4" fill="#b5c8a2"/><circle cx="420" cy="430" r="5"/>
+          </g>
+          <circle cx="260" cy="260" r="34" fill="url(#core)"/>
+          <circle cx="260" cy="260" r="6" fill="#070a10" stroke="#f3dda7" stroke-width="2"/>
+          <!-- labels on the rings (halo for legibility) -->
+          <g font-family="ui-monospace,Menlo,monospace" font-size="11" letter-spacing="2" text-anchor="middle" paint-order="stroke" stroke="#0b1018" stroke-width="7" stroke-linejoin="round">
+            <text x="260" y="208" fill="#4cc4f0">VELOCITY</text>
+            <text x="260" y="180" fill="#6fc6dc">BRIDGE</text>
+            <text x="260" y="148" fill="#93c8c0">EARN</text>
+            <text x="260" y="110" fill="#b5c8a2">MONEY</text>
+            <text x="260" y="66"  fill="#d3c785">DEEP</text>
+            <text x="260" y="20"  fill="#e9c46a">CEILING</text>
+          </g>
+          <text x="260" y="282" text-anchor="middle" fill="#9ca3af" font-family="ui-monospace,Menlo,monospace" font-size="9" letter-spacing="1.5">PRICE</text>
+        </svg>
+      </div>
+    </figure>
+    <div class="reveal" style="transition-delay:120ms">
+      <p class="eyebrow cyan">The engine</p>
+      <h2 id="engine-title" class="h2">Six liquidity rings around every market.</h2>
+      <p class="lede">Titan Ghost places offers in six rings around the market price. The inner rings quote tight, so everyday payments clear. The outer rings hold deeper liquidity further out, so larger payments still find a path.</p>
+      <ul class="ring-legend" aria-label="Rings, inside to outside">
+        <li><span class="sw" style="background:#4cc4f0"></span><span>Velocity<small>Inner · tight</small></span></li>
+        <li><span class="sw" style="background:#6fc6dc"></span><span>Bridge<small>Ring 2</small></span></li>
+        <li><span class="sw" style="background:#93c8c0"></span><span>Earn<small>Ring 3</small></span></li>
+        <li><span class="sw" style="background:#b5c8a2"></span><span>Money<small>Ring 4</small></span></li>
+        <li><span class="sw" style="background:#d3c785"></span><span>Deep<small>Ring 5</small></span></li>
+        <li><span class="sw" style="background:#e9c46a"></span><span>Ceiling<small>Outer · deep</small></span></li>
+      </ul>
+      <span class="pill existing"><span class="dot g" aria-hidden="true"></span>Existing GYW1313 technology</span>
+      <div class="bridge">
+        <p><strong class="foam" style="font-weight:500">The XRP Ledger does the routing.</strong> Its built-in path-finding sends payments through Titan Ghost offers on its own, including XRP auto-bridging, where a payment hops from one currency through XRP into another.</p>
+        <svg viewBox="0 0 440 70" role="img" aria-label="Auto-bridging: Token A to XRP to Token B, with Titan Ghost offers on both legs">
+          <g font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+            <rect x="2" y="14" width="96" height="36" rx="18" fill="#111927" stroke="rgba(255,255,255,.18)"/><text x="50" y="37" fill="#e9eef6">Token A</text>
+            <rect x="172" y="14" width="96" height="36" rx="18" fill="rgba(233,196,106,.08)" stroke="#e9c46a"/><text x="220" y="37" fill="#f3dda7">XRP</text>
+            <rect x="342" y="14" width="96" height="36" rx="18" fill="#111927" stroke="rgba(255,255,255,.18)"/><text x="390" y="37" fill="#e9eef6">Token B</text>
+          </g>
+          <g stroke="#4cc4f0" stroke-width="2" fill="none" class="flow" stroke-dasharray="6 6"><path d="M102 32 H166"/><path d="M272 32 H336"/></g>
+          <g font-family="ui-monospace,Menlo,monospace" font-size="9" letter-spacing="1.2" fill="#8b95a7" text-anchor="middle"><text x="135" y="64">TG OFFERS</text><text x="305" y="64">TG OFFERS</text></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. BUILT THIS WEEKEND -->
+<section id="built" class="band" aria-labelledby="built-title">
+  <div class="wrap section">
+    <div class="reveal">
+      <p class="eyebrow gold">New this weekend</p>
+      <h2 id="built-title" class="h2">What we built this weekend.</h2>
+      <p class="lede">Built during the XRPL Commons AI Hackathon in London: two capabilities inside Titan Ghost, and one neutral protocol open to any liquidity provider.</p>
+    </div>
+    <div class="caps">
+      <!-- a) Lending -->
+      <article class="card cap reveal" aria-labelledby="cap-a">
+        <div class="art">
+          <svg viewBox="0 0 320 196" role="img" aria-labelledby="cap-a-t">
+            <title id="cap-a-t">Two distinct, linked platforms: TGLW supplies Tiers 1 and 2 to TGLB. TGLB funds new markets in three tiers; Tier 3 is underwritten loans.</title>
+            <!-- TGLW platform -->
+            <rect x="4" y="18" width="116" height="76" rx="12" fill="rgba(76,196,240,.07)" stroke="#4cc4f0"/>
+            <text x="62" y="46" text-anchor="middle" fill="#4cc4f0" font-family="ui-monospace,Menlo,monospace" font-size="15" font-weight="700" letter-spacing="2">TGLW</text>
+            <text x="62" y="64" text-anchor="middle" fill="#9ca3af" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10">Liquidity Wake</text>
+            <text x="62" y="80" text-anchor="middle" fill="#8b95a7" font-family="ui-sans-serif,system-ui,sans-serif" font-size="9">self-custodial wallets</text>
+            <!-- TGLB platform -->
+            <rect x="200" y="18" width="116" height="76" rx="12" fill="rgba(233,196,106,.07)" stroke="#e9c46a"/>
+            <text x="258" y="46" text-anchor="middle" fill="#e9c46a" font-family="ui-monospace,Menlo,monospace" font-size="15" font-weight="700" letter-spacing="2">TGLB</text>
+            <text x="258" y="64" text-anchor="middle" fill="#9ca3af" font-family="ui-sans-serif,system-ui,sans-serif" font-size="10">Liquidity Bootstrap</text>
+            <text x="258" y="80" text-anchor="middle" fill="#8b95a7" font-family="ui-sans-serif,system-ui,sans-serif" font-size="9">funds new markets</text>
+            <!-- link -->
+            <path d="M124 56 H192" stroke="#4cc4f0" stroke-width="2" stroke-dasharray="5 5" class="flow" fill="none"/>
+            <path d="M188 51 L196 56 L188 61" stroke="#4cc4f0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="160" y="46" text-anchor="middle" fill="#9ca3af" font-family="ui-monospace,Menlo,monospace" font-size="8.5" letter-spacing="1">SUPPORTS</text>
+            <text x="160" y="74" text-anchor="middle" fill="#9ca3af" font-family="ui-monospace,Menlo,monospace" font-size="8.5" letter-spacing="1">TIERS 1–2</text>
+            <!-- tiers -->
+            <g font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.2">
+              <rect x="4" y="118" width="312" height="20" rx="6" fill="rgba(76,196,240,.10)" stroke="rgba(76,196,240,.45)"/>
+              <text x="14" y="132" fill="#e9eef6">TIER 1</text><text x="306" y="132" text-anchor="end" fill="#4cc4f0">FROM TGLW</text>
+              <rect x="4" y="144" width="312" height="20" rx="6" fill="rgba(76,196,240,.10)" stroke="rgba(76,196,240,.45)"/>
+              <text x="14" y="158" fill="#e9eef6">TIER 2</text><text x="306" y="158" text-anchor="end" fill="#4cc4f0">FROM TGLW</text>
+              <rect x="4" y="170" width="312" height="20" rx="6" fill="rgba(233,196,106,.10)" stroke="rgba(233,196,106,.5)"/>
+              <text x="14" y="184" fill="#e9eef6">TIER 3</text><text x="306" y="184" text-anchor="end" fill="#e9c46a">UNDERWRITTEN LOANS</text>
+            </g>
+            <path d="M258 98 V112" stroke="rgba(233,196,106,.6)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="tag gold">Lending</p>
+        <h3 id="cap-a">Titan Ghost Liquidity Bootstrap (TGLB)<small>Funds new markets in three tiers</small></h3>
+        <p>TGLB gives a new market the liquidity it needs from day one. It is supported by a separate platform, <strong>Titan Ghost Liquidity Wake (TGLW)</strong>.</p>
+        <ul>
+          <li><span><b>TGLW</b> is its own self-custodial liquidity platform. It supplies Tiers 1–2 from participants' own wallets.</span></li>
+          <li><span><b>Tier 3</b> is underwritten loans.</span></li>
+          <li><span>Two distinct platforms, linked: TGLW supports TGLB.</span></li>
+        </ul>
+        <div class="foot"><div class="rule"></div></div>
+      </article>
+
+      <!-- b) Agentic payments -->
+      <article class="card cap c reveal" style="transition-delay:80ms" aria-labelledby="cap-b">
+        <div class="art">
+          <svg viewBox="0 0 320 196" role="img" aria-labelledby="cap-b-t">
+            <title id="cap-b-t">An AI agent requests Titan Ghost market data over x402; a person approves the payment before it settles on the XRP Ledger.</title>
+            <!-- agent -->
+            <rect x="4" y="22" width="88" height="70" rx="12" fill="#111927" stroke="rgba(255,255,255,.18)"/>
+            <g transform="translate(48,48)" stroke="#4cc4f0" stroke-width="1.8" fill="none"><rect x="-14" y="-10" width="28" height="20" rx="5"/><circle cx="-5" cy="0" r="2" fill="#4cc4f0"/><circle cx="5" cy="0" r="2" fill="#4cc4f0"/><path d="M0 -10 V-16"/><circle cx="0" cy="-18" r="2"/></g>
+            <text x="48" y="82" text-anchor="middle" fill="#9ca3af" font-family="ui-monospace,Menlo,monospace" font-size="9" letter-spacing="1.2">AI AGENT</text>
+            <!-- merchant -->
+            <rect x="228" y="22" width="88" height="70" rx="12" fill="rgba(76,196,240,.07)" stroke="#4cc4f0"/>
+            <g transform="translate(272,46)" fill="#4cc4f0"><rect x="-14" y="2" width="5" height="10" rx="1.5" opacity=".6"/><rect x="-6" y="-4" width="5" height="16" rx="1.5" opacity=".8"/><rect x="2" y="-10" width="5" height="22" rx="1.5"/><rect x="10" y="-6" width="5" height="18" rx="1.5" opacity=".8"/></g>
+            <text x="272" y="76" text-anchor="middle" fill="#e9eef6" font-family="ui-monospace,Menlo,monospace" font-size="9" letter-spacing="1.2">TG MERCHANT</text>
+            <text x="272" y="87" text-anchor="middle" fill="#8b95a7" font-family="ui-monospace,Menlo,monospace" font-size="8" letter-spacing="1">MARKET DATA</text>
+            <!-- request -->
+            <path d="M96 44 H222" stroke="#4cc4f0" stroke-width="1.8" stroke-dasharray="5 5" class="flow" fill="none"/>
+            <text x="160" y="36" text-anchor="middle" fill="#4cc4f0" font-family="ui-monospace,Menlo,monospace" font-size="10" letter-spacing="1.5">x402</text>
+            <!-- approval gate -->
+            <path d="M160 52 V112" stroke="rgba(233,196,106,.55)" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <rect x="96" y="112" width="128" height="56" rx="12" fill="rgba(233,196,106,.08)" stroke="#e9c46a"/>
+            <g transform="translate(122,140)" stroke="#e9c46a" stroke-width="1.8" fill="none"><circle cx="0" cy="-7" r="5"/><path d="M-10 10 C-10 1 10 1 10 10"/></g>
+            <text x="140" y="137" fill="#f3dda7" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.2">PERSON</text>
+            <text x="140" y="151" fill="#f3dda7" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1.2">APPROVES</text>
+            <g transform="translate(206,140)"><circle r="9" fill="#e9c46a"/><path d="M-4 0 L-1 3.5 L4.5 -3.5" stroke="#070a10" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+            <text x="160" y="190" text-anchor="middle" fill="#8b95a7" font-family="ui-monospace,Menlo,monospace" font-size="9" letter-spacing="1.4">SETTLES ON THE XRP LEDGER</text>
+          </svg>
+        </div>
+        <p class="tag cyan">Agentic payments</p>
+        <h3 id="cap-b">TG Merchant<small>AI agents buy market data over x402</small></h3>
+        <p>AI agents can pay for Titan Ghost market data with x402 payments on the XRP Ledger, in the same flow they already use to request it.</p>
+        <ul>
+          <li><span><b>Every payment needs a person's approval.</b> Agents can ask; people decide.</span></li>
+          <li><span>Payments settle on the XRP Ledger.</span></li>
+        </ul>
+        <div class="foot"><div class="rule"></div></div>
+      </article>
+
+      <!-- c) XDLC -->
+      <article class="card cap reveal" style="transition-delay:160ms" aria-labelledby="cap-c">
+        <div class="art">
+          <svg viewBox="0 0 320 196" role="img" aria-labelledby="cap-c-t">
+            <title id="cap-c-t">Price against depth: the XRPL AMM price curve, including its fee, rises with order size; the XDLC corridor ladder sits just inside it, quoting a better price at every depth.</title>
+            <!-- axes -->
+            <line x1="30" y1="166" x2="310" y2="166" stroke="rgba(255,255,255,.16)"/>
+            <line x1="30" y1="14" x2="30" y2="166" stroke="rgba(255,255,255,.16)"/>
+            <g font-family="ui-monospace,Menlo,monospace" font-size="8.5" letter-spacing="1.2" fill="#8b95a7">
+              <text x="310" y="184" text-anchor="end">DEPTH →</text>
+              <text x="22" y="166" text-anchor="start" transform="rotate(-90 22 166)">PRICE PAID →</text>
+            </g>
+            <!-- AMM curve (worse price as depth grows) -->
+            <path d="M30 150 C 120 146, 200 124, 300 30" stroke="#9ca3af" stroke-width="2" fill="none"/>
+            <!-- corridor ladder just inside the curve -->
+            <path d="M30 156 H76 V152 H122 V143 H168 V127 H214 V103 H260 V71 H300" stroke="#e9c46a" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+            <path d="M30 156 H76 V152 H122 V143 H168 V127 H214 V103 H260 V71 H300 V166 H30 Z" fill="#e9c46a" opacity=".07"/>
+            <g fill="#e9c46a"><circle cx="76" cy="152" r="2.6"/><circle cx="122" cy="143" r="2.6"/><circle cx="168" cy="127" r="2.6"/><circle cx="214" cy="103" r="2.6"/><circle cx="260" cy="71" r="2.6"/></g>
+            <!-- labels -->
+            <g font-family="ui-monospace,Menlo,monospace" font-size="9" letter-spacing="1.1">
+              <rect x="44" y="22" width="112" height="30" rx="7" fill="#0b1018" stroke="rgba(255,255,255,.14)"/>
+              <text x="54" y="35" fill="#e9eef6">XRPL AMM</text>
+              <text x="54" y="46" fill="#8b95a7" font-size="8">PRICE INCL. FEE</text>
+              <path d="M156 40 L246 74" stroke="rgba(255,255,255,.3)"/>
+              <rect x="186" y="132" width="116" height="30" rx="7" fill="#0b1018" stroke="rgba(233,196,106,.55)"/>
+              <text x="196" y="145" fill="#f3dda7">XDLC CORRIDOR</text>
+              <text x="196" y="156" fill="#e9c46a" font-size="8">≥ 1 BP BETTER</text>
+              <path d="M236 132 V106" stroke="rgba(233,196,106,.5)"/>
+            </g>
+          </svg>
+        </div>
+        <p class="tag gold">Neutral protocol</p>
+        <h3 id="cap-c">XDLC<small>XRPL Dynamic Liquidity Corridors</small></h3>
+        <p>A neutral liquidity corridor for any XRP Ledger pair that has an AMM. It quotes at least 1 basis point better than the AMM price, fee included, at every depth. Providers' funds stay in their own wallets, longer commitments fill first, and there is no price oracle.</p>
+        <ul>
+          <li><span><b>Quotes better than the AMM at every depth</b></span></li>
+          <li><span>Open to any provider: Titan Ghost, TGLW participants, other firms</span></li>
+          <li><span>Exit early, pay the providers who stay</span></li>
+        </ul>
+        <span class="draft" style="border-radius:12px">Neutral protocol · Draft amendment, not yet submitted</span>
+        <div class="foot"><div class="rule"></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. SAFEGUARDS -->
+<section id="safeguards" class="wrap section" aria-labelledby="guards-title">
+  <div class="reveal">
+    <p class="eyebrow cyan">Safeguards</p>
+    <h2 id="guards-title" class="h2">People stay in charge of the money.</h2>
+  </div>
+  <div class="guards reveal" style="transition-delay:100ms">
+    <div class="guard">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="rgba(76,196,240,.35)"/><path d="M8 20 C12 13 16 11 20 11 C24 11 28 13 32 20 C28 27 24 29 20 29 C16 29 12 27 8 20 Z" stroke="#4cc4f0" stroke-width="1.6"/><circle cx="20" cy="20" r="4" fill="#4cc4f0"/></svg>
+      <div><h3>TG Sentinel watches every system</h3><p>It keeps the record of what every system does. It never approves spending.</p></div>
+    </div>
+    <div class="guard">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="rgba(233,196,106,.35)"/><rect x="10" y="13" width="20" height="15" rx="3" stroke="#e9c46a" stroke-width="1.6"/><path d="M10 17 H30" stroke="#e9c46a" stroke-width="1.6"/><circle cx="25" cy="22.5" r="1.8" fill="#e9c46a"/></svg>
+      <div><h3>Participant funds stay in their wallets</h3><p>Self-custody first. Participants keep their own keys.</p></div>
+    </div>
+    <div class="guard">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="rgba(233,196,106,.35)"/><circle cx="20" cy="15" r="4.5" stroke="#e9c46a" stroke-width="1.6"/><path d="M11 30 C11 23 29 23 29 30" stroke="#e9c46a" stroke-width="1.6"/><circle cx="29" cy="12" r="5" fill="#e9c46a"/><path d="M26.8 12 L28.4 13.6 L31.3 10.5" stroke="#070a10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><h3>People approve every capital move</h3><p>No capital moves without a person signing off.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COMING TO MARKET -->
+<section id="ecosystem" class="band" aria-labelledby="eco-title">
+  <div class="wrap section">
+    <div class="count-row reveal">
+      <div>
+        <p class="eyebrow gold">Coming to market</p>
+        <h2 id="eco-title" class="h2">17 products. One ecosystem.</h2>
+      </div>
+      <div class="legend-mini" aria-hidden="true">
+        <span class="pill" style="border-color:rgba(233,196,106,.4)"><span class="dot g"></span>Featured this weekend</span>
+        <span class="pill"><span class="dot"></span>Coming to market</span>
+      </div>
+    </div>
+    <ul class="featured" aria-label="Featured products">
+      <li class="card feat reveal"><span class="ft"><span class="dot g" aria-hidden="true"></span>Featured</span><h3>Titan Ghost</h3><p>Autonomous market making on the XRP Ledger.</p></li>
+      <li class="card feat reveal" style="transition-delay:50ms"><span class="ft"><span class="dot g" aria-hidden="true"></span>Featured</span><h3>Titan Ghost Liquidity Bootstrap (TGLB)</h3><p>Funds new markets in three tiers.</p></li>
+      <li class="card feat reveal" style="transition-delay:100ms"><span class="ft"><span class="dot g" aria-hidden="true"></span>Featured</span><h3>Titan Ghost Liquidity Wake (TGLW)</h3><p>Self-custodial liquidity from participants' own wallets.</p></li>
+      <li class="card feat reveal" style="transition-delay:150ms"><span class="ft"><span class="dot g" aria-hidden="true"></span>Featured</span><h3>TG Merchant</h3><p>Market data for AI agents, paid over x402.</p></li>
+      <li class="card feat reveal" style="transition-delay:200ms"><span class="ft"><span class="dot g" aria-hidden="true"></span>Featured</span><h3>XDLC</h3><p>Neutral liquidity corridor that beats the AMM · proposed amendment.</p></li>
+    </ul>
+    <ul class="grid12" aria-label="Coming to market">
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Intelligence</h3><p>Market signals that guide where liquidity goes.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Sentinel</h3><p>Watches every system and keeps the record.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Guardian</h3><p>Policy checks before capital can move.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Authority</h3><p>Permissions and approvals for people and agents.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Advisory Network (TGAN)</h3><p>Advisors for projects bringing markets to life.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Tokenization</h3><p>Issue and launch tokens on the XRP Ledger.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG View</h3><p>A clear window onto order books and launches.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Arena (TGAR)</h3><p>Where market-making strategies compete.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Play Analysis</h3><p>Replay and study how a market played out.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG Developer Platform</h3><p>Tools and access for builders.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>TG SEO Intelligence</h3><p>Helps new projects get found.</p></li>
+      <li class="card prod reveal"><span class="ct">Coming to market</span><h3>1313VERSE</h3><p>An immersive home for the GYW1313 ecosystem.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. BUILT WITH -->
+<section id="partners" class="wrap section" aria-labelledby="partners-title">
+  <div class="reveal">
+    <p class="eyebrow cyan">Ecosystem</p>
+    <h2 id="partners-title" class="h2">Built with</h2>
+  </div>
+  <ul class="partners reveal" style="transition-delay:100ms">
+    <li class="partner"><span class="wm">XRP Ledger</span><span class="st live"><span class="dot" aria-hidden="true"></span>Live</span></li>
+    <li class="partner"><span class="wm">t54<small>x402</small></span><span class="st conn"><span class="dot" aria-hidden="true"></span>Connected</span></li>
+    <li class="partner"><span class="wm">Ledger</span><span class="st ready"><span class="dot" aria-hidden="true"></span>Integration ready</span></li>
+    <li class="partner"><span class="wm">QuickNode</span><span class="st prog"><span class="dot" aria-hidden="true"></span>In progress</span></li>
+    <li class="partner"><span class="wm">AWS</span><span class="st prog"><span class="dot" aria-hidden="true"></span>In progress</span></li>
+    <li class="partner"><span class="wm">Mastercard</span><span class="st prog"><span class="dot" aria-hidden="true"></span>In progress</span></li>
+  </ul>
+  <p class="mono reveal" style="margin-top:14px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute2)">Names shown as plain text. Status reflects integration work, not endorsement.</p>
+</section>
+
+<!-- CTA -->
+<section class="wrap" style="padding-bottom:96px" aria-labelledby="cta-title">
+  <div class="cta-box reveal">
+    <div class="row">
+      <div>
+        <p class="eyebrow gold">Early access</p>
+        <h2 id="cta-title" class="h2" style="max-width:20ch">Bring liquidity to your XRP Ledger market.</h2>
+        <p class="lede" style="margin-top:14px">Titan Ghost sits under Work Hard Ascent, alongside Titan Merchant™, as part of GYW1313's work on the future of capital formation on the XRP Ledger.</p>
+      </div>
+      <div class="ctas" style="margin-top:0;flex:none">
+        <a class="btn btn-solid" href="https://gyw1313.com/#contact">Early access</a>
+        <a class="btn btn-ghost" href="/future">Explore the vision →</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <a href="/" class="brand" aria-label="GYW1313 home">
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L42 13.5 V34.5 L24 45 L6 34.5 V13.5 Z" stroke="url(#gyw-grad)" stroke-width="1.5" stroke-linejoin="round" opacity="0.85"/><rect x="13.5" y="27" width="3.2" height="7" rx="1.4" fill="url(#gyw-grad)"/><rect x="18" y="24" width="3.2" height="10" rx="1.4" fill="url(#gyw-grad)"/><rect x="22.5" y="21" width="3.2" height="13" rx="1.4" fill="url(#gyw-grad)"/><rect x="27" y="18" width="3.2" height="16" rx="1.4" fill="url(#gyw-grad)"/><rect x="31.5" y="15" width="3.2" height="19" rx="1.4" fill="url(#gyw-grad)"/></svg>
+        <span class="wordmark" style="font-size:12px">GYW<span>1313</span> · FAMILY OFFICE</span>
+      </a>
+      <p class="tiny">Purpose · Prosperity · Kingdom Impact</p>
+      <p class="tiny" style="letter-spacing:.06em;text-transform:none">© 2026 GYW1313</p>
+    </div>
+    <p class="honesty">Hackathon demonstration on XRPL Testnet with read-only Mainnet observation. Simulated figures are labeled in the demo. XDLC is a proposed amendment, not live on XRPL.</p>
+  </div>
+</footer>
+</div>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('is-visible')});return}
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-visible');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

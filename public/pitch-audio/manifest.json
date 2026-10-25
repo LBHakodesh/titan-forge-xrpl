@@ -1,0 +1,89 @@
+{
+  "voice": "af_heart",
+  "speed": 1,
+  "engine": "Kokoro TTS (self-hosted, 127.0.0.1:5131)",
+  "format": "audio/wav",
+  "totalSeconds": 95.19,
+  "scenes": [
+    {
+      "id": "open",
+      "file": "scene-01.wav",
+      "duration": 9.6,
+      "lead": 2.5,
+      "speed": 1,
+      "key": "7f14e86c1d75ab81",
+      "scene": 13,
+      "fits": true
+    },
+    {
+      "id": "problem",
+      "file": "scene-03.wav",
+      "duration": 9.579,
+      "lead": 0.5,
+      "speed": 1,
+      "key": "fc595b75e9f2036a",
+      "scene": 15,
+      "fits": true
+    },
+    {
+      "id": "engine",
+      "file": "scene-04.wav",
+      "duration": 12.949,
+      "lead": 0.5,
+      "speed": 1,
+      "key": "4efe511221bd92a3",
+      "scene": 17,
+      "fits": true
+    },
+    {
+      "id": "proof",
+      "file": "scene-05.wav",
+      "duration": 4.907,
+      "lead": 0.5,
+      "speed": 1,
+      "key": "e5e3014e78d672bf",
+      "scene": 8,
+      "fits": true
+    },
+    {
+      "id": "lending",
+      "file": "scene-06.wav",
+      "duration": 16.107,
+      "lead": 0.5,
+      "speed": 1,
+      "key": "f7fecbfafe8ddf60",
+      "scene": 22,
+      "fits": true
+    },
+    {
+      "id": "agentic",
+      "file": "scene-07.wav",
+      "duration": 12.523,
+      "lead": 0.5,
+      "speed": 1,
+      "key": "92268164615ab937",
+      "scene": 18,
+      "fits": true
+    },
+    {
+      "id": "xdlc",
+      "file": "scene-08.wav",
+      "duration": 19.2,
+      "lead": 0.5,
+      "speed": 1,
+      "key": "7886373e7fc50165",
+      "scene": 20,
+      "fits": true
+    },
+    {
+      "id": "site",
+      "file": "scene-10.wav",
+      "duration": 10.325,
+      "lead": 1,
+      "speed": 1,
+      "key": "1ca42e3c08a745cf",
+      "scene": 15,
+      "fits": true
+    }
+  ]
+}

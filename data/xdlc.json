@@ -1,0 +1,839 @@
+{
+  "version": 1,
+  "statement": "Corridor lifecycle is Titan Ghost application logic. XDLC is a proposed XRPL amendment, not live. Records are SIMULATION unless a real recorded Testnet hash is cited.",
+  "seq": 0,
+  "corridors": {
+    "xrp-rlusd": {
+      "id": "xrp-rlusd",
+      "marketId": "mainnet:RLUSD/XRP",
+      "label": "XRP/RLUSD (initial corridor)",
+      "pair": "XRP/RLUSD",
+      "origin": "RADAR_DISCOVERED",
+      "radarId": null,
+      "state": "MATURE",
+      "funding": {
+        "requestedUsd": 120000,
+        "committedUsd": 100000,
+        "fundedUsd": 90000,
+        "executableUsd": 85000
+      },
+      "log": [
+        {
+          "seq": 0,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:00:00.000Z",
+          "from": "DISCOVERY",
+          "to": "OPPORTUNITY_EVALUATION",
+          "mode": "SIMULATION",
+          "evidence": {
+            "radarId": "radar:RLUSD",
+            "note": "Scripted demo seed. Mainnet XRP/RLUSD observed read-only; Titan Forge holds no Mainnet accounts."
+          },
+          "funding": {
+            "requestedUsd": 0,
+            "committedUsd": 0,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 1,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [],
+            "deltas": {},
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "3339337f2e1b497ae58fe8b24a7855f8ca0035331389c633b250ed69a3d24797"
+        },
+        {
+          "seq": 1,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:07:00.000Z",
+          "from": "OPPORTUNITY_EVALUATION",
+          "to": "PROJECT_REQUEST",
+          "mode": "SIMULATION",
+          "evidence": {
+            "origin": "RADAR_DISCOVERED",
+            "netBenefitUsd": {
+              "low": -400,
+              "base": 900,
+              "high": 2200
+            },
+            "model": "Historical seed assumption at entry (SIMULATION), before external makers deepened the book."
+          },
+          "funding": {
+            "requestedUsd": 0,
+            "committedUsd": 0,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 1,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [],
+            "deltas": {},
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "3339337f2e1b497ae58fe8b24a7855f8ca0035331389c633b250ed69a3d24797",
+          "hash": "ea5ae03c74528daa5385c2ab765a84349b8607c191f114d06d9b0d2571e3604a"
+        },
+        {
+          "seq": 2,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:14:00.000Z",
+          "from": "PROJECT_REQUEST",
+          "to": "CAPITAL_STRUCTURE",
+          "mode": "SIMULATION",
+          "evidence": {
+            "note": "Capital stack requested across sources."
+          },
+          "funding": {
+            "requestedUsd": 120000,
+            "committedUsd": 0,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 120000,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 120000,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [
+              "requestedUsd"
+            ],
+            "deltas": {
+              "requestedUsd": 120000
+            },
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "ea5ae03c74528daa5385c2ab765a84349b8607c191f114d06d9b0d2571e3604a",
+          "hash": "26e6e21ccea30e237572ea6a5a0bf170df95c38d07407bbd33da97f109a5f135"
+        },
+        {
+          "seq": 3,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:21:00.000Z",
+          "from": "CAPITAL_STRUCTURE",
+          "to": "APPROVAL_PENDING",
+          "mode": "SIMULATION",
+          "evidence": {
+            "sources": {
+              "PROPRIETARY": {
+                "usd": 40000,
+                "reallocatable": true
+              },
+              "T1": {
+                "usd": 25000,
+                "reallocatable": false,
+                "custody": "self-custodial TGLW"
+              },
+              "T2": {
+                "usd": 35000,
+                "reallocatable": false,
+                "custody": "self-custodial TGLW (term)"
+              },
+              "T3": {
+                "usd": 20000,
+                "reallocatable": false,
+                "custody": "TGLB lending-vault loan proceeds"
+              }
+            },
+            "note": "Only PROPRIETARY capital is reallocatable by Titan Ghost."
+          },
+          "funding": {
+            "requestedUsd": 120000,
+            "committedUsd": 100000,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 100000,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 120000,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [
+              "committedUsd"
+            ],
+            "deltas": {
+              "committedUsd": 100000
+            },
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "26e6e21ccea30e237572ea6a5a0bf170df95c38d07407bbd33da97f109a5f135",
+          "hash": "5564a005998453290ba6c4868c6639d77129efc105003eff3a8820af07b4cd46"
+        },
+        {
+          "seq": 4,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:28:00.000Z",
+          "from": "APPROVAL_PENDING",
+          "to": "BOOTSTRAPPING",
+          "mode": "SIMULATION",
+          "evidence": {
+            "note": "Demo history (scripted, not a live approval)."
+          },
+          "funding": {
+            "requestedUsd": 120000,
+            "committedUsd": 100000,
+            "fundedUsd": 90000,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": true,
+            "approved": true,
+            "approvedBy": "Demo history (scripted, not a live approval)",
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 90000,
+                "requiresApproval": true
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 0
+            },
+            "changed": [
+              "fundedUsd"
+            ],
+            "deltas": {
+              "fundedUsd": 90000
+            },
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "5564a005998453290ba6c4868c6639d77129efc105003eff3a8820af07b4cd46",
+          "hash": "5e8957598e5bfef699a338a822ddb56c52f32261d3f004c93437fc39d0f46df9"
+        },
+        {
+          "seq": 5,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:35:00.000Z",
+          "from": "BOOTSTRAPPING",
+          "to": "ACTIVE",
+          "mode": "SIMULATION",
+          "evidence": {
+            "offersPlaced": 12,
+            "note": "Modeled six-ring offers (SIMULATION; no Mainnet offers exist)."
+          },
+          "funding": {
+            "requestedUsd": 120000,
+            "committedUsd": 100000,
+            "fundedUsd": 90000,
+            "executableUsd": 85000,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 90000,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 85000
+            },
+            "changed": [
+              "executableUsd"
+            ],
+            "deltas": {
+              "executableUsd": 85000
+            },
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "5e8957598e5bfef699a338a822ddb56c52f32261d3f004c93437fc39d0f46df9",
+          "hash": "68381d8ed1550ae6f6137025b49a72d803e733188ab6c3a229a7caa9900dd920"
+        },
+        {
+          "seq": 6,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:42:00.000Z",
+          "from": "ACTIVE",
+          "to": "REINFORCED",
+          "mode": "SIMULATION",
+          "evidence": {
+            "independentShare": 0.42,
+            "risks": [
+              "RLUSD issuer can claw back (AllowTrustLineClawback)"
+            ]
+          },
+          "funding": {
+            "requestedUsd": 120000,
+            "committedUsd": 100000,
+            "fundedUsd": 90000,
+            "executableUsd": 85000,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 90000,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "moderate",
+            "items": [
+              "RLUSD issuer can claw back (AllowTrustLineClawback)"
+            ],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 85000
+            },
+            "fundingAfter": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 85000
+            },
+            "changed": [],
+            "deltas": {},
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "68381d8ed1550ae6f6137025b49a72d803e733188ab6c3a229a7caa9900dd920",
+          "hash": "3243dcba4fd50b12314caf4506196874a9b26f53bb5fccd0e503f971ea515324"
+        },
+        {
+          "seq": 7,
+          "corridorId": "xrp-rlusd",
+          "marketId": "mainnet:RLUSD/XRP",
+          "at": "2026-10-25T08:49:00.000Z",
+          "from": "REINFORCED",
+          "to": "MATURE",
+          "mode": "SIMULATION",
+          "evidence": {
+            "independentShare": 0.78,
+            "persistence": 0.9,
+            "note": "External makers carry most of the book (modeled share vs observed Mainnet depth)."
+          },
+          "funding": {
+            "requestedUsd": 120000,
+            "committedUsd": 100000,
+            "fundedUsd": 90000,
+            "executableUsd": 85000,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 90000,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 85000
+            },
+            "fundingAfter": {
+              "requestedUsd": 120000,
+              "committedUsd": 100000,
+              "fundedUsd": 90000,
+              "executableUsd": 85000
+            },
+            "changed": [],
+            "deltas": {},
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "3243dcba4fd50b12314caf4506196874a9b26f53bb5fccd0e503f971ea515324",
+          "hash": "f9eb9591b6ecb3ce9784686de6dd133711d5cfeda782771799ad841d6edec681"
+        }
+      ],
+      "createdAt": "2026-10-25T08:00:00.000Z",
+      "updatedAt": "2026-10-25T08:49:00.000Z"
+    },
+    "tst-bbl": {
+      "id": "tst-bbl",
+      "marketId": "testnet:BBL",
+      "label": "BBL/XRP (Testnet demo token)",
+      "pair": "BBL/XRP",
+      "origin": "PROJECT_REQUESTED",
+      "radarId": null,
+      "state": "APPROVAL_PENDING",
+      "funding": {
+        "requestedUsd": 500,
+        "committedUsd": 500,
+        "fundedUsd": 0,
+        "executableUsd": 0
+      },
+      "log": [
+        {
+          "seq": 0,
+          "corridorId": "tst-bbl",
+          "marketId": "testnet:BBL",
+          "at": "2026-10-25T08:56:00.000Z",
+          "from": "DISCOVERY",
+          "to": "OPPORTUNITY_EVALUATION",
+          "mode": "SIMULATION",
+          "evidence": {
+            "radarId": "radar:testnet:BBL",
+            "note": "Testnet demo token (organic:false). NO_PATH evidence on BBL→LDN."
+          },
+          "funding": {
+            "requestedUsd": 0,
+            "committedUsd": 0,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 1,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [],
+            "deltas": {},
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "67a9cb76a83de4756a3d0944db91b35c3d8cb6a3ac2cdaf5b21835ccc5e93b8f"
+        },
+        {
+          "seq": 1,
+          "corridorId": "tst-bbl",
+          "marketId": "testnet:BBL",
+          "at": "2026-10-25T09:03:00.000Z",
+          "from": "OPPORTUNITY_EVALUATION",
+          "to": "PROJECT_REQUEST",
+          "mode": "SIMULATION",
+          "evidence": {
+            "origin": "PROJECT_REQUESTED",
+            "netBenefitUsd": {
+              "low": 50,
+              "base": 120,
+              "high": 300
+            },
+            "model": "Demo-mechanics assumption (SIMULATION); not an economic forecast for a real market."
+          },
+          "funding": {
+            "requestedUsd": 0,
+            "committedUsd": 0,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 1,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [],
+            "deltas": {},
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "67a9cb76a83de4756a3d0944db91b35c3d8cb6a3ac2cdaf5b21835ccc5e93b8f",
+          "hash": "a6f433b2eca779689fc22f82ec7bea86efa3fe81eda814ee177a1450c8b36c3f"
+        },
+        {
+          "seq": 2,
+          "corridorId": "tst-bbl",
+          "marketId": "testnet:BBL",
+          "at": "2026-10-25T09:10:00.000Z",
+          "from": "PROJECT_REQUEST",
+          "to": "CAPITAL_STRUCTURE",
+          "mode": "SIMULATION",
+          "evidence": {
+            "note": "Small Testnet demo stack."
+          },
+          "funding": {
+            "requestedUsd": 500,
+            "committedUsd": 0,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 500,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 0,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 500,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [
+              "requestedUsd"
+            ],
+            "deltas": {
+              "requestedUsd": 500
+            },
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "a6f433b2eca779689fc22f82ec7bea86efa3fe81eda814ee177a1450c8b36c3f",
+          "hash": "a3c2d1e97d49c781313dc3d43f3c12ce66510a72b8690de7bc5c33ad2b94cf46"
+        },
+        {
+          "seq": 3,
+          "corridorId": "tst-bbl",
+          "marketId": "testnet:BBL",
+          "at": "2026-10-25T09:17:00.000Z",
+          "from": "CAPITAL_STRUCTURE",
+          "to": "APPROVAL_PENDING",
+          "mode": "SIMULATION",
+          "evidence": {
+            "sources": {
+              "PROPRIETARY": {
+                "usd": 500,
+                "reallocatable": true
+              }
+            },
+            "nextLedgerEvidence": "EDA257921AEEC6815CBEC96F525F3B69EBC248469541929511745990050CCFFB",
+            "note": "Awaiting operator approval in the console."
+          },
+          "funding": {
+            "requestedUsd": 500,
+            "committedUsd": 500,
+            "fundedUsd": 0,
+            "executableUsd": 0,
+            "mode": "SIMULATION",
+            "note": "requested / committed / funded / executable are tracked separately and never summed."
+          },
+          "authorization": {
+            "required": false,
+            "approved": null,
+            "approvedBy": null,
+            "guardian": {
+              "allowed": true,
+              "reasons": [],
+              "input": {
+                "mode": "SIMULATION",
+                "amountUsd": 500,
+                "requiresApproval": false
+              }
+            }
+          },
+          "risk": {
+            "level": "low",
+            "items": [],
+            "mode": "SIMULATION"
+          },
+          "reconciliation": {
+            "fundingBefore": {
+              "requestedUsd": 500,
+              "committedUsd": 0,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "fundingAfter": {
+              "requestedUsd": 500,
+              "committedUsd": 500,
+              "fundedUsd": 0,
+              "executableUsd": 0
+            },
+            "changed": [
+              "committedUsd"
+            ],
+            "deltas": {
+              "committedUsd": 500
+            },
+            "invariantsOk": true
+          },
+          "ledgerRef": null,
+          "ledgerNote": "No ledger transaction: SIMULATION record.",
+          "prevHash": "a3c2d1e97d49c781313dc3d43f3c12ce66510a72b8690de7bc5c33ad2b94cf46",
+          "hash": "13db58b8643f57186e3aeba95024a048feeed10d4a3be707d961c07105c6e44e"
+        }
+      ],
+      "createdAt": "2026-10-25T08:00:00.000Z",
+      "updatedAt": "2026-10-25T09:17:00.000Z"
+    }
+  }
+}

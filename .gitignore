@@ -1,0 +1,18 @@
+node_modules/
+data/wallets.json
+data/server.log
+data/server.pid
+data/*.readonly-*.json
+.x402audit*
+data/server-*.pid
+data/server-*.log
+data/watchdog*
+data/arena.offline-*.json
+
+# runtime data rewritten by the server; snapshot deliberately with git add -f
+data/findings.json
+data/spokes-snapshot.json
+data/demo-loop.json
+
+# build artifacts (deploy bundles)
+dist/

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "financial-event.schema.json",
+  "title": "FinancialEvent",
+  "description": "Event envelope. The in-process bus (lib/store.mjs Bus.publish) FLATTENS payload fields onto the envelope; engines should send them under 'payload'. Both forms validate.",
+  "type": "object",
+  "required": ["type", "mode", "at"],
+  "properties": {
+    "type": { "type": "string", "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$", "description": "<area>.<verb>, e.g. launch.done, capital.injected" },
+    "mode": { "$ref": "common.schema.json#/$defs/Mode" },
+    "at": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "payload": { "type": "object" }
+  },
+  "additionalProperties": true
+}

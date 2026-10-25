@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quote-request.schema.json",
+  "title": "QuoteRequest",
+  "description": "Request to the authentic Titan Ghost Rust Quoter (interface only; no quoting logic lives in Titan Forge).",
+  "type": "object",
+  "required": ["pair", "side", "size", "ring", "mode"],
+  "properties": {
+    "pair": {
+      "type": "object", "required": ["base", "quote"],
+      "properties": { "base": { "$ref": "asset.schema.json" }, "quote": { "$ref": "asset.schema.json" } },
+      "additionalProperties": false
+    },
+    "side": { "enum": ["bid", "ask"] },
+    "size": { "type": "number", "exclusiveMinimum": 0, "description": "Base-asset units." },
+    "ring": { "$ref": "common.schema.json#/$defs/RingId" },
+    "marketId": { "$ref": "common.schema.json#/$defs/MarketRef" },
+    "mode": { "$ref": "common.schema.json#/$defs/Mode" }
+  },
+  "additionalProperties": false
+}

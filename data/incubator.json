@@ -1,0 +1,409 @@
+{
+ "version": 1,
+ "seq": 0,
+ "projects": {
+  "demo-aurora": {
+   "id": "demo-aurora",
+   "name": "Aurora Grid Co-op (fictional)",
+   "description": "FICTIONAL demo project. A community solar co-operative that wants to tokenize metered energy credits for members. Business model still being validated with two pilot sites.",
+   "token": {
+    "network": "testnet",
+    "currency": "AUR",
+    "issuer": null,
+    "issued": false
+   },
+   "regulatoryReview": {
+    "status": "IN_REVIEW",
+    "reviewer": "Demo reviewer (fictional counsel)",
+    "date": "2026-10-21",
+    "notes": "Token classification under review (fictional).",
+    "source": "OPERATOR_INPUT",
+    "aiGenerated": false
+   },
+   "requestedUsd": 400000,
+   "targetOperatingPeriod": {
+    "months": 12
+   },
+   "sustainabilityMeasures": "Member subscription fees cover operations; no token revenue assumed (fictional).",
+   "runwayMonths": 18,
+   "mmEconomics": {
+    "targetSpreadBps": 60,
+    "minDepthUsd": 15000,
+    "maxInventorySkewPct": 30,
+    "notes": null
+   },
+   "desiredMarkets": [
+    "AUR/XRP",
+    "AUR/RLUSD"
+   ],
+   "radarId": null,
+   "source": "PROJECT_REQUESTED",
+   "fictional": true,
+   "mode": "SIMULATION",
+   "createdAt": "2026-10-20T09:00:00Z",
+   "stack": {
+    "targetUsd": 300000,
+    "combination": "T1+T2+T3",
+    "sources": {
+     "T1": {
+      "usd": 120000,
+      "pct": 40
+     },
+     "T2": {
+      "usd": 120000,
+      "pct": 40
+     },
+     "T3": {
+      "usd": 60000,
+      "pct": 20
+     },
+     "PROJECT": {
+      "usd": 50000
+     },
+     "PROPRIETARY": {
+      "usd": 50000
+     }
+    },
+    "terms": {
+     "T2": {
+      "termDays": 180,
+      "earlyExit": {
+       "noticeDays": 30,
+       "penaltyBps": 75
+      },
+      "model": "CONTRACTUAL",
+      "walletPermissions": "Not established by this contractual model: protocol-enforced wallet permissions are a separate control."
+     },
+     "T3": {
+      "partner": "Authorized lending partner (fictional, demo)",
+      "underwriting": "DECLINED",
+      "loanAgreementRef": null,
+      "disbursed": false,
+      "permittedUse": "Market-making inventory for the named program only",
+      "aprBps": 1100,
+      "termMonths": 12,
+      "repayment": "MONTHLY_INTEREST_BULLET_PRINCIPAL",
+      "creditRisk": "ELEVATED",
+      "note": "Declined: insufficient operating history (fictional).",
+      "mode": "SIMULATION",
+      "nativeLending": "UNAVAILABLE"
+     }
+    },
+    "mode": "SIMULATION"
+   },
+   "capitalStates": {
+    "T1": {
+     "REQUESTED": 120000,
+     "MATCHED": 95000,
+     "COMMITTED": 95000,
+     "FUNDED": 80000,
+     "EXECUTABLE": 80000
+    },
+    "T2": {
+     "REQUESTED": 120000,
+     "MATCHED": 70000,
+     "COMMITTED": 70000,
+     "FUNDED": 70000,
+     "EXECUTABLE": 60000
+    },
+    "T3": {
+     "REQUESTED": 60000,
+     "MATCHED": 0,
+     "COMMITTED": 0,
+     "FUNDED": 0,
+     "EXECUTABLE": 0
+    },
+    "PROJECT": {
+     "REQUESTED": 50000,
+     "MATCHED": 50000,
+     "COMMITTED": 50000,
+     "FUNDED": 50000,
+     "EXECUTABLE": 50000
+    },
+    "PROPRIETARY": {
+     "REQUESTED": 50000,
+     "MATCHED": 0,
+     "COMMITTED": 0,
+     "FUNDED": 0,
+     "EXECUTABLE": 0
+    }
+   },
+   "legalItems": {
+    "token_offering_analysis": {
+     "status": "OPEN",
+     "note": "Counsel analysis in progress (fictional)."
+    },
+    "permitted_market_participants": {
+     "status": "OPEN"
+    },
+    "issuer_trading_requirements": {
+     "status": "PASS",
+     "docRef": "DEMO-AUR-L3 (fictional)",
+     "reviewer": "Demo reviewer (fictional counsel)",
+     "date": "2026-10-21"
+    },
+    "approval_documentation": {
+     "status": "OPEN"
+    }
+   },
+   "demand": {
+    "verifiedEvidence": [
+     {
+      "ref": "DEMO-AUR-D1 (fictional)",
+      "description": "Pilot-site member waitlist (fictional)"
+     }
+    ],
+    "independentParticipants": 9
+   },
+   "interimDays": 30,
+   "stage": "entered",
+   "program": "XRP_RLUSD_INTERIM",
+   "recordedOutcome": null,
+   "maturityWeek": null,
+   "proprietaryInitialUsd": 0,
+   "history": [
+    {
+     "at": "2026-10-20T09:00:00Z",
+     "type": "created",
+     "note": "Seeded fictional demo project."
+    }
+   ]
+  },
+  "demo-beacon": {
+   "id": "demo-beacon",
+   "name": "Beacon Freight Ledger (fictional)",
+   "description": "FICTIONAL demo project. Freight-invoice settlement network for small carriers; settlement credits would be represented by a Testnet demo token BCN.",
+   "token": {
+    "network": "testnet",
+    "currency": "BCN",
+    "issuer": null,
+    "issued": false
+   },
+   "regulatoryReview": {
+    "status": "COUNSEL_OPINION_RECEIVED",
+    "reviewer": "Demo reviewer (fictional counsel)",
+    "date": "2026-10-18",
+    "notes": "Fictional counsel opinion for the demo.",
+    "source": "OPERATOR_INPUT",
+    "aiGenerated": false
+   },
+   "requestedUsd": 650000,
+   "targetOperatingPeriod": {
+    "months": 12
+   },
+   "sustainabilityMeasures": "Carrier SaaS revenue covers operating costs; token corridor fees are not required for solvency (fictional).",
+   "runwayMonths": 24,
+   "mmEconomics": {
+    "targetSpreadBps": 50,
+    "minDepthUsd": 25000,
+    "maxInventorySkewPct": 25,
+    "notes": null
+   },
+   "desiredMarkets": [
+    "BCN/XRP",
+    "BCN/RLUSD"
+   ],
+   "radarId": null,
+   "source": "PROJECT_REQUESTED",
+   "fictional": true,
+   "mode": "SIMULATION",
+   "createdAt": "2026-10-20T09:00:00Z",
+   "stack": {
+    "targetUsd": 500000,
+    "combination": "T1+T2+T3",
+    "sources": {
+     "T1": {
+      "usd": 150000,
+      "pct": 30
+     },
+     "T2": {
+      "usd": 250000,
+      "pct": 50
+     },
+     "T3": {
+      "usd": 100000,
+      "pct": 20
+     },
+     "PROJECT": {
+      "usd": 120000
+     },
+     "PROPRIETARY": {
+      "usd": 150000
+     }
+    },
+    "terms": {
+     "T2": {
+      "termDays": 180,
+      "earlyExit": {
+       "noticeDays": 30,
+       "penaltyBps": 75
+      },
+      "model": "CONTRACTUAL",
+      "walletPermissions": "Not established by this contractual model: protocol-enforced wallet permissions are a separate control."
+     },
+     "T3": {
+      "partner": "Authorized lending partner (fictional, demo)",
+      "underwriting": "APPROVED",
+      "loanAgreementRef": "DEMO-BCN-LOAN-01 (fictional)",
+      "disbursed": true,
+      "permittedUse": "Market-making inventory for the named program only",
+      "aprBps": 900,
+      "termMonths": 12,
+      "repayment": "MONTHLY_INTEREST_BULLET_PRINCIPAL",
+      "creditRisk": "MODERATE",
+      "mode": "SIMULATION",
+      "nativeLending": "UNAVAILABLE"
+     }
+    },
+    "mode": "SIMULATION"
+   },
+   "capitalStates": {
+    "T1": {
+     "REQUESTED": 150000,
+     "MATCHED": 150000,
+     "COMMITTED": 150000,
+     "FUNDED": 150000,
+     "EXECUTABLE": 150000
+    },
+    "T2": {
+     "REQUESTED": 250000,
+     "MATCHED": 250000,
+     "COMMITTED": 250000,
+     "FUNDED": 250000,
+     "EXECUTABLE": 250000
+    },
+    "T3": {
+     "REQUESTED": 100000,
+     "MATCHED": 100000,
+     "COMMITTED": 100000,
+     "FUNDED": 100000,
+     "EXECUTABLE": 100000
+    },
+    "PROJECT": {
+     "REQUESTED": 120000,
+     "MATCHED": 120000,
+     "COMMITTED": 120000,
+     "FUNDED": 120000,
+     "EXECUTABLE": 120000
+    },
+    "PROPRIETARY": {
+     "REQUESTED": 150000,
+     "MATCHED": 0,
+     "COMMITTED": 0,
+     "FUNDED": 0,
+     "EXECUTABLE": 0
+    }
+   },
+   "legalItems": {
+    "token_offering_analysis": {
+     "status": "PASS",
+     "docRef": "DEMO-BCN-L1 (fictional)",
+     "reviewer": "Demo reviewer (fictional counsel)",
+     "date": "2026-10-18"
+    },
+    "permitted_market_participants": {
+     "status": "PASS",
+     "docRef": "DEMO-BCN-L2 (fictional)",
+     "reviewer": "Demo reviewer (fictional counsel)",
+     "date": "2026-10-18"
+    },
+    "issuer_trading_requirements": {
+     "status": "PASS",
+     "docRef": "DEMO-BCN-L3 (fictional)",
+     "reviewer": "Demo reviewer (fictional counsel)",
+     "date": "2026-10-18"
+    },
+    "approval_documentation": {
+     "status": "PASS",
+     "docRef": "DEMO-BCN-L4 (fictional)",
+     "reviewer": "Demo reviewer (fictional counsel)",
+     "date": "2026-10-18"
+    }
+   },
+   "demand": {
+    "verifiedEvidence": [
+     {
+      "ref": "DEMO-BCN-D1 (fictional)",
+      "description": "Signed carrier LOIs (fictional)"
+     },
+     {
+      "ref": "DEMO-BCN-D2 (fictional)",
+      "description": "Invoice volume audit (fictional)"
+     },
+     {
+      "ref": "DEMO-BCN-D3 (fictional)",
+      "description": "Pilot settlement logs (fictional)"
+     }
+    ],
+    "independentParticipants": 22
+   },
+   "interimDays": 45,
+   "stage": "entered",
+   "program": "XRP_RLUSD_INTERIM",
+   "recordedOutcome": null,
+   "maturityWeek": null,
+   "proprietaryInitialUsd": 0,
+   "history": [
+    {
+     "at": "2026-10-20T09:00:00Z",
+     "type": "created",
+     "note": "Seeded fictional demo project."
+    }
+   ]
+  }
+ },
+ "proprietary": {
+  "budgetUsd": 150000,
+  "allocations": {}
+ },
+ "decisions": [],
+ "custodyAttempts": [],
+ "amendmentCheck": {
+  "mode": "LIVE_TESTNET",
+  "readOnly": true,
+  "checkedAt": "2026-10-24T04:45:30Z",
+  "network": "XRPL Testnet",
+  "networkId": 1,
+  "validatedLedger": 21778134,
+  "serverVersion": "3.4.1",
+  "features": {
+   "SingleAssetVault": {
+    "enabled": false,
+    "supported": true
+   },
+   "LendingProtocol": {
+    "enabled": false,
+    "supported": true
+   },
+   "LendingProtocolV1_1": {
+    "enabled": false,
+    "supported": true
+   },
+   "PermissionedDEX": {
+    "enabled": true,
+    "supported": true
+   },
+   "PermissionedDomains": {
+    "enabled": true,
+    "supported": true
+   },
+   "Credentials": {
+    "enabled": true,
+    "supported": true
+   },
+   "MPTokensV1": {
+    "enabled": true,
+    "supported": true
+   }
+  },
+  "rlusd": {
+   "issuer": "rQhWct2fv4Vc4KRjRgMrxa8xPN9Zx9iLKV",
+   "source": "Ripple RLUSD developer documentation (Testnet issuer)",
+   "exists": true,
+   "domain": "https://ripple.com/",
+   "obligationsRLUSD": "1254511280.909997",
+   "status": "AVAILABLE"
+  }
+ },
+ "loans": {}
+}

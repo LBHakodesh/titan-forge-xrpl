@@ -1,0 +1,8364 @@
+{
+ "_fixture": {
+  "note": "FIXTURE: invented assets, issuers and hashes for UI development. Not real XRPL data. Each key mirrors one API response body.",
+  "mirrors": {
+   "spokes": "GET /api/spokes",
+   "details": "GET /api/spokes/:id (keyed by id)",
+   "flows": "GET /api/spokes/flows",
+   "replay": "GET /api/spokes/replay"
+  }
+ },
+ "spokes": {
+  "hub": {
+   "currency": "XRP"
+  },
+  "snapshot": {
+   "source": "fixture",
+   "fetchedAt": "2026-10-24T09:00:00.000Z",
+   "freshness": "cached",
+   "ageSec": 420,
+   "attribution": "Rankings: XRPL.to (fixture copy, not live)",
+   "refreshMin": 15
+  },
+  "groups": {
+   "A": {
+    "title": "Group A · ranks 1–13 (Mainnet observed)",
+    "spokes": [
+     {
+      "id": "mainnet:AURA:rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp",
+      "group": "A",
+      "rank": 1,
+      "network": "mainnet",
+      "currency": "AURA",
+      "currencyHex": "4155524100000000000000000000000000000000",
+      "issuer": "rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp",
+      "name": "Aura Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": false,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 733751,
+       "bid": 0.182627,
+       "ask": 0.184573,
+       "spreadBps": 106,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 24917
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 5304
+         },
+         {
+          "band": "1-2%",
+          "xrp": 40518
+         },
+         {
+          "band": "2-5%",
+          "xrp": 91708
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 8323
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 13325
+         },
+         {
+          "band": "1-2%",
+          "xrp": 10930
+         },
+         {
+          "band": "2-5%",
+          "xrp": 91315
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMA17LiH9qPVLYZwcNkmrdf4K4b",
+        "xrp": 10862,
+        "token": 202962,
+        "tradingFeeBps": 100
+       },
+       "observedAt": "2026-10-24T08:54:03.000Z"
+      },
+      "testnet": {
+       "code": "AURA",
+       "issuer": "rFAKETA1LyfBwcY2x5sGRdTBNTA6yggXA",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "mature",
+       "recommendation": "Graduate to six-ring corridor",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 1,
+       "mainnetObserved": 1,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": [
+       {
+        "severity": "medium",
+        "text": "AMM pool imbalance"
+       }
+      ]
+     },
+     {
+      "id": "mainnet:BRIK:rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU",
+      "group": "A",
+      "rank": 2,
+      "network": "mainnet",
+      "currency": "BRIK",
+      "currencyHex": "4252494B00000000000000000000000000000000",
+      "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU",
+      "name": "Brik Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 1489728,
+       "bid": 1.103471,
+       "ask": 1.109889,
+       "spreadBps": 58,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 12301
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 11169
+         },
+         {
+          "band": "1-2%",
+          "xrp": 63198
+         },
+         {
+          "band": "2-5%",
+          "xrp": 45218
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 18069
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 48644
+         },
+         {
+          "band": "1-2%",
+          "xrp": 3901
+         },
+         {
+          "band": "2-5%",
+          "xrp": 23401
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:58:53.000Z"
+      },
+      "testnet": {
+       "code": "BRIK",
+       "issuer": "rFAKETA2Stbg2P6rzayQZbRyVcYUuduV7",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "growing_spoke",
+       "recommendation": "Deepen BRIDGE ring",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 2,
+       "mainnetObserved": 2,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:CRUX:rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL",
+      "group": "A",
+      "rank": 3,
+      "network": "mainnet",
+      "currency": "CRUX",
+      "currencyHex": "4352555800000000000000000000000000000000",
+      "issuer": "rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL",
+      "name": "Crux Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 1693918,
+       "bid": 1.407505,
+       "ask": 1.420655,
+       "spreadBps": 93,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 3013
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 41265
+         },
+         {
+          "band": "1-2%",
+          "xrp": 8540
+         },
+         {
+          "band": "2-5%",
+          "xrp": 37263
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 12896
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 30480
+         },
+         {
+          "band": "1-2%",
+          "xrp": 6430
+         },
+         {
+          "band": "2-5%",
+          "xrp": 60566
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMA3w1jMVaVSZ9AkxMuamp6gt2A",
+        "xrp": 83966,
+        "token": 782841,
+        "tradingFeeBps": 25
+       },
+       "observedAt": "2026-10-24T08:59:30.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Tighten VELOCITY quotes",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 1,
+       "mainnetObserved": 1,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": [
+       {
+        "severity": "medium",
+        "text": "AMM pool imbalance"
+       }
+      ]
+     },
+     {
+      "id": "mainnet:DUNE:rFAKEA04gisitaMrKHKXtWjB8rPj7saSF",
+      "group": "A",
+      "rank": 4,
+      "network": "mainnet",
+      "currency": "DUNE",
+      "currencyHex": "44554E4500000000000000000000000000000000",
+      "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF",
+      "name": "Dune Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 730129,
+       "bid": 0.403388,
+       "ask": 0.403792,
+       "spreadBps": 10,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 9166
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 18773
+         },
+         {
+          "band": "1-2%",
+          "xrp": 31405
+         },
+         {
+          "band": "2-5%",
+          "xrp": 20518
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 11378
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 13820
+         },
+         {
+          "band": "1-2%",
+          "xrp": 60480
+         },
+         {
+          "band": "2-5%",
+          "xrp": 52481
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMA4BShknGfBYHbAiPFVW5nkoiW",
+        "xrp": 25157,
+        "token": 776003,
+        "tradingFeeBps": 25
+       },
+       "observedAt": "2026-10-24T08:55:26.000Z"
+      },
+      "testnet": {
+       "code": "DUNE",
+       "issuer": "rFAKETA4zhFstiCtLHQGy4DwcbrcKLk6r",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Add CEILING backstop",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 2,
+       "mainnetObserved": 2,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx",
+      "group": "A",
+      "rank": 5,
+      "network": "mainnet",
+      "currency": "EMBR",
+      "currencyHex": "454D425200000000000000000000000000000000",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx",
+      "name": "Embr Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 1595236,
+       "bid": 1.034324,
+       "ask": 1.039716,
+       "spreadBps": 52,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 18586
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 23749
+         },
+         {
+          "band": "1-2%",
+          "xrp": 69784
+         },
+         {
+          "band": "2-5%",
+          "xrp": 20614
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 16028
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 25074
+         },
+         {
+          "band": "1-2%",
+          "xrp": 21186
+         },
+         {
+          "band": "2-5%",
+          "xrp": 23221
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:57:35.000Z"
+      },
+      "testnet": {
+       "code": "EMBR",
+       "issuer": "rFAKETA5ZgpUyyaCwgPbEHJ1T8SZryK4A",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "mature",
+       "recommendation": "Deepen BRIDGE ring",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 5,
+       "mainnetObserved": 5,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:FERN:rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY",
+      "group": "A",
+      "rank": 6,
+      "network": "mainnet",
+      "currency": "FERN",
+      "currencyHex": "4645524E00000000000000000000000000000000",
+      "issuer": "rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY",
+      "name": "Fern Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 1101470,
+       "bid": 1.7398,
+       "ask": 1.74852,
+       "spreadBps": 50,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 10620
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 39712
+         },
+         {
+          "band": "1-2%",
+          "xrp": 64623
+         },
+         {
+          "band": "2-5%",
+          "xrp": 75074
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 22053
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 30571
+         },
+         {
+          "band": "1-2%",
+          "xrp": 57159
+         },
+         {
+          "band": "2-5%",
+          "xrp": 56495
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:56:31.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Tighten VELOCITY quotes",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 1,
+       "mainnetObserved": 1,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42",
+      "group": "A",
+      "rank": 7,
+      "network": "mainnet",
+      "currency": "GLOW",
+      "currencyHex": "474C4F5700000000000000000000000000000000",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42",
+      "name": "Glow Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 670290,
+       "bid": 0.17095,
+       "ask": 0.17317,
+       "spreadBps": 129,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 19671
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 16330
+         },
+         {
+          "band": "1-2%",
+          "xrp": 31502
+         },
+         {
+          "band": "2-5%",
+          "xrp": 25842
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 6893
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 41540
+         },
+         {
+          "band": "1-2%",
+          "xrp": 71904
+         },
+         {
+          "band": "2-5%",
+          "xrp": 31973
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:52:33.000Z"
+      },
+      "testnet": {
+       "code": "GLOW",
+       "issuer": "rFAKETA7jGjWkg1jd4uqtbJNTteZyNELy",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "mature",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 4,
+       "mainnetObserved": 4,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": [
+       {
+        "severity": "medium",
+        "text": "Spread widened above 150 bps"
+       }
+      ]
+     },
+     {
+      "id": "mainnet:HALO:rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn",
+      "group": "A",
+      "rank": 8,
+      "network": "mainnet",
+      "currency": "HALO",
+      "currencyHex": "48414C4F00000000000000000000000000000000",
+      "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn",
+      "name": "Halo Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 766707,
+       "bid": 0.515372,
+       "ask": 0.523528,
+       "spreadBps": 157,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1468
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 9093
+         },
+         {
+          "band": "1-2%",
+          "xrp": 13393
+         },
+         {
+          "band": "2-5%",
+          "xrp": 83986
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 12128
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 48610
+         },
+         {
+          "band": "1-2%",
+          "xrp": 68214
+         },
+         {
+          "band": "2-5%",
+          "xrp": 86873
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:54:07.000Z"
+      },
+      "testnet": {
+       "code": "HALO",
+       "issuer": "rFAKETA8GJ7x1UY32cBBGMxxiArw8JMMD",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "corridor",
+       "recommendation": "Deepen BRIDGE ring",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 2,
+       "mainnetObserved": 2,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": [
+       {
+        "severity": "low",
+        "text": "Single maker holds >80% of asks"
+       }
+      ]
+     },
+     {
+      "id": "mainnet:IRIS:rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N",
+      "group": "A",
+      "rank": 9,
+      "network": "mainnet",
+      "currency": "IRIS",
+      "currencyHex": "4952495300000000000000000000000000000000",
+      "issuer": "rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N",
+      "name": "Iris Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 542910,
+       "bid": 0.533307,
+       "ask": 0.541313,
+       "spreadBps": 149,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 16718
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 31342
+         },
+         {
+          "band": "1-2%",
+          "xrp": 65305
+         },
+         {
+          "band": "2-5%",
+          "xrp": 21397
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 13572
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 10343
+         },
+         {
+          "band": "1-2%",
+          "xrp": 47697
+         },
+         {
+          "band": "2-5%",
+          "xrp": 65101
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMA98rjp7EuBXes1ZiNYcCsJmyr",
+        "xrp": 74812,
+        "token": 105718,
+        "tradingFeeBps": 100
+       },
+       "observedAt": "2026-10-24T08:50:34.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 1,
+       "mainnetObserved": 1,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:JADE:rFAKEA10fD1KTZmafXkzDRw3ySizovgBU",
+      "group": "A",
+      "rank": 10,
+      "network": "mainnet",
+      "currency": "JADE",
+      "currencyHex": "4A41444500000000000000000000000000000000",
+      "issuer": "rFAKEA10fD1KTZmafXkzDRw3ySizovgBU",
+      "name": "Jade Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 813448,
+       "bid": 0.929907,
+       "ask": 0.938313,
+       "spreadBps": 90,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 19628
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 32691
+         },
+         {
+          "band": "1-2%",
+          "xrp": 43000
+         },
+         {
+          "band": "2-5%",
+          "xrp": 58450
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 23398
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 29767
+         },
+         {
+          "band": "1-2%",
+          "xrp": 39639
+         },
+         {
+          "band": "2-5%",
+          "xrp": 81305
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMA10pb6Fg1woE5WbDkymR5FLN8",
+        "xrp": 84134,
+        "token": 841368,
+        "tradingFeeBps": 25
+       },
+       "observedAt": "2026-10-24T08:50:12.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "spoke",
+       "recommendation": "Graduate to six-ring corridor",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 1,
+       "mainnetObserved": 1,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:KELP:rFAKEA11GxVNW2RHti89LGUiWwjKu7N6G",
+      "group": "A",
+      "rank": 11,
+      "network": "mainnet",
+      "currency": "KELP",
+      "currencyHex": "4B454C5000000000000000000000000000000000",
+      "issuer": "rFAKEA11GxVNW2RHti89LGUiWwjKu7N6G",
+      "name": "Kelp Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 1180823,
+       "bid": 0.33344,
+       "ask": 0.33622,
+       "spreadBps": 83,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 2346
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 17463
+         },
+         {
+          "band": "1-2%",
+          "xrp": 24771
+         },
+         {
+          "band": "2-5%",
+          "xrp": 69481
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 24484
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 43772
+         },
+         {
+          "band": "1-2%",
+          "xrp": 41199
+         },
+         {
+          "band": "2-5%",
+          "xrp": 15598
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMA11bYo62aHdaf4iHbqrDs2oay",
+        "xrp": 62453,
+        "token": 393477,
+        "tradingFeeBps": 50
+       },
+       "observedAt": "2026-10-24T08:59:37.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "growing_spoke",
+       "recommendation": "Add CEILING backstop",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "mainnet:LUMA:rFAKEA12YFEvzH3d1ucHDzSZwjFr4FMaj",
+      "group": "A",
+      "rank": 12,
+      "network": "mainnet",
+      "currency": "LUMA",
+      "currencyHex": "4C554D4100000000000000000000000000000000",
+      "issuer": "rFAKEA12YFEvzH3d1ucHDzSZwjFr4FMaj",
+      "name": "Luma Fixture Asset",
+      "status": "UNAVAILABLE",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": false,
+         "detail": "issuer account not found in last scan"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": false,
+         "detail": "book empty"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": false,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": null,
+       "bid": null,
+       "ask": null,
+       "spreadBps": null,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:58:08.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Hold: spoke unavailable",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": [
+       {
+        "severity": "high",
+        "text": "Issuer not found; spoke blocked"
+       }
+      ]
+     },
+     {
+      "id": "mainnet:MOSS:rFAKEA13n26AfFbmdVzdmdobWX8dniAD7",
+      "group": "A",
+      "rank": 13,
+      "network": "mainnet",
+      "currency": "MOSS",
+      "currencyHex": "4D4F535300000000000000000000000000000000",
+      "issuer": "rFAKEA13n26AfFbmdVzdmdobWX8dniAD7",
+      "name": "Moss Fixture Asset",
+      "status": "MAINNET_OBSERVED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 1019060,
+       "bid": 1.817053,
+       "ask": 1.845807,
+       "spreadBps": 157,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 25152
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 32687
+         },
+         {
+          "band": "1-2%",
+          "xrp": 10895
+         },
+         {
+          "band": "2-5%",
+          "xrp": 33265
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 25028
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 3924
+         },
+         {
+          "band": "1-2%",
+          "xrp": 55983
+         },
+         {
+          "band": "2-5%",
+          "xrp": 15599
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:55:56.000Z"
+      },
+      "testnet": null,
+      "corridor": {
+       "stage": "spoke",
+       "recommendation": "Add CEILING backstop",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     }
+    ]
+   },
+   "B": {
+    "title": "Group B · ranks 14–26 (Testnet corridor candidates)",
+    "spokes": [
+     {
+      "id": "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+      "group": "B",
+      "rank": 14,
+      "network": "testnet",
+      "currency": "NOVA",
+      "currencyHex": "4E4F564100000000000000000000000000000000",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+      "name": "Nova Fixture Asset",
+      "status": "TESTNET_FUNDED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 9696,
+       "bid": 1.509517,
+       "ask": 1.517843,
+       "spreadBps": 55,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1828
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 1116
+         },
+         {
+          "band": "1-2%",
+          "xrp": 1520
+         },
+         {
+          "band": "2-5%",
+          "xrp": 3752
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 2329
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 3046
+         },
+         {
+          "band": "1-2%",
+          "xrp": 8367
+         },
+         {
+          "band": "2-5%",
+          "xrp": 7511
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB144Ntsv17J68gaGzb4dW4jcy",
+        "xrp": 47131,
+        "token": 409525,
+        "tradingFeeBps": 100
+       },
+       "observedAt": "2026-10-24T08:56:29.000Z"
+      },
+      "testnet": {
+       "code": "NOVA",
+       "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+       "funded": true,
+       "book": {
+        "bids": 7,
+        "asks": 4
+       }
+      },
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Add CEILING backstop",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 2,
+       "mainnetObserved": 0,
+       "liveTestnet": 2,
+       "titanShare": 0.579,
+       "rivalShare": 0.321
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+      "group": "B",
+      "rank": 15,
+      "network": "testnet",
+      "currency": "ONYX",
+      "currencyHex": "4F4E595800000000000000000000000000000000",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+      "name": "Onyx Fixture Asset",
+      "status": "TESTNET_FUNDED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 8592,
+       "bid": 0.304687,
+       "ask": 0.308613,
+       "spreadBps": 128,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1240
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 7904
+         },
+         {
+          "band": "1-2%",
+          "xrp": 11681
+         },
+         {
+          "band": "2-5%",
+          "xrp": 9689
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 2659
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 5026
+         },
+         {
+          "band": "1-2%",
+          "xrp": 9768
+         },
+         {
+          "band": "2-5%",
+          "xrp": 5943
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:50:04.000Z"
+      },
+      "testnet": {
+       "code": "ONYX",
+       "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+       "funded": true,
+       "book": {
+        "bids": 4,
+        "asks": 4
+       }
+      },
+      "corridor": {
+       "stage": "spoke",
+       "recommendation": "Tighten VELOCITY quotes",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 2,
+       "mainnetObserved": 0,
+       "liveTestnet": 2,
+       "titanShare": 0.551,
+       "rivalShare": 0.349
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:PIKE:rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+      "group": "B",
+      "rank": 16,
+      "network": "testnet",
+      "currency": "PIKE",
+      "currencyHex": "50494B4500000000000000000000000000000000",
+      "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+      "name": "Pike Fixture Asset",
+      "status": "TESTNET_FUNDED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 6530,
+       "bid": 1.320696,
+       "ask": 1.322944,
+       "spreadBps": 17,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1899
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 7719
+         },
+         {
+          "band": "1-2%",
+          "xrp": 9019
+         },
+         {
+          "band": "2-5%",
+          "xrp": 7429
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 2730
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 1241
+         },
+         {
+          "band": "1-2%",
+          "xrp": 3015
+         },
+         {
+          "band": "2-5%",
+          "xrp": 6693
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB16gKXzNe6FBx78pnf8tU28Cq",
+        "xrp": 41211,
+        "token": 508878,
+        "tradingFeeBps": 100
+       },
+       "observedAt": "2026-10-24T08:57:17.000Z"
+      },
+      "testnet": {
+       "code": "PIKE",
+       "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+       "funded": true,
+       "book": {
+        "bids": 3,
+        "asks": 7
+       }
+      },
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": 0.669,
+       "rivalShare": 0.231
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+      "group": "B",
+      "rank": 17,
+      "network": "testnet",
+      "currency": "QUIL",
+      "currencyHex": "5155494C00000000000000000000000000000000",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+      "name": "Quil Fixture Asset",
+      "status": "TESTNET_FUNDED",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 6546,
+       "bid": 1.877653,
+       "ask": 1.907747,
+       "spreadBps": 159,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 655
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 538
+         },
+         {
+          "band": "1-2%",
+          "xrp": 4232
+         },
+         {
+          "band": "2-5%",
+          "xrp": 2240
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 625
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 6429
+         },
+         {
+          "band": "1-2%",
+          "xrp": 9685
+         },
+         {
+          "band": "2-5%",
+          "xrp": 12401
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB17PX6KyW6KTRxLf72nQAGCAP",
+        "xrp": 36117,
+        "token": 127676,
+        "tradingFeeBps": 10
+       },
+       "observedAt": "2026-10-24T08:52:19.000Z"
+      },
+      "testnet": {
+       "code": "QUIL",
+       "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+       "funded": true,
+       "book": {
+        "bids": 7,
+        "asks": 3
+       }
+      },
+      "corridor": {
+       "stage": "spoke",
+       "recommendation": "Add CEILING backstop",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 2,
+       "mainnetObserved": 0,
+       "liveTestnet": 2,
+       "titanShare": 0.621,
+       "rivalShare": 0.279
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:RUNE:rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH",
+      "group": "B",
+      "rank": 18,
+      "network": "testnet",
+      "currency": "RUNE",
+      "currencyHex": "52554E4500000000000000000000000000000000",
+      "issuer": "rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH",
+      "name": "Rune Fixture Asset",
+      "status": "TESTNET_CANDIDATE",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": false,
+         "detail": "no funded bids yet"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": false,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 6185,
+       "bid": 1.106563,
+       "ask": 1.117797,
+       "spreadBps": 101,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1673
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 8288
+         },
+         {
+          "band": "1-2%",
+          "xrp": 5626
+         },
+         {
+          "band": "2-5%",
+          "xrp": 7545
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:57:59.000Z"
+      },
+      "testnet": {
+       "code": "RUNE",
+       "issuer": "rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "growing_spoke",
+       "recommendation": "Graduate to six-ring corridor",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:SAGE:rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX",
+      "group": "B",
+      "rank": 19,
+      "network": "testnet",
+      "currency": "SAGE",
+      "currencyHex": "5341474500000000000000000000000000000000",
+      "issuer": "rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX",
+      "name": "Sage Fixture Asset",
+      "status": "TESTNET_CANDIDATE",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": false,
+         "detail": "no funded bids yet"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 3485,
+       "bid": 0.102954,
+       "ask": 0.103046,
+       "spreadBps": 9,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1417
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 2265
+         },
+         {
+          "band": "1-2%",
+          "xrp": 10103
+         },
+         {
+          "band": "2-5%",
+          "xrp": 4535
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB19DGVd1tK6NqFb7x8Fk1KZo5",
+        "xrp": 87891,
+        "token": 859742,
+        "tradingFeeBps": 25
+       },
+       "observedAt": "2026-10-24T08:53:23.000Z"
+      },
+      "testnet": {
+       "code": "SAGE",
+       "issuer": "rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "mature",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:TIDE:rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L",
+      "group": "B",
+      "rank": 20,
+      "network": "testnet",
+      "currency": "TIDE",
+      "currencyHex": "5449444500000000000000000000000000000000",
+      "issuer": "rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L",
+      "name": "Tide Fixture Asset",
+      "status": "TESTNET_CANDIDATE",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": false,
+         "detail": "no funded bids yet"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": false,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 5741,
+       "bid": 0.2693,
+       "ask": 0.27206,
+       "spreadBps": 102,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 716
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 5271
+         },
+         {
+          "band": "1-2%",
+          "xrp": 3393
+         },
+         {
+          "band": "2-5%",
+          "xrp": 11580
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:55:40.000Z"
+      },
+      "testnet": {
+       "code": "TIDE",
+       "issuer": "rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:UMBR:rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T",
+      "group": "B",
+      "rank": 21,
+      "network": "testnet",
+      "currency": "UMBR",
+      "currencyHex": "554D425200000000000000000000000000000000",
+      "issuer": "rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T",
+      "name": "Umbr Fixture Asset",
+      "status": "SIMULATION",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 3966,
+       "bid": 0.173833,
+       "ask": 0.175667,
+       "spreadBps": 105,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1649
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 7721
+         },
+         {
+          "band": "1-2%",
+          "xrp": 2804
+         },
+         {
+          "band": "2-5%",
+          "xrp": 6046
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1235
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 7554
+         },
+         {
+          "band": "1-2%",
+          "xrp": 1108
+         },
+         {
+          "band": "2-5%",
+          "xrp": 7017
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB21wvgtXJiHqYrey1FruS4VQh",
+        "xrp": 72928,
+        "token": 393718,
+        "tradingFeeBps": 50
+       },
+       "observedAt": "2026-10-24T08:57:01.000Z"
+      },
+      "testnet": {
+       "code": "UMBR",
+       "issuer": "rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "corridor",
+       "recommendation": "Tighten VELOCITY quotes",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:VALE:rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX",
+      "group": "B",
+      "rank": 22,
+      "network": "testnet",
+      "currency": "VALE",
+      "currencyHex": "56414C4500000000000000000000000000000000",
+      "issuer": "rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX",
+      "name": "Vale Fixture Asset",
+      "status": "SIMULATION",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 3256,
+       "bid": 1.129534,
+       "ask": 1.148326,
+       "spreadBps": 165,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 3073
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 799
+         },
+         {
+          "band": "1-2%",
+          "xrp": 9368
+         },
+         {
+          "band": "2-5%",
+          "xrp": 1522
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 875
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 512
+         },
+         {
+          "band": "1-2%",
+          "xrp": 5256
+         },
+         {
+          "band": "2-5%",
+          "xrp": 11411
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:53:31.000Z"
+      },
+      "testnet": {
+       "code": "VALE",
+       "issuer": "rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "corridor",
+       "recommendation": "Graduate to six-ring corridor",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:WISP:rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+      "group": "B",
+      "rank": 23,
+      "network": "testnet",
+      "currency": "WISP",
+      "currencyHex": "5749535000000000000000000000000000000000",
+      "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+      "name": "Wisp Fixture Asset",
+      "status": "REPLAY",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 2811,
+       "bid": 1.618779,
+       "ask": 1.628521,
+       "spreadBps": 60,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 1262
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 7205
+         },
+         {
+          "band": "1-2%",
+          "xrp": 685
+         },
+         {
+          "band": "2-5%",
+          "xrp": 1836
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 3673
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 1742
+         },
+         {
+          "band": "1-2%",
+          "xrp": 1902
+         },
+         {
+          "band": "2-5%",
+          "xrp": 16080
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:56:56.000Z"
+      },
+      "testnet": {
+       "code": "WISP",
+       "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "corridor",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": 0.474,
+       "rivalShare": 0.426
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+      "group": "B",
+      "rank": 24,
+      "network": "testnet",
+      "currency": "XENO",
+      "currencyHex": "58454E4F00000000000000000000000000000000",
+      "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+      "name": "Xeno Fixture Asset",
+      "status": "REPLAY",
+      "eligibility": {
+       "eligible": true,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": true,
+         "detail": "bids and asks present"
+        },
+        {
+         "id": "min_depth",
+         "ok": true,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 2300,
+       "bid": 1.811876,
+       "ask": 1.840364,
+       "spreadBps": 156,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 2776
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 5948
+         },
+         {
+          "band": "1-2%",
+          "xrp": 4331
+         },
+         {
+          "band": "2-5%",
+          "xrp": 13258
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 596
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 5805
+         },
+         {
+          "band": "1-2%",
+          "xrp": 8948
+         },
+         {
+          "band": "2-5%",
+          "xrp": 7122
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB24yypBD78UcdWeeSrZLLPD9o",
+        "xrp": 93009,
+        "token": 323091,
+        "tradingFeeBps": 100
+       },
+       "observedAt": "2026-10-24T08:54:16.000Z"
+      },
+      "testnet": {
+       "code": "XENO",
+       "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "growing_spoke",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": 0.615,
+       "rivalShare": 0.285
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:YARN:rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw",
+      "group": "B",
+      "rank": 25,
+      "network": "testnet",
+      "currency": "YARN",
+      "currencyHex": "5941524E00000000000000000000000000000000",
+      "issuer": "rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw",
+      "name": "Yarn Fixture Asset",
+      "status": "TESTNET_CANDIDATE",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": true,
+         "detail": "issuer account active"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": false,
+         "detail": "no funded bids yet"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": 2042,
+       "bid": 0.313294,
+       "ask": 0.316126,
+       "spreadBps": 90,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 3478
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 3888
+         },
+         {
+          "band": "1-2%",
+          "xrp": 8347
+         },
+         {
+          "band": "2-5%",
+          "xrp": 1376
+         }
+        ]
+       },
+       "amm": {
+        "account": "rFAKEAMMB25BVERf6M2dvaHtJU2e3cLov",
+        "xrp": 86462,
+        "token": 65665,
+        "tradingFeeBps": 10
+       },
+       "observedAt": "2026-10-24T08:53:30.000Z"
+      },
+      "testnet": {
+       "code": "YARN",
+       "issuer": "rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "growing_spoke",
+       "recommendation": "Hold allocation",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": []
+     },
+     {
+      "id": "testnet:ZEST:rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c",
+      "group": "B",
+      "rank": 26,
+      "network": "testnet",
+      "currency": "ZEST",
+      "currencyHex": "5A45535400000000000000000000000000000000",
+      "issuer": "rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c",
+      "name": "Zest Fixture Asset",
+      "status": "UNAVAILABLE",
+      "eligibility": {
+       "eligible": false,
+       "checks": [
+        {
+         "id": "issuer_exists",
+         "ok": false,
+         "detail": "issuer account not found in last scan"
+        },
+        {
+         "id": "no_freeze",
+         "ok": true,
+         "detail": "no global freeze flag"
+        },
+        {
+         "id": "book_two_sided",
+         "ok": false,
+         "detail": "book empty"
+        },
+        {
+         "id": "min_depth",
+         "ok": false,
+         "detail": "funded depth within 2% band"
+        },
+        {
+         "id": "rippling_ok",
+         "ok": true,
+         "detail": "DefaultRipple set on issuer"
+        }
+       ]
+      },
+      "market": {
+       "vol24hXrp": null,
+       "bid": null,
+       "ask": null,
+       "spreadBps": null,
+       "depthXrp": {
+        "bids": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ],
+        "asks": [
+         {
+          "band": "0-0.5%",
+          "xrp": 0
+         },
+         {
+          "band": "0.5-1%",
+          "xrp": 0
+         },
+         {
+          "band": "1-2%",
+          "xrp": 0
+         },
+         {
+          "band": "2-5%",
+          "xrp": 0
+         }
+        ]
+       },
+       "amm": null,
+       "observedAt": "2026-10-24T08:59:27.000Z"
+      },
+      "testnet": {
+       "code": "ZEST",
+       "issuer": "rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c",
+       "funded": false,
+       "book": null
+      },
+      "corridor": {
+       "stage": "entered",
+       "recommendation": "Hold: spoke unavailable",
+       "mode": "SIMULATION",
+       "engineLabel": "Temporary demo adapter (fixture)"
+      },
+      "flows": {
+       "validated": 0,
+       "mainnetObserved": 0,
+       "liveTestnet": 0,
+       "titanShare": null,
+       "rivalShare": null
+      },
+      "alerts": [
+       {
+        "severity": "high",
+        "text": "Issuer not found; spoke blocked"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "counts": {
+   "displayed": 26,
+   "MAINNET_OBSERVED": 12,
+   "TESTNET_FUNDED": 4,
+   "TESTNET_CANDIDATE": 4,
+   "SIMULATION": 2,
+   "REPLAY": 2,
+   "UNAVAILABLE": 2,
+   "eligible": 17
+  },
+  "coverage": {
+   "mainnetLedgersScanned": 1200,
+   "mainnetPaymentsMatched": 10,
+   "from": 99199000,
+   "to": 99200200
+  }
+ },
+ "details": {
+  "mainnet:AURA:rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp": {
+   "spoke": {
+    "id": "mainnet:AURA:rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp",
+    "group": "A",
+    "rank": 1,
+    "network": "mainnet",
+    "currency": "AURA",
+    "currencyHex": "4155524100000000000000000000000000000000",
+    "issuer": "rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp",
+    "name": "Aura Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": false,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 733751,
+     "bid": 0.182627,
+     "ask": 0.184573,
+     "spreadBps": 106,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 24917
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 5304
+       },
+       {
+        "band": "1-2%",
+        "xrp": 40518
+       },
+       {
+        "band": "2-5%",
+        "xrp": 91708
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 8323
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 13325
+       },
+       {
+        "band": "1-2%",
+        "xrp": 10930
+       },
+       {
+        "band": "2-5%",
+        "xrp": 91315
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMA17LiH9qPVLYZwcNkmrdf4K4b",
+      "xrp": 10862,
+      "token": 202962,
+      "tradingFeeBps": 100
+     },
+     "observedAt": "2026-10-24T08:54:03.000Z"
+    },
+    "testnet": {
+     "code": "AURA",
+     "issuer": "rFAKETA1LyfBwcY2x5sGRdTBNTA6yggXA",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "mature",
+     "recommendation": "Graduate to six-ring corridor",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 1,
+     "mainnetObserved": 1,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": [
+     {
+      "severity": "medium",
+      "text": "AMM pool imbalance"
+     }
+    ]
+   },
+   "transactions": [
+    {
+     "hash": "557C30EE3E6BC28ADEF9F2C2FFBC715A611BD8C9DE13DC6D24FB607EED1558AC",
+     "ledger": 99200021,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:29:16.215Z",
+     "from": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "to": {
+      "currency": "AURA",
+      "issuer": "rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4572.01",
+      "currency": "AURA"
+     },
+     "rate": 0.387639,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0VS5AYHGDVmc815XuduUL2CeUa",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1D2vEed2qPeRQf1PZ1ofWcsHqy",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9002,
+      "asksXrp": 19585
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/557C30EE3E6BC28ADEF9F2C2FFBC715A611BD8C9DE13DC6D24FB607EED1558AC"
+    }
+   ]
+  },
+  "mainnet:BRIK:rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU": {
+   "spoke": {
+    "id": "mainnet:BRIK:rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU",
+    "group": "A",
+    "rank": 2,
+    "network": "mainnet",
+    "currency": "BRIK",
+    "currencyHex": "4252494B00000000000000000000000000000000",
+    "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU",
+    "name": "Brik Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 1489728,
+     "bid": 1.103471,
+     "ask": 1.109889,
+     "spreadBps": 58,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 12301
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 11169
+       },
+       {
+        "band": "1-2%",
+        "xrp": 63198
+       },
+       {
+        "band": "2-5%",
+        "xrp": 45218
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 18069
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 48644
+       },
+       {
+        "band": "1-2%",
+        "xrp": 3901
+       },
+       {
+        "band": "2-5%",
+        "xrp": 23401
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:58:53.000Z"
+    },
+    "testnet": {
+     "code": "BRIK",
+     "issuer": "rFAKETA2Stbg2P6rzayQZbRyVcYUuduV7",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "growing_spoke",
+     "recommendation": "Deepen BRIDGE ring",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 2,
+     "mainnetObserved": 2,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "3C48CD27D88BB972309B2850E9053EE0FEED11DC53342A61A5E1A3E742C12EE8",
+     "ledger": 99200003,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:07:51.405Z",
+     "from": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "to": {
+      "currency": "BRIK",
+      "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "5027.59",
+      "currency": "BRIK"
+     },
+     "rate": 0.4947,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK096yyM67DT3tDfpxikJReuPEWm",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1ZUJKK8uMtLJzB2utS8gtRqzWa",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 20009,
+      "asksXrp": 15404
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/3C48CD27D88BB972309B2850E9053EE0FEED11DC53342A61A5E1A3E742C12EE8"
+    },
+    {
+     "hash": "7AEB738CF501EBBBFA030650DDF5583C5AD2D2D78523185D5872FE3F9EDB0105",
+     "ledger": 99200000,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:04:04.720Z",
+     "from": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "to": {
+      "currency": "BRIK",
+      "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+     },
+     "viaXrp": null,
+     "delivered": {
+      "value": "1612.27",
+      "currency": "BRIK"
+     },
+     "rate": 1.887897,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0Hm77CAFmDV3FRxtVZpuMpwaka",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1dasT4KKChFMKqS4eeRyYrazak",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK22CDQBjNyi2uofygEzvVQH4qdF",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 19519,
+      "asksXrp": 6054
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/7AEB738CF501EBBBFA030650DDF5583C5AD2D2D78523185D5872FE3F9EDB0105"
+    }
+   ]
+  },
+  "mainnet:CRUX:rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL": {
+   "spoke": {
+    "id": "mainnet:CRUX:rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL",
+    "group": "A",
+    "rank": 3,
+    "network": "mainnet",
+    "currency": "CRUX",
+    "currencyHex": "4352555800000000000000000000000000000000",
+    "issuer": "rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL",
+    "name": "Crux Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 1693918,
+     "bid": 1.407505,
+     "ask": 1.420655,
+     "spreadBps": 93,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 3013
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 41265
+       },
+       {
+        "band": "1-2%",
+        "xrp": 8540
+       },
+       {
+        "band": "2-5%",
+        "xrp": 37263
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 12896
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 30480
+       },
+       {
+        "band": "1-2%",
+        "xrp": 6430
+       },
+       {
+        "band": "2-5%",
+        "xrp": 60566
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMA3w1jMVaVSZ9AkxMuamp6gt2A",
+      "xrp": 83966,
+      "token": 782841,
+      "tradingFeeBps": 25
+     },
+     "observedAt": "2026-10-24T08:59:30.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Tighten VELOCITY quotes",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 1,
+     "mainnetObserved": 1,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": [
+     {
+      "severity": "medium",
+      "text": "AMM pool imbalance"
+     }
+    ]
+   },
+   "transactions": [
+    {
+     "hash": "129146B20E117FE927C0EA1E4C2DA2F2BC158CE05D14A3382B0319B29BB7A70C",
+     "ledger": 99200036,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:48:01.483Z",
+     "from": {
+      "currency": "CRUX",
+      "issuer": "rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL"
+     },
+     "to": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "2351.2",
+      "currency": "GLOW"
+     },
+     "rate": 0.323727,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0UFGAdtFqhzg7DHJYDbFoPUnGr",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK15t9bqvEJBVj9x6Lt7d1UctQai",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 15103,
+      "asksXrp": 1642
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/129146B20E117FE927C0EA1E4C2DA2F2BC158CE05D14A3382B0319B29BB7A70C"
+    }
+   ]
+  },
+  "mainnet:DUNE:rFAKEA04gisitaMrKHKXtWjB8rPj7saSF": {
+   "spoke": {
+    "id": "mainnet:DUNE:rFAKEA04gisitaMrKHKXtWjB8rPj7saSF",
+    "group": "A",
+    "rank": 4,
+    "network": "mainnet",
+    "currency": "DUNE",
+    "currencyHex": "44554E4500000000000000000000000000000000",
+    "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF",
+    "name": "Dune Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 730129,
+     "bid": 0.403388,
+     "ask": 0.403792,
+     "spreadBps": 10,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 9166
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 18773
+       },
+       {
+        "band": "1-2%",
+        "xrp": 31405
+       },
+       {
+        "band": "2-5%",
+        "xrp": 20518
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 11378
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 13820
+       },
+       {
+        "band": "1-2%",
+        "xrp": 60480
+       },
+       {
+        "band": "2-5%",
+        "xrp": 52481
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMA4BShknGfBYHbAiPFVW5nkoiW",
+      "xrp": 25157,
+      "token": 776003,
+      "tradingFeeBps": 25
+     },
+     "observedAt": "2026-10-24T08:55:26.000Z"
+    },
+    "testnet": {
+     "code": "DUNE",
+     "issuer": "rFAKETA4zhFstiCtLHQGy4DwcbrcKLk6r",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Add CEILING backstop",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 2,
+     "mainnetObserved": 2,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "AA3D8BC1FCD4FB5AC49369C5C09FC46715533AF891090D663DF67C89690E8FC5",
+     "ledger": 99200027,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:36:41.537Z",
+     "from": {
+      "currency": "DUNE",
+      "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF"
+     },
+     "to": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "2194.99",
+      "currency": "EMBR"
+     },
+     "rate": 0.647671,
+     "partial": true,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0PLLi4RkdK7E316Y56GFnA5NP8",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1UZPrYS979rUrbaxce3kLMyxBc",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK2hgknfRiLa3e4VxRiTMeBF5gUA",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9134,
+      "asksXrp": 9329
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/AA3D8BC1FCD4FB5AC49369C5C09FC46715533AF891090D663DF67C89690E8FC5"
+    },
+    {
+     "hash": "3F4DA19A0D050EF8115F106A462C897E6388A282347311BAB929346C52F26F18",
+     "ledger": 99200018,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:25:47.110Z",
+     "from": {
+      "currency": "DUNE",
+      "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF"
+     },
+     "to": {
+      "currency": "JADE",
+      "issuer": "rFAKEA10fD1KTZmafXkzDRw3ySizovgBU"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "705.57",
+      "currency": "JADE"
+     },
+     "rate": 1.069941,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0bZx94N5pKGdkosVcDrwphj627",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK1BRYCrvojojKkgVuwndKH6Gk4E",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2qwdFPSAGHsqEcdyHouFT2cTbJ",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 1153,
+      "asksXrp": 5815
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/3F4DA19A0D050EF8115F106A462C897E6388A282347311BAB929346C52F26F18"
+    }
+   ]
+  },
+  "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx": {
+   "spoke": {
+    "id": "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx",
+    "group": "A",
+    "rank": 5,
+    "network": "mainnet",
+    "currency": "EMBR",
+    "currencyHex": "454D425200000000000000000000000000000000",
+    "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx",
+    "name": "Embr Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 1595236,
+     "bid": 1.034324,
+     "ask": 1.039716,
+     "spreadBps": 52,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 18586
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 23749
+       },
+       {
+        "band": "1-2%",
+        "xrp": 69784
+       },
+       {
+        "band": "2-5%",
+        "xrp": 20614
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 16028
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 25074
+       },
+       {
+        "band": "1-2%",
+        "xrp": 21186
+       },
+       {
+        "band": "2-5%",
+        "xrp": 23221
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:57:35.000Z"
+    },
+    "testnet": {
+     "code": "EMBR",
+     "issuer": "rFAKETA5ZgpUyyaCwgPbEHJ1T8SZryK4A",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "mature",
+     "recommendation": "Deepen BRIDGE ring",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 5,
+     "mainnetObserved": 5,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "9AC355A867FC0233408A73B563BD24CEDFCD2E60C690EE1BF708B8AA88C34A92",
+     "ledger": 99200039,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:52:07.238Z",
+     "from": {
+      "currency": "IRIS",
+      "issuer": "rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N"
+     },
+     "to": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4388.54",
+      "currency": "EMBR"
+     },
+     "rate": 1.93831,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0mwtRZQHdNkDQMPtLuT7cEwhB5",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK1QQpkULjKMVpy31Jj9RuULtpx1",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2nD5i5X2FQZQgN2Pj7E4msBNyq",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 1255,
+      "asksXrp": 4725
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/9AC355A867FC0233408A73B563BD24CEDFCD2E60C690EE1BF708B8AA88C34A92"
+    },
+    {
+     "hash": "AA3D8BC1FCD4FB5AC49369C5C09FC46715533AF891090D663DF67C89690E8FC5",
+     "ledger": 99200027,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:36:41.537Z",
+     "from": {
+      "currency": "DUNE",
+      "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF"
+     },
+     "to": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "2194.99",
+      "currency": "EMBR"
+     },
+     "rate": 0.647671,
+     "partial": true,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0PLLi4RkdK7E316Y56GFnA5NP8",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1UZPrYS979rUrbaxce3kLMyxBc",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK2hgknfRiLa3e4VxRiTMeBF5gUA",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9134,
+      "asksXrp": 9329
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/AA3D8BC1FCD4FB5AC49369C5C09FC46715533AF891090D663DF67C89690E8FC5"
+    },
+    {
+     "hash": "557C30EE3E6BC28ADEF9F2C2FFBC715A611BD8C9DE13DC6D24FB607EED1558AC",
+     "ledger": 99200021,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:29:16.215Z",
+     "from": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "to": {
+      "currency": "AURA",
+      "issuer": "rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4572.01",
+      "currency": "AURA"
+     },
+     "rate": 0.387639,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0VS5AYHGDVmc815XuduUL2CeUa",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1D2vEed2qPeRQf1PZ1ofWcsHqy",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9002,
+      "asksXrp": 19585
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/557C30EE3E6BC28ADEF9F2C2FFBC715A611BD8C9DE13DC6D24FB607EED1558AC"
+    },
+    {
+     "hash": "10518EC28357BC0E9300FD1EA5E7E3CE727AC7346B841E416BBC39B7076173AD",
+     "ledger": 99200012,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:18:31.805Z",
+     "from": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "to": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "185.23",
+      "currency": "EMBR"
+     },
+     "rate": 2.680762,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0b3a52a5XM6vhDgx7ir6Uf3v91",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1MU8YeSAFGs3iMpBX8tqyoJTBi",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK2HxT2m1rJor6rLQwVY8PUVNVuP",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 2319,
+      "asksXrp": 11516
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/10518EC28357BC0E9300FD1EA5E7E3CE727AC7346B841E416BBC39B7076173AD"
+    },
+    {
+     "hash": "7AEB738CF501EBBBFA030650DDF5583C5AD2D2D78523185D5872FE3F9EDB0105",
+     "ledger": 99200000,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:04:04.720Z",
+     "from": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "to": {
+      "currency": "BRIK",
+      "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+     },
+     "viaXrp": null,
+     "delivered": {
+      "value": "1612.27",
+      "currency": "BRIK"
+     },
+     "rate": 1.887897,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0Hm77CAFmDV3FRxtVZpuMpwaka",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1dasT4KKChFMKqS4eeRyYrazak",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK22CDQBjNyi2uofygEzvVQH4qdF",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 19519,
+      "asksXrp": 6054
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/7AEB738CF501EBBBFA030650DDF5583C5AD2D2D78523185D5872FE3F9EDB0105"
+    }
+   ]
+  },
+  "mainnet:FERN:rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY": {
+   "spoke": {
+    "id": "mainnet:FERN:rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY",
+    "group": "A",
+    "rank": 6,
+    "network": "mainnet",
+    "currency": "FERN",
+    "currencyHex": "4645524E00000000000000000000000000000000",
+    "issuer": "rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY",
+    "name": "Fern Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 1101470,
+     "bid": 1.7398,
+     "ask": 1.74852,
+     "spreadBps": 50,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 10620
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 39712
+       },
+       {
+        "band": "1-2%",
+        "xrp": 64623
+       },
+       {
+        "band": "2-5%",
+        "xrp": 75074
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 22053
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 30571
+       },
+       {
+        "band": "1-2%",
+        "xrp": 57159
+       },
+       {
+        "band": "2-5%",
+        "xrp": 56495
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:56:31.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Tighten VELOCITY quotes",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 1,
+     "mainnetObserved": 1,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "14AA2669D7E310459F72CB26B94C8E5AE2C283D110912D360BBCF078515E8A9B",
+     "ledger": 99200030,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:40:14.084Z",
+     "from": {
+      "currency": "FERN",
+      "issuer": "rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY"
+     },
+     "to": {
+      "currency": "HALO",
+      "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "178.25",
+      "currency": "HALO"
+     },
+     "rate": 2.951389,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0g5C15L7KRF9KwVbCbG2Ysapde",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 17256,
+      "asksXrp": 13405
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/14AA2669D7E310459F72CB26B94C8E5AE2C283D110912D360BBCF078515E8A9B"
+    }
+   ]
+  },
+  "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42": {
+   "spoke": {
+    "id": "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42",
+    "group": "A",
+    "rank": 7,
+    "network": "mainnet",
+    "currency": "GLOW",
+    "currencyHex": "474C4F5700000000000000000000000000000000",
+    "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42",
+    "name": "Glow Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 670290,
+     "bid": 0.17095,
+     "ask": 0.17317,
+     "spreadBps": 129,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 19671
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 16330
+       },
+       {
+        "band": "1-2%",
+        "xrp": 31502
+       },
+       {
+        "band": "2-5%",
+        "xrp": 25842
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 6893
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 41540
+       },
+       {
+        "band": "1-2%",
+        "xrp": 71904
+       },
+       {
+        "band": "2-5%",
+        "xrp": 31973
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:52:33.000Z"
+    },
+    "testnet": {
+     "code": "GLOW",
+     "issuer": "rFAKETA7jGjWkg1jd4uqtbJNTteZyNELy",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "mature",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 4,
+     "mainnetObserved": 4,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": [
+     {
+      "severity": "medium",
+      "text": "Spread widened above 150 bps"
+     }
+    ]
+   },
+   "transactions": [
+    {
+     "hash": "129146B20E117FE927C0EA1E4C2DA2F2BC158CE05D14A3382B0319B29BB7A70C",
+     "ledger": 99200036,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:48:01.483Z",
+     "from": {
+      "currency": "CRUX",
+      "issuer": "rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL"
+     },
+     "to": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "2351.2",
+      "currency": "GLOW"
+     },
+     "rate": 0.323727,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0UFGAdtFqhzg7DHJYDbFoPUnGr",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK15t9bqvEJBVj9x6Lt7d1UctQai",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 15103,
+      "asksXrp": 1642
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/129146B20E117FE927C0EA1E4C2DA2F2BC158CE05D14A3382B0319B29BB7A70C"
+    },
+    {
+     "hash": "10518EC28357BC0E9300FD1EA5E7E3CE727AC7346B841E416BBC39B7076173AD",
+     "ledger": 99200012,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:18:31.805Z",
+     "from": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "to": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "185.23",
+      "currency": "EMBR"
+     },
+     "rate": 2.680762,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0b3a52a5XM6vhDgx7ir6Uf3v91",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1MU8YeSAFGs3iMpBX8tqyoJTBi",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK2HxT2m1rJor6rLQwVY8PUVNVuP",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 2319,
+      "asksXrp": 11516
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/10518EC28357BC0E9300FD1EA5E7E3CE727AC7346B841E416BBC39B7076173AD"
+    },
+    {
+     "hash": "F175D96B763D43F84666519233602E4DFB5DBA5ED92342A52F3C671C93659C28",
+     "ledger": 99200009,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:15:09.458Z",
+     "from": {
+      "currency": "HALO",
+      "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+     },
+     "to": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "3137.1",
+      "currency": "GLOW"
+     },
+     "rate": 1.346572,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0FYBVf4bGRy77jUvCy9pLvwa4H",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 4516,
+      "asksXrp": 9677
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/F175D96B763D43F84666519233602E4DFB5DBA5ED92342A52F3C671C93659C28"
+    },
+    {
+     "hash": "3C48CD27D88BB972309B2850E9053EE0FEED11DC53342A61A5E1A3E742C12EE8",
+     "ledger": 99200003,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:07:51.405Z",
+     "from": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "to": {
+      "currency": "BRIK",
+      "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "5027.59",
+      "currency": "BRIK"
+     },
+     "rate": 0.4947,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK096yyM67DT3tDfpxikJReuPEWm",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1ZUJKK8uMtLJzB2utS8gtRqzWa",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 20009,
+      "asksXrp": 15404
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/3C48CD27D88BB972309B2850E9053EE0FEED11DC53342A61A5E1A3E742C12EE8"
+    }
+   ]
+  },
+  "mainnet:HALO:rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn": {
+   "spoke": {
+    "id": "mainnet:HALO:rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn",
+    "group": "A",
+    "rank": 8,
+    "network": "mainnet",
+    "currency": "HALO",
+    "currencyHex": "48414C4F00000000000000000000000000000000",
+    "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn",
+    "name": "Halo Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 766707,
+     "bid": 0.515372,
+     "ask": 0.523528,
+     "spreadBps": 157,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1468
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 9093
+       },
+       {
+        "band": "1-2%",
+        "xrp": 13393
+       },
+       {
+        "band": "2-5%",
+        "xrp": 83986
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 12128
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 48610
+       },
+       {
+        "band": "1-2%",
+        "xrp": 68214
+       },
+       {
+        "band": "2-5%",
+        "xrp": 86873
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:54:07.000Z"
+    },
+    "testnet": {
+     "code": "HALO",
+     "issuer": "rFAKETA8GJ7x1UY32cBBGMxxiArw8JMMD",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "corridor",
+     "recommendation": "Deepen BRIDGE ring",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 2,
+     "mainnetObserved": 2,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": [
+     {
+      "severity": "low",
+      "text": "Single maker holds >80% of asks"
+     }
+    ]
+   },
+   "transactions": [
+    {
+     "hash": "14AA2669D7E310459F72CB26B94C8E5AE2C283D110912D360BBCF078515E8A9B",
+     "ledger": 99200030,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:40:14.084Z",
+     "from": {
+      "currency": "FERN",
+      "issuer": "rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY"
+     },
+     "to": {
+      "currency": "HALO",
+      "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "178.25",
+      "currency": "HALO"
+     },
+     "rate": 2.951389,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0g5C15L7KRF9KwVbCbG2Ysapde",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 17256,
+      "asksXrp": 13405
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/14AA2669D7E310459F72CB26B94C8E5AE2C283D110912D360BBCF078515E8A9B"
+    },
+    {
+     "hash": "F175D96B763D43F84666519233602E4DFB5DBA5ED92342A52F3C671C93659C28",
+     "ledger": 99200009,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:15:09.458Z",
+     "from": {
+      "currency": "HALO",
+      "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+     },
+     "to": {
+      "currency": "GLOW",
+      "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "3137.1",
+      "currency": "GLOW"
+     },
+     "rate": 1.346572,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0FYBVf4bGRy77jUvCy9pLvwa4H",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 4516,
+      "asksXrp": 9677
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/F175D96B763D43F84666519233602E4DFB5DBA5ED92342A52F3C671C93659C28"
+    }
+   ]
+  },
+  "mainnet:IRIS:rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N": {
+   "spoke": {
+    "id": "mainnet:IRIS:rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N",
+    "group": "A",
+    "rank": 9,
+    "network": "mainnet",
+    "currency": "IRIS",
+    "currencyHex": "4952495300000000000000000000000000000000",
+    "issuer": "rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N",
+    "name": "Iris Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 542910,
+     "bid": 0.533307,
+     "ask": 0.541313,
+     "spreadBps": 149,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 16718
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 31342
+       },
+       {
+        "band": "1-2%",
+        "xrp": 65305
+       },
+       {
+        "band": "2-5%",
+        "xrp": 21397
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 13572
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 10343
+       },
+       {
+        "band": "1-2%",
+        "xrp": 47697
+       },
+       {
+        "band": "2-5%",
+        "xrp": 65101
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMA98rjp7EuBXes1ZiNYcCsJmyr",
+      "xrp": 74812,
+      "token": 105718,
+      "tradingFeeBps": 100
+     },
+     "observedAt": "2026-10-24T08:50:34.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 1,
+     "mainnetObserved": 1,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "9AC355A867FC0233408A73B563BD24CEDFCD2E60C690EE1BF708B8AA88C34A92",
+     "ledger": 99200039,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:52:07.238Z",
+     "from": {
+      "currency": "IRIS",
+      "issuer": "rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N"
+     },
+     "to": {
+      "currency": "EMBR",
+      "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4388.54",
+      "currency": "EMBR"
+     },
+     "rate": 1.93831,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0mwtRZQHdNkDQMPtLuT7cEwhB5",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK1QQpkULjKMVpy31Jj9RuULtpx1",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2nD5i5X2FQZQgN2Pj7E4msBNyq",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 1255,
+      "asksXrp": 4725
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/9AC355A867FC0233408A73B563BD24CEDFCD2E60C690EE1BF708B8AA88C34A92"
+    }
+   ]
+  },
+  "mainnet:JADE:rFAKEA10fD1KTZmafXkzDRw3ySizovgBU": {
+   "spoke": {
+    "id": "mainnet:JADE:rFAKEA10fD1KTZmafXkzDRw3ySizovgBU",
+    "group": "A",
+    "rank": 10,
+    "network": "mainnet",
+    "currency": "JADE",
+    "currencyHex": "4A41444500000000000000000000000000000000",
+    "issuer": "rFAKEA10fD1KTZmafXkzDRw3ySizovgBU",
+    "name": "Jade Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 813448,
+     "bid": 0.929907,
+     "ask": 0.938313,
+     "spreadBps": 90,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 19628
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 32691
+       },
+       {
+        "band": "1-2%",
+        "xrp": 43000
+       },
+       {
+        "band": "2-5%",
+        "xrp": 58450
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 23398
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 29767
+       },
+       {
+        "band": "1-2%",
+        "xrp": 39639
+       },
+       {
+        "band": "2-5%",
+        "xrp": 81305
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMA10pb6Fg1woE5WbDkymR5FLN8",
+      "xrp": 84134,
+      "token": 841368,
+      "tradingFeeBps": 25
+     },
+     "observedAt": "2026-10-24T08:50:12.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "spoke",
+     "recommendation": "Graduate to six-ring corridor",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 1,
+     "mainnetObserved": 1,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "3F4DA19A0D050EF8115F106A462C897E6388A282347311BAB929346C52F26F18",
+     "ledger": 99200018,
+     "network": "mainnet",
+     "kind": "MAINNET_OBSERVED",
+     "at": "2026-10-24T08:25:47.110Z",
+     "from": {
+      "currency": "DUNE",
+      "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF"
+     },
+     "to": {
+      "currency": "JADE",
+      "issuer": "rFAKEA10fD1KTZmafXkzDRw3ySizovgBU"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "705.57",
+      "currency": "JADE"
+     },
+     "rate": 1.069941,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0bZx94N5pKGdkosVcDrwphj627",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK1BRYCrvojojKkgVuwndKH6Gk4E",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2qwdFPSAGHsqEcdyHouFT2cTbJ",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 1153,
+      "asksXrp": 5815
+     },
+     "explorer": "https://livenet.xrpl.org/transactions/3F4DA19A0D050EF8115F106A462C897E6388A282347311BAB929346C52F26F18"
+    }
+   ]
+  },
+  "mainnet:KELP:rFAKEA11GxVNW2RHti89LGUiWwjKu7N6G": {
+   "spoke": {
+    "id": "mainnet:KELP:rFAKEA11GxVNW2RHti89LGUiWwjKu7N6G",
+    "group": "A",
+    "rank": 11,
+    "network": "mainnet",
+    "currency": "KELP",
+    "currencyHex": "4B454C5000000000000000000000000000000000",
+    "issuer": "rFAKEA11GxVNW2RHti89LGUiWwjKu7N6G",
+    "name": "Kelp Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 1180823,
+     "bid": 0.33344,
+     "ask": 0.33622,
+     "spreadBps": 83,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 2346
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 17463
+       },
+       {
+        "band": "1-2%",
+        "xrp": 24771
+       },
+       {
+        "band": "2-5%",
+        "xrp": 69481
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 24484
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 43772
+       },
+       {
+        "band": "1-2%",
+        "xrp": 41199
+       },
+       {
+        "band": "2-5%",
+        "xrp": 15598
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMA11bYo62aHdaf4iHbqrDs2oay",
+      "xrp": 62453,
+      "token": 393477,
+      "tradingFeeBps": 50
+     },
+     "observedAt": "2026-10-24T08:59:37.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "growing_spoke",
+     "recommendation": "Add CEILING backstop",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "mainnet:LUMA:rFAKEA12YFEvzH3d1ucHDzSZwjFr4FMaj": {
+   "spoke": {
+    "id": "mainnet:LUMA:rFAKEA12YFEvzH3d1ucHDzSZwjFr4FMaj",
+    "group": "A",
+    "rank": 12,
+    "network": "mainnet",
+    "currency": "LUMA",
+    "currencyHex": "4C554D4100000000000000000000000000000000",
+    "issuer": "rFAKEA12YFEvzH3d1ucHDzSZwjFr4FMaj",
+    "name": "Luma Fixture Asset",
+    "status": "UNAVAILABLE",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": false,
+       "detail": "issuer account not found in last scan"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": false,
+       "detail": "book empty"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": false,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": null,
+     "bid": null,
+     "ask": null,
+     "spreadBps": null,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:58:08.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Hold: spoke unavailable",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": [
+     {
+      "severity": "high",
+      "text": "Issuer not found; spoke blocked"
+     }
+    ]
+   },
+   "transactions": []
+  },
+  "mainnet:MOSS:rFAKEA13n26AfFbmdVzdmdobWX8dniAD7": {
+   "spoke": {
+    "id": "mainnet:MOSS:rFAKEA13n26AfFbmdVzdmdobWX8dniAD7",
+    "group": "A",
+    "rank": 13,
+    "network": "mainnet",
+    "currency": "MOSS",
+    "currencyHex": "4D4F535300000000000000000000000000000000",
+    "issuer": "rFAKEA13n26AfFbmdVzdmdobWX8dniAD7",
+    "name": "Moss Fixture Asset",
+    "status": "MAINNET_OBSERVED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 1019060,
+     "bid": 1.817053,
+     "ask": 1.845807,
+     "spreadBps": 157,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 25152
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 32687
+       },
+       {
+        "band": "1-2%",
+        "xrp": 10895
+       },
+       {
+        "band": "2-5%",
+        "xrp": 33265
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 25028
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 3924
+       },
+       {
+        "band": "1-2%",
+        "xrp": 55983
+       },
+       {
+        "band": "2-5%",
+        "xrp": 15599
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:55:56.000Z"
+    },
+    "testnet": null,
+    "corridor": {
+     "stage": "spoke",
+     "recommendation": "Add CEILING backstop",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi": {
+   "spoke": {
+    "id": "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+    "group": "B",
+    "rank": 14,
+    "network": "testnet",
+    "currency": "NOVA",
+    "currencyHex": "4E4F564100000000000000000000000000000000",
+    "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+    "name": "Nova Fixture Asset",
+    "status": "TESTNET_FUNDED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 9696,
+     "bid": 1.509517,
+     "ask": 1.517843,
+     "spreadBps": 55,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1828
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 1116
+       },
+       {
+        "band": "1-2%",
+        "xrp": 1520
+       },
+       {
+        "band": "2-5%",
+        "xrp": 3752
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 2329
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 3046
+       },
+       {
+        "band": "1-2%",
+        "xrp": 8367
+       },
+       {
+        "band": "2-5%",
+        "xrp": 7511
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB144Ntsv17J68gaGzb4dW4jcy",
+      "xrp": 47131,
+      "token": 409525,
+      "tradingFeeBps": 100
+     },
+     "observedAt": "2026-10-24T08:56:29.000Z"
+    },
+    "testnet": {
+     "code": "NOVA",
+     "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+     "funded": true,
+     "book": {
+      "bids": 7,
+      "asks": 4
+     }
+    },
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Add CEILING backstop",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 2,
+     "mainnetObserved": 0,
+     "liveTestnet": 2,
+     "titanShare": 0.579,
+     "rivalShare": 0.321
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "24E6CBC03B710D044E1BECDF4388EF1F1198C013A592E7ADF8CCCB238CF8B05A",
+     "ledger": 6100033,
+     "network": "testnet",
+     "kind": "LIVE_TESTNET",
+     "at": "2026-10-24T08:43:46.926Z",
+     "from": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "to": {
+      "currency": "NOVA",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+     },
+     "viaXrp": null,
+     "delivered": {
+      "value": "190",
+      "currency": "NOVA"
+     },
+     "rate": 0.600728,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0QBTrcaNK3UxwNS2XSmKWeSVT5",
+       "role": "rival"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9040,
+      "asksXrp": 6671
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/24E6CBC03B710D044E1BECDF4388EF1F1198C013A592E7ADF8CCCB238CF8B05A"
+    },
+    {
+     "hash": "8B24F6072845871E97450EA5E659AC6926F8A909BEFBB313E3FC42EBFEEE1BC4",
+     "ledger": 6100015,
+     "network": "testnet",
+     "kind": "LIVE_TESTNET",
+     "at": "2026-10-24T08:22:08.996Z",
+     "from": {
+      "currency": "NOVA",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+     },
+     "to": {
+      "currency": "XRP",
+      "issuer": null
+     },
+     "viaXrp": false,
+     "delivered": {
+      "value": "1492.41",
+      "currency": "XRP"
+     },
+     "rate": 2.493078,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0SdiUVtufo5Dfyijg9dmyva1ry",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 12002,
+      "asksXrp": 7003
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/8B24F6072845871E97450EA5E659AC6926F8A909BEFBB313E3FC42EBFEEE1BC4"
+    },
+    {
+     "hash": "BDB39B9AA88C1864F53DB761934C4C5C15E7F58A686C6082431AE25C3FFE68FD",
+     "ledger": 6101509,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:04.500Z",
+     "from": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "to": {
+      "currency": "NOVA",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "3895.78",
+      "currency": "NOVA"
+     },
+     "rate": 2.907078,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0XPWncwNdQq3MS4DCYsS7sNUyZ",
+       "role": "titan"
+      },
+      {
+       "account": "rFAKEMK1WWHHoejydwSdoUkojzeeiyRiz",
+       "role": "rival"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 19407,
+      "asksXrp": 18035
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/BDB39B9AA88C1864F53DB761934C4C5C15E7F58A686C6082431AE25C3FFE68FD"
+    },
+    {
+     "hash": "C1EEAFD63EAD220AD70EF3102B0ED21983954CEF37F36B4494F271F8A1480F1F",
+     "ledger": 6101518,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:09.000Z",
+     "from": {
+      "currency": "NOVA",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+     },
+     "to": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4106.05",
+      "currency": "QUIL"
+     },
+     "rate": 0.123748,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0yVqLBRStbmpEAQv42Bick4dK3",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 18693,
+      "asksXrp": 2998
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/C1EEAFD63EAD220AD70EF3102B0ED21983954CEF37F36B4494F271F8A1480F1F"
+    }
+   ]
+  },
+  "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m": {
+   "spoke": {
+    "id": "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+    "group": "B",
+    "rank": 15,
+    "network": "testnet",
+    "currency": "ONYX",
+    "currencyHex": "4F4E595800000000000000000000000000000000",
+    "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+    "name": "Onyx Fixture Asset",
+    "status": "TESTNET_FUNDED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 8592,
+     "bid": 0.304687,
+     "ask": 0.308613,
+     "spreadBps": 128,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1240
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 7904
+       },
+       {
+        "band": "1-2%",
+        "xrp": 11681
+       },
+       {
+        "band": "2-5%",
+        "xrp": 9689
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 2659
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 5026
+       },
+       {
+        "band": "1-2%",
+        "xrp": 9768
+       },
+       {
+        "band": "2-5%",
+        "xrp": 5943
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:50:04.000Z"
+    },
+    "testnet": {
+     "code": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+     "funded": true,
+     "book": {
+      "bids": 4,
+      "asks": 4
+     }
+    },
+    "corridor": {
+     "stage": "spoke",
+     "recommendation": "Tighten VELOCITY quotes",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 2,
+     "mainnetObserved": 0,
+     "liveTestnet": 2,
+     "titanShare": 0.551,
+     "rivalShare": 0.349
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "C93CF49889A27E516641244A0E2978805D83D7839F1AADE34F70FD73697690A2",
+     "ledger": 6100024,
+     "network": "testnet",
+     "kind": "LIVE_TESTNET",
+     "at": "2026-10-24T08:33:17.876Z",
+     "from": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "to": {
+      "currency": "XRP",
+      "issuer": null
+     },
+     "viaXrp": false,
+     "delivered": {
+      "value": "1748.64",
+      "currency": "XRP"
+     },
+     "rate": 1.991068,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0XurW5jq7JvhR4EEQpP9uxJV9j",
+       "role": "titan"
+      },
+      {
+       "account": "rFAKEMK1Nz9ogepnHDwu9ivaBXPZFRTWz",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2iNXJz4jTBdvtCS7CfH6JF35nL",
+       "role": "titan"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 14433,
+      "asksXrp": 2875
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/C93CF49889A27E516641244A0E2978805D83D7839F1AADE34F70FD73697690A2"
+    },
+    {
+     "hash": "62663AFCBC7BC70F3542A7CC5E38010574FA962B801BBC0F251303C4444DE0B7",
+     "ledger": 6100006,
+     "network": "testnet",
+     "kind": "LIVE_TESTNET",
+     "at": "2026-10-24T08:11:11.423Z",
+     "from": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "to": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "1470.83",
+      "currency": "ONYX"
+     },
+     "rate": 0.109519,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0zhbaSizBeDG2mKuHDDBAA5E3R",
+       "role": "titan"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 5421,
+      "asksXrp": 1122
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/62663AFCBC7BC70F3542A7CC5E38010574FA962B801BBC0F251303C4444DE0B7"
+    },
+    {
+     "hash": "33A7B7CFD126D52B3B58B5B4147FCE17FF16431F45E22E0DFEF936FA572A72D9",
+     "ledger": 6101503,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:01.500Z",
+     "from": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "to": {
+      "currency": "PIKE",
+      "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4663.65",
+      "currency": "PIKE"
+     },
+     "rate": 1.983295,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0ZNGXXJfEKeB9DmZ3Z8HCJNQd9",
+       "role": "titan"
+      },
+      {
+       "account": "rFAKEMK19MHE92aJcNoGx7Ci6pP6vnnXe",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2UVaCr3i58FtXgzAejoeWNf39U",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 4829,
+      "asksXrp": 9564
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/33A7B7CFD126D52B3B58B5B4147FCE17FF16431F45E22E0DFEF936FA572A72D9"
+    },
+    {
+     "hash": "25CE3A9566E9A15E9D66AB8759A7CE57E71CA91768E8B128D4E3AB474928D498",
+     "ledger": 6101506,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:03.000Z",
+     "from": {
+      "currency": "PIKE",
+      "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+     },
+     "to": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "669.28",
+      "currency": "ONYX"
+     },
+     "rate": 1.910958,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0JkMWzuDFtSd7XqvohNWmAxr3y",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 11229,
+      "asksXrp": 2953
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/25CE3A9566E9A15E9D66AB8759A7CE57E71CA91768E8B128D4E3AB474928D498"
+    }
+   ]
+  },
+  "testnet:PIKE:rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM": {
+   "spoke": {
+    "id": "testnet:PIKE:rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+    "group": "B",
+    "rank": 16,
+    "network": "testnet",
+    "currency": "PIKE",
+    "currencyHex": "50494B4500000000000000000000000000000000",
+    "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+    "name": "Pike Fixture Asset",
+    "status": "TESTNET_FUNDED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 6530,
+     "bid": 1.320696,
+     "ask": 1.322944,
+     "spreadBps": 17,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1899
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 7719
+       },
+       {
+        "band": "1-2%",
+        "xrp": 9019
+       },
+       {
+        "band": "2-5%",
+        "xrp": 7429
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 2730
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 1241
+       },
+       {
+        "band": "1-2%",
+        "xrp": 3015
+       },
+       {
+        "band": "2-5%",
+        "xrp": 6693
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB16gKXzNe6FBx78pnf8tU28Cq",
+      "xrp": 41211,
+      "token": 508878,
+      "tradingFeeBps": 100
+     },
+     "observedAt": "2026-10-24T08:57:17.000Z"
+    },
+    "testnet": {
+     "code": "PIKE",
+     "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+     "funded": true,
+     "book": {
+      "bids": 3,
+      "asks": 7
+     }
+    },
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": 0.669,
+     "rivalShare": 0.231
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "33A7B7CFD126D52B3B58B5B4147FCE17FF16431F45E22E0DFEF936FA572A72D9",
+     "ledger": 6101503,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:01.500Z",
+     "from": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "to": {
+      "currency": "PIKE",
+      "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "4663.65",
+      "currency": "PIKE"
+     },
+     "rate": 1.983295,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0ZNGXXJfEKeB9DmZ3Z8HCJNQd9",
+       "role": "titan"
+      },
+      {
+       "account": "rFAKEMK19MHE92aJcNoGx7Ci6pP6vnnXe",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK2UVaCr3i58FtXgzAejoeWNf39U",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 4829,
+      "asksXrp": 9564
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/33A7B7CFD126D52B3B58B5B4147FCE17FF16431F45E22E0DFEF936FA572A72D9"
+    },
+    {
+     "hash": "25CE3A9566E9A15E9D66AB8759A7CE57E71CA91768E8B128D4E3AB474928D498",
+     "ledger": 6101506,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:03.000Z",
+     "from": {
+      "currency": "PIKE",
+      "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+     },
+     "to": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "669.28",
+      "currency": "ONYX"
+     },
+     "rate": 1.910958,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0JkMWzuDFtSd7XqvohNWmAxr3y",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 11229,
+      "asksXrp": 2953
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/25CE3A9566E9A15E9D66AB8759A7CE57E71CA91768E8B128D4E3AB474928D498"
+    }
+   ]
+  },
+  "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3": {
+   "spoke": {
+    "id": "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+    "group": "B",
+    "rank": 17,
+    "network": "testnet",
+    "currency": "QUIL",
+    "currencyHex": "5155494C00000000000000000000000000000000",
+    "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+    "name": "Quil Fixture Asset",
+    "status": "TESTNET_FUNDED",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 6546,
+     "bid": 1.877653,
+     "ask": 1.907747,
+     "spreadBps": 159,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 655
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 538
+       },
+       {
+        "band": "1-2%",
+        "xrp": 4232
+       },
+       {
+        "band": "2-5%",
+        "xrp": 2240
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 625
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 6429
+       },
+       {
+        "band": "1-2%",
+        "xrp": 9685
+       },
+       {
+        "band": "2-5%",
+        "xrp": 12401
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB17PX6KyW6KTRxLf72nQAGCAP",
+      "xrp": 36117,
+      "token": 127676,
+      "tradingFeeBps": 10
+     },
+     "observedAt": "2026-10-24T08:52:19.000Z"
+    },
+    "testnet": {
+     "code": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+     "funded": true,
+     "book": {
+      "bids": 7,
+      "asks": 3
+     }
+    },
+    "corridor": {
+     "stage": "spoke",
+     "recommendation": "Add CEILING backstop",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 2,
+     "mainnetObserved": 0,
+     "liveTestnet": 2,
+     "titanShare": 0.621,
+     "rivalShare": 0.279
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "24E6CBC03B710D044E1BECDF4388EF1F1198C013A592E7ADF8CCCB238CF8B05A",
+     "ledger": 6100033,
+     "network": "testnet",
+     "kind": "LIVE_TESTNET",
+     "at": "2026-10-24T08:43:46.926Z",
+     "from": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "to": {
+      "currency": "NOVA",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+     },
+     "viaXrp": null,
+     "delivered": {
+      "value": "190",
+      "currency": "NOVA"
+     },
+     "rate": 0.600728,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0QBTrcaNK3UxwNS2XSmKWeSVT5",
+       "role": "rival"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9040,
+      "asksXrp": 6671
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/24E6CBC03B710D044E1BECDF4388EF1F1198C013A592E7ADF8CCCB238CF8B05A"
+    },
+    {
+     "hash": "62663AFCBC7BC70F3542A7CC5E38010574FA962B801BBC0F251303C4444DE0B7",
+     "ledger": 6100006,
+     "network": "testnet",
+     "kind": "LIVE_TESTNET",
+     "at": "2026-10-24T08:11:11.423Z",
+     "from": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "to": {
+      "currency": "ONYX",
+      "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "1470.83",
+      "currency": "ONYX"
+     },
+     "rate": 0.109519,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0zhbaSizBeDG2mKuHDDBAA5E3R",
+       "role": "titan"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 5421,
+      "asksXrp": 1122
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/62663AFCBC7BC70F3542A7CC5E38010574FA962B801BBC0F251303C4444DE0B7"
+    },
+    {
+     "hash": "F9337DE189BA1FE2304B623B0B36166BE4812D9EDA25BB246DF9594804C48179",
+     "ledger": 6101500,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:00.000Z",
+     "from": {
+      "currency": "XRP",
+      "issuer": null
+     },
+     "to": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "viaXrp": false,
+     "delivered": {
+      "value": "4830.39",
+      "currency": "QUIL"
+     },
+     "rate": 1.988708,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0L3bHVjDwPSLsBc3JBsG1axrFf",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK12zaMmSqELKt5Ajx7bDxLFeeFQ",
+       "role": "other"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 1314,
+      "asksXrp": 17893
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/F9337DE189BA1FE2304B623B0B36166BE4812D9EDA25BB246DF9594804C48179"
+    },
+    {
+     "hash": "BDB39B9AA88C1864F53DB761934C4C5C15E7F58A686C6082431AE25C3FFE68FD",
+     "ledger": 6101509,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:04.500Z",
+     "from": {
+      "currency": "QUIL",
+      "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+     },
+     "to": {
+      "currency": "NOVA",
+      "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "3895.78",
+      "currency": "NOVA"
+     },
+     "rate": 2.907078,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0XPWncwNdQq3MS4DCYsS7sNUyZ",
+       "role": "titan"
+      },
+      {
+       "account": "rFAKEMK1WWHHoejydwSdoUkojzeeiyRiz",
+       "role": "rival"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 19407,
+      "asksXrp": 18035
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/BDB39B9AA88C1864F53DB761934C4C5C15E7F58A686C6082431AE25C3FFE68FD"
+    }
+   ]
+  },
+  "testnet:RUNE:rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH": {
+   "spoke": {
+    "id": "testnet:RUNE:rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH",
+    "group": "B",
+    "rank": 18,
+    "network": "testnet",
+    "currency": "RUNE",
+    "currencyHex": "52554E4500000000000000000000000000000000",
+    "issuer": "rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH",
+    "name": "Rune Fixture Asset",
+    "status": "TESTNET_CANDIDATE",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": false,
+       "detail": "no funded bids yet"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": false,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 6185,
+     "bid": 1.106563,
+     "ask": 1.117797,
+     "spreadBps": 101,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1673
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 8288
+       },
+       {
+        "band": "1-2%",
+        "xrp": 5626
+       },
+       {
+        "band": "2-5%",
+        "xrp": 7545
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:57:59.000Z"
+    },
+    "testnet": {
+     "code": "RUNE",
+     "issuer": "rFAKEB18YZG1KCPbHrJuvi81UvDHUVeBH",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "growing_spoke",
+     "recommendation": "Graduate to six-ring corridor",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:SAGE:rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX": {
+   "spoke": {
+    "id": "testnet:SAGE:rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX",
+    "group": "B",
+    "rank": 19,
+    "network": "testnet",
+    "currency": "SAGE",
+    "currencyHex": "5341474500000000000000000000000000000000",
+    "issuer": "rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX",
+    "name": "Sage Fixture Asset",
+    "status": "TESTNET_CANDIDATE",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": false,
+       "detail": "no funded bids yet"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 3485,
+     "bid": 0.102954,
+     "ask": 0.103046,
+     "spreadBps": 9,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1417
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 2265
+       },
+       {
+        "band": "1-2%",
+        "xrp": 10103
+       },
+       {
+        "band": "2-5%",
+        "xrp": 4535
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB19DGVd1tK6NqFb7x8Fk1KZo5",
+      "xrp": 87891,
+      "token": 859742,
+      "tradingFeeBps": 25
+     },
+     "observedAt": "2026-10-24T08:53:23.000Z"
+    },
+    "testnet": {
+     "code": "SAGE",
+     "issuer": "rFAKEB19pJAm5CyUAFAeU63uhnPjWJpfX",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "mature",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:TIDE:rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L": {
+   "spoke": {
+    "id": "testnet:TIDE:rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L",
+    "group": "B",
+    "rank": 20,
+    "network": "testnet",
+    "currency": "TIDE",
+    "currencyHex": "5449444500000000000000000000000000000000",
+    "issuer": "rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L",
+    "name": "Tide Fixture Asset",
+    "status": "TESTNET_CANDIDATE",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": false,
+       "detail": "no funded bids yet"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": false,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 5741,
+     "bid": 0.2693,
+     "ask": 0.27206,
+     "spreadBps": 102,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 716
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 5271
+       },
+       {
+        "band": "1-2%",
+        "xrp": 3393
+       },
+       {
+        "band": "2-5%",
+        "xrp": 11580
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:55:40.000Z"
+    },
+    "testnet": {
+     "code": "TIDE",
+     "issuer": "rFAKEB20tf3mJ6yt4GYsR6UYEy2Bxha7L",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:UMBR:rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T": {
+   "spoke": {
+    "id": "testnet:UMBR:rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T",
+    "group": "B",
+    "rank": 21,
+    "network": "testnet",
+    "currency": "UMBR",
+    "currencyHex": "554D425200000000000000000000000000000000",
+    "issuer": "rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T",
+    "name": "Umbr Fixture Asset",
+    "status": "SIMULATION",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 3966,
+     "bid": 0.173833,
+     "ask": 0.175667,
+     "spreadBps": 105,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1649
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 7721
+       },
+       {
+        "band": "1-2%",
+        "xrp": 2804
+       },
+       {
+        "band": "2-5%",
+        "xrp": 6046
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1235
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 7554
+       },
+       {
+        "band": "1-2%",
+        "xrp": 1108
+       },
+       {
+        "band": "2-5%",
+        "xrp": 7017
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB21wvgtXJiHqYrey1FruS4VQh",
+      "xrp": 72928,
+      "token": 393718,
+      "tradingFeeBps": 50
+     },
+     "observedAt": "2026-10-24T08:57:01.000Z"
+    },
+    "testnet": {
+     "code": "UMBR",
+     "issuer": "rFAKEB21nKdGshZzdhuiqXoC5KDAWe33T",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "corridor",
+     "recommendation": "Tighten VELOCITY quotes",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:VALE:rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX": {
+   "spoke": {
+    "id": "testnet:VALE:rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX",
+    "group": "B",
+    "rank": 22,
+    "network": "testnet",
+    "currency": "VALE",
+    "currencyHex": "56414C4500000000000000000000000000000000",
+    "issuer": "rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX",
+    "name": "Vale Fixture Asset",
+    "status": "SIMULATION",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 3256,
+     "bid": 1.129534,
+     "ask": 1.148326,
+     "spreadBps": 165,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 3073
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 799
+       },
+       {
+        "band": "1-2%",
+        "xrp": 9368
+       },
+       {
+        "band": "2-5%",
+        "xrp": 1522
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 875
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 512
+       },
+       {
+        "band": "1-2%",
+        "xrp": 5256
+       },
+       {
+        "band": "2-5%",
+        "xrp": 11411
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:53:31.000Z"
+    },
+    "testnet": {
+     "code": "VALE",
+     "issuer": "rFAKEB22D7RtV2nR4kyNWhyV4yExSmpeX",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "corridor",
+     "recommendation": "Graduate to six-ring corridor",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:WISP:rFAKEB23u4bmz18pTwhEaih9AZymT5Jna": {
+   "spoke": {
+    "id": "testnet:WISP:rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+    "group": "B",
+    "rank": 23,
+    "network": "testnet",
+    "currency": "WISP",
+    "currencyHex": "5749535000000000000000000000000000000000",
+    "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+    "name": "Wisp Fixture Asset",
+    "status": "REPLAY",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 2811,
+     "bid": 1.618779,
+     "ask": 1.628521,
+     "spreadBps": 60,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 1262
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 7205
+       },
+       {
+        "band": "1-2%",
+        "xrp": 685
+       },
+       {
+        "band": "2-5%",
+        "xrp": 1836
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 3673
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 1742
+       },
+       {
+        "band": "1-2%",
+        "xrp": 1902
+       },
+       {
+        "band": "2-5%",
+        "xrp": 16080
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:56:56.000Z"
+    },
+    "testnet": {
+     "code": "WISP",
+     "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "corridor",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": 0.474,
+     "rivalShare": 0.426
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "58808EE4D9887926A2DA75EEE327161425449258AA53F5FD5AC1FAEDACC691F9",
+     "ledger": 6101515,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:07.500Z",
+     "from": {
+      "currency": "XENO",
+      "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+     },
+     "to": {
+      "currency": "WISP",
+      "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "5044.24",
+      "currency": "WISP"
+     },
+     "rate": 0.43701,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0dqHNpRyqHMFLs8F1Qh8UhHYU2",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK18z7rGd3gGBFjnt2iMTasVZCfm",
+       "role": "titan"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 8188,
+      "asksXrp": 13882
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/58808EE4D9887926A2DA75EEE327161425449258AA53F5FD5AC1FAEDACC691F9"
+    },
+    {
+     "hash": "0CFDA8DB0881808B4C23815649FBC9619F5BA2C7D06561BBDAA046305A7F0399",
+     "ledger": 6101530,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:15.000Z",
+     "from": {
+      "currency": "WISP",
+      "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+     },
+     "to": {
+      "currency": "XENO",
+      "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "2907.34",
+      "currency": "XENO"
+     },
+     "rate": 0.243398,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0pGyH7h7KbhREhXSGQzdCZ8VMc",
+       "role": "other"
+      },
+      {
+       "account": "rFAKEMK1Djnq3YwDx7WiMXeHWhsTncAMf",
+       "role": "amm"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 9323,
+      "asksXrp": 7526
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/0CFDA8DB0881808B4C23815649FBC9619F5BA2C7D06561BBDAA046305A7F0399"
+    }
+   ]
+  },
+  "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR": {
+   "spoke": {
+    "id": "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+    "group": "B",
+    "rank": 24,
+    "network": "testnet",
+    "currency": "XENO",
+    "currencyHex": "58454E4F00000000000000000000000000000000",
+    "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+    "name": "Xeno Fixture Asset",
+    "status": "REPLAY",
+    "eligibility": {
+     "eligible": true,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": true,
+       "detail": "bids and asks present"
+      },
+      {
+       "id": "min_depth",
+       "ok": true,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 2300,
+     "bid": 1.811876,
+     "ask": 1.840364,
+     "spreadBps": 156,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 2776
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 5948
+       },
+       {
+        "band": "1-2%",
+        "xrp": 4331
+       },
+       {
+        "band": "2-5%",
+        "xrp": 13258
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 596
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 5805
+       },
+       {
+        "band": "1-2%",
+        "xrp": 8948
+       },
+       {
+        "band": "2-5%",
+        "xrp": 7122
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB24yypBD78UcdWeeSrZLLPD9o",
+      "xrp": 93009,
+      "token": 323091,
+      "tradingFeeBps": 100
+     },
+     "observedAt": "2026-10-24T08:54:16.000Z"
+    },
+    "testnet": {
+     "code": "XENO",
+     "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "growing_spoke",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": 0.615,
+     "rivalShare": 0.285
+    },
+    "alerts": []
+   },
+   "transactions": [
+    {
+     "hash": "3FA9B93E88C8B0CB8AE85EE00A97183BF96E6976C6A73D66DD021E767F4F1C7C",
+     "ledger": 6101512,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:06.000Z",
+     "from": {
+      "currency": "XRP",
+      "issuer": null
+     },
+     "to": {
+      "currency": "XENO",
+      "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+     },
+     "viaXrp": false,
+     "delivered": {
+      "value": "3297.48",
+      "currency": "XENO"
+     },
+     "rate": 1.079545,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK09rj36PeV7HyZuSpaShUXs9oGt",
+       "role": "titan"
+      },
+      {
+       "account": "rFAKEMK1kZpR3LgyHshZxkzCJiRjNbo5g",
+       "role": "titan"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 8018,
+      "asksXrp": 9496
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/3FA9B93E88C8B0CB8AE85EE00A97183BF96E6976C6A73D66DD021E767F4F1C7C"
+    },
+    {
+     "hash": "58808EE4D9887926A2DA75EEE327161425449258AA53F5FD5AC1FAEDACC691F9",
+     "ledger": 6101515,
+     "network": "testnet",
+     "kind": "REPLAY",
+     "at": "2026-10-24T09:00:07.500Z",
+     "from": {
+      "currency": "XENO",
+      "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+     },
+     "to": {
+      "currency": "WISP",
+      "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+     },
+     "viaXrp": true,
+     "delivered": {
+      "value": "5044.24",
+      "currency": "WISP"
+     },
+     "rate": 0.43701,
+     "partial": false,
+     "offerOwners": [
+      {
+       "account": "rFAKEMK0dqHNpRyqHMFLs8F1Qh8UhHYU2",
+       "role": "amm"
+      },
+      {
+       "account": "rFAKEMK18z7rGd3gGBFjnt2iMTasVZCfm",
+       "role": "titan"
+      }
+     ],
+     "depthAfter": {
+      "bidsXrp": 8188,
+      "asksXrp": 13882
+     },
+     "explorer": "https://testnet.xrpl.org/transactions/58808EE4D9887926A2DA75EEE327161425449258AA53F5FD5AC1FAEDACC691F9"
+    }
+   ]
+  },
+  "testnet:YARN:rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw": {
+   "spoke": {
+    "id": "testnet:YARN:rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw",
+    "group": "B",
+    "rank": 25,
+    "network": "testnet",
+    "currency": "YARN",
+    "currencyHex": "5941524E00000000000000000000000000000000",
+    "issuer": "rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw",
+    "name": "Yarn Fixture Asset",
+    "status": "TESTNET_CANDIDATE",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": true,
+       "detail": "issuer account active"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": false,
+       "detail": "no funded bids yet"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": 2042,
+     "bid": 0.313294,
+     "ask": 0.316126,
+     "spreadBps": 90,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 3478
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 3888
+       },
+       {
+        "band": "1-2%",
+        "xrp": 8347
+       },
+       {
+        "band": "2-5%",
+        "xrp": 1376
+       }
+      ]
+     },
+     "amm": {
+      "account": "rFAKEAMMB25BVERf6M2dvaHtJU2e3cLov",
+      "xrp": 86462,
+      "token": 65665,
+      "tradingFeeBps": 10
+     },
+     "observedAt": "2026-10-24T08:53:30.000Z"
+    },
+    "testnet": {
+     "code": "YARN",
+     "issuer": "rFAKEB25UMa5qNrV1VQbXPvzpQ9fcBZsw",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "growing_spoke",
+     "recommendation": "Hold allocation",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": []
+   },
+   "transactions": []
+  },
+  "testnet:ZEST:rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c": {
+   "spoke": {
+    "id": "testnet:ZEST:rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c",
+    "group": "B",
+    "rank": 26,
+    "network": "testnet",
+    "currency": "ZEST",
+    "currencyHex": "5A45535400000000000000000000000000000000",
+    "issuer": "rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c",
+    "name": "Zest Fixture Asset",
+    "status": "UNAVAILABLE",
+    "eligibility": {
+     "eligible": false,
+     "checks": [
+      {
+       "id": "issuer_exists",
+       "ok": false,
+       "detail": "issuer account not found in last scan"
+      },
+      {
+       "id": "no_freeze",
+       "ok": true,
+       "detail": "no global freeze flag"
+      },
+      {
+       "id": "book_two_sided",
+       "ok": false,
+       "detail": "book empty"
+      },
+      {
+       "id": "min_depth",
+       "ok": false,
+       "detail": "funded depth within 2% band"
+      },
+      {
+       "id": "rippling_ok",
+       "ok": true,
+       "detail": "DefaultRipple set on issuer"
+      }
+     ]
+    },
+    "market": {
+     "vol24hXrp": null,
+     "bid": null,
+     "ask": null,
+     "spreadBps": null,
+     "depthXrp": {
+      "bids": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ],
+      "asks": [
+       {
+        "band": "0-0.5%",
+        "xrp": 0
+       },
+       {
+        "band": "0.5-1%",
+        "xrp": 0
+       },
+       {
+        "band": "1-2%",
+        "xrp": 0
+       },
+       {
+        "band": "2-5%",
+        "xrp": 0
+       }
+      ]
+     },
+     "amm": null,
+     "observedAt": "2026-10-24T08:59:27.000Z"
+    },
+    "testnet": {
+     "code": "ZEST",
+     "issuer": "rFAKEB26tD3Rk67sgGp9JMztHPz9cGa9c",
+     "funded": false,
+     "book": null
+    },
+    "corridor": {
+     "stage": "entered",
+     "recommendation": "Hold: spoke unavailable",
+     "mode": "SIMULATION",
+     "engineLabel": "Temporary demo adapter (fixture)"
+    },
+    "flows": {
+     "validated": 0,
+     "mainnetObserved": 0,
+     "liveTestnet": 0,
+     "titanShare": null,
+     "rivalShare": null
+    },
+    "alerts": [
+     {
+      "severity": "high",
+      "text": "Issuer not found; spoke blocked"
+     }
+    ]
+   },
+   "transactions": []
+  }
+ },
+ "flows": {
+  "flows": [
+   {
+    "hash": "9AC355A867FC0233408A73B563BD24CEDFCD2E60C690EE1BF708B8AA88C34A92",
+    "ledger": 99200039,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:52:07.238Z",
+    "from": {
+     "currency": "IRIS",
+     "issuer": "rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N"
+    },
+    "to": {
+     "currency": "EMBR",
+     "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "4388.54",
+     "currency": "EMBR"
+    },
+    "rate": 1.93831,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0mwtRZQHdNkDQMPtLuT7cEwhB5",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK1QQpkULjKMVpy31Jj9RuULtpx1",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK2nD5i5X2FQZQgN2Pj7E4msBNyq",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 1255,
+     "asksXrp": 4725
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/9AC355A867FC0233408A73B563BD24CEDFCD2E60C690EE1BF708B8AA88C34A92",
+    "spokeIds": [
+     "mainnet:IRIS:rFAKEA09dDPXwaJqBLX7ygka5WmTqbQ9N",
+     "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    ]
+   },
+   {
+    "hash": "129146B20E117FE927C0EA1E4C2DA2F2BC158CE05D14A3382B0319B29BB7A70C",
+    "ledger": 99200036,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:48:01.483Z",
+    "from": {
+     "currency": "CRUX",
+     "issuer": "rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL"
+    },
+    "to": {
+     "currency": "GLOW",
+     "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "2351.2",
+     "currency": "GLOW"
+    },
+    "rate": 0.323727,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0UFGAdtFqhzg7DHJYDbFoPUnGr",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK15t9bqvEJBVj9x6Lt7d1UctQai",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 15103,
+     "asksXrp": 1642
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/129146B20E117FE927C0EA1E4C2DA2F2BC158CE05D14A3382B0319B29BB7A70C",
+    "spokeIds": [
+     "mainnet:CRUX:rFAKEA03uVLZy5mz5wijc1Ngv7JsVeEwL",
+     "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+    ]
+   },
+   {
+    "hash": "24E6CBC03B710D044E1BECDF4388EF1F1198C013A592E7ADF8CCCB238CF8B05A",
+    "ledger": 6100033,
+    "network": "testnet",
+    "kind": "LIVE_TESTNET",
+    "at": "2026-10-24T08:43:46.926Z",
+    "from": {
+     "currency": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    },
+    "to": {
+     "currency": "NOVA",
+     "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    },
+    "viaXrp": null,
+    "delivered": {
+     "value": "190",
+     "currency": "NOVA"
+    },
+    "rate": 0.600728,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0QBTrcaNK3UxwNS2XSmKWeSVT5",
+      "role": "rival"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 9040,
+     "asksXrp": 6671
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/24E6CBC03B710D044E1BECDF4388EF1F1198C013A592E7ADF8CCCB238CF8B05A",
+    "spokeIds": [
+     "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+     "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    ]
+   },
+   {
+    "hash": "14AA2669D7E310459F72CB26B94C8E5AE2C283D110912D360BBCF078515E8A9B",
+    "ledger": 99200030,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:40:14.084Z",
+    "from": {
+     "currency": "FERN",
+     "issuer": "rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY"
+    },
+    "to": {
+     "currency": "HALO",
+     "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "178.25",
+     "currency": "HALO"
+    },
+    "rate": 2.951389,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0g5C15L7KRF9KwVbCbG2Ysapde",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 17256,
+     "asksXrp": 13405
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/14AA2669D7E310459F72CB26B94C8E5AE2C283D110912D360BBCF078515E8A9B",
+    "spokeIds": [
+     "mainnet:FERN:rFAKEA0613cQ6M7vfcj12UrFyWdXoxuNY",
+     "mainnet:HALO:rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+    ]
+   },
+   {
+    "hash": "AA3D8BC1FCD4FB5AC49369C5C09FC46715533AF891090D663DF67C89690E8FC5",
+    "ledger": 99200027,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:36:41.537Z",
+    "from": {
+     "currency": "DUNE",
+     "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF"
+    },
+    "to": {
+     "currency": "EMBR",
+     "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "2194.99",
+     "currency": "EMBR"
+    },
+    "rate": 0.647671,
+    "partial": true,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0PLLi4RkdK7E316Y56GFnA5NP8",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK1UZPrYS979rUrbaxce3kLMyxBc",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK2hgknfRiLa3e4VxRiTMeBF5gUA",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 9134,
+     "asksXrp": 9329
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/AA3D8BC1FCD4FB5AC49369C5C09FC46715533AF891090D663DF67C89690E8FC5",
+    "spokeIds": [
+     "mainnet:DUNE:rFAKEA04gisitaMrKHKXtWjB8rPj7saSF",
+     "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    ]
+   },
+   {
+    "hash": "C93CF49889A27E516641244A0E2978805D83D7839F1AADE34F70FD73697690A2",
+    "ledger": 6100024,
+    "network": "testnet",
+    "kind": "LIVE_TESTNET",
+    "at": "2026-10-24T08:33:17.876Z",
+    "from": {
+     "currency": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    },
+    "to": {
+     "currency": "XRP",
+     "issuer": null
+    },
+    "viaXrp": false,
+    "delivered": {
+     "value": "1748.64",
+     "currency": "XRP"
+    },
+    "rate": 1.991068,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0XurW5jq7JvhR4EEQpP9uxJV9j",
+      "role": "titan"
+     },
+     {
+      "account": "rFAKEMK1Nz9ogepnHDwu9ivaBXPZFRTWz",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK2iNXJz4jTBdvtCS7CfH6JF35nL",
+      "role": "titan"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 14433,
+     "asksXrp": 2875
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/C93CF49889A27E516641244A0E2978805D83D7839F1AADE34F70FD73697690A2",
+    "spokeIds": [
+     "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    ]
+   },
+   {
+    "hash": "557C30EE3E6BC28ADEF9F2C2FFBC715A611BD8C9DE13DC6D24FB607EED1558AC",
+    "ledger": 99200021,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:29:16.215Z",
+    "from": {
+     "currency": "EMBR",
+     "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    },
+    "to": {
+     "currency": "AURA",
+     "issuer": "rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "4572.01",
+     "currency": "AURA"
+    },
+    "rate": 0.387639,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0VS5AYHGDVmc815XuduUL2CeUa",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK1D2vEed2qPeRQf1PZ1ofWcsHqy",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 9002,
+     "asksXrp": 19585
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/557C30EE3E6BC28ADEF9F2C2FFBC715A611BD8C9DE13DC6D24FB607EED1558AC",
+    "spokeIds": [
+     "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx",
+     "mainnet:AURA:rFAKEA01hBkFbUHySkZAGAzafaPPqnaDp"
+    ]
+   },
+   {
+    "hash": "3F4DA19A0D050EF8115F106A462C897E6388A282347311BAB929346C52F26F18",
+    "ledger": 99200018,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:25:47.110Z",
+    "from": {
+     "currency": "DUNE",
+     "issuer": "rFAKEA04gisitaMrKHKXtWjB8rPj7saSF"
+    },
+    "to": {
+     "currency": "JADE",
+     "issuer": "rFAKEA10fD1KTZmafXkzDRw3ySizovgBU"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "705.57",
+     "currency": "JADE"
+    },
+    "rate": 1.069941,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0bZx94N5pKGdkosVcDrwphj627",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK1BRYCrvojojKkgVuwndKH6Gk4E",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK2qwdFPSAGHsqEcdyHouFT2cTbJ",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 1153,
+     "asksXrp": 5815
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/3F4DA19A0D050EF8115F106A462C897E6388A282347311BAB929346C52F26F18",
+    "spokeIds": [
+     "mainnet:DUNE:rFAKEA04gisitaMrKHKXtWjB8rPj7saSF",
+     "mainnet:JADE:rFAKEA10fD1KTZmafXkzDRw3ySizovgBU"
+    ]
+   },
+   {
+    "hash": "8B24F6072845871E97450EA5E659AC6926F8A909BEFBB313E3FC42EBFEEE1BC4",
+    "ledger": 6100015,
+    "network": "testnet",
+    "kind": "LIVE_TESTNET",
+    "at": "2026-10-24T08:22:08.996Z",
+    "from": {
+     "currency": "NOVA",
+     "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    },
+    "to": {
+     "currency": "XRP",
+     "issuer": null
+    },
+    "viaXrp": false,
+    "delivered": {
+     "value": "1492.41",
+     "currency": "XRP"
+    },
+    "rate": 2.493078,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0SdiUVtufo5Dfyijg9dmyva1ry",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 12002,
+     "asksXrp": 7003
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/8B24F6072845871E97450EA5E659AC6926F8A909BEFBB313E3FC42EBFEEE1BC4",
+    "spokeIds": [
+     "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    ]
+   },
+   {
+    "hash": "10518EC28357BC0E9300FD1EA5E7E3CE727AC7346B841E416BBC39B7076173AD",
+    "ledger": 99200012,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:18:31.805Z",
+    "from": {
+     "currency": "GLOW",
+     "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+    },
+    "to": {
+     "currency": "EMBR",
+     "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "185.23",
+     "currency": "EMBR"
+    },
+    "rate": 2.680762,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0b3a52a5XM6vhDgx7ir6Uf3v91",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK1MU8YeSAFGs3iMpBX8tqyoJTBi",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK2HxT2m1rJor6rLQwVY8PUVNVuP",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 2319,
+     "asksXrp": 11516
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/10518EC28357BC0E9300FD1EA5E7E3CE727AC7346B841E416BBC39B7076173AD",
+    "spokeIds": [
+     "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42",
+     "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    ]
+   },
+   {
+    "hash": "F175D96B763D43F84666519233602E4DFB5DBA5ED92342A52F3C671C93659C28",
+    "ledger": 99200009,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:15:09.458Z",
+    "from": {
+     "currency": "HALO",
+     "issuer": "rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn"
+    },
+    "to": {
+     "currency": "GLOW",
+     "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "3137.1",
+     "currency": "GLOW"
+    },
+    "rate": 1.346572,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0FYBVf4bGRy77jUvCy9pLvwa4H",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 4516,
+     "asksXrp": 9677
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/F175D96B763D43F84666519233602E4DFB5DBA5ED92342A52F3C671C93659C28",
+    "spokeIds": [
+     "mainnet:HALO:rFAKEA08J4hNm9Bi2T479mrAwj66gkQfn",
+     "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+    ]
+   },
+   {
+    "hash": "62663AFCBC7BC70F3542A7CC5E38010574FA962B801BBC0F251303C4444DE0B7",
+    "ledger": 6100006,
+    "network": "testnet",
+    "kind": "LIVE_TESTNET",
+    "at": "2026-10-24T08:11:11.423Z",
+    "from": {
+     "currency": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    },
+    "to": {
+     "currency": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "1470.83",
+     "currency": "ONYX"
+    },
+    "rate": 0.109519,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0zhbaSizBeDG2mKuHDDBAA5E3R",
+      "role": "titan"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 5421,
+     "asksXrp": 1122
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/62663AFCBC7BC70F3542A7CC5E38010574FA962B801BBC0F251303C4444DE0B7",
+    "spokeIds": [
+     "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+     "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    ]
+   },
+   {
+    "hash": "3C48CD27D88BB972309B2850E9053EE0FEED11DC53342A61A5E1A3E742C12EE8",
+    "ledger": 99200003,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:07:51.405Z",
+    "from": {
+     "currency": "GLOW",
+     "issuer": "rFAKEA07WZoppBUL9szV43L2CPU67Hc42"
+    },
+    "to": {
+     "currency": "BRIK",
+     "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "5027.59",
+     "currency": "BRIK"
+    },
+    "rate": 0.4947,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK096yyM67DT3tDfpxikJReuPEWm",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK1ZUJKK8uMtLJzB2utS8gtRqzWa",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 20009,
+     "asksXrp": 15404
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/3C48CD27D88BB972309B2850E9053EE0FEED11DC53342A61A5E1A3E742C12EE8",
+    "spokeIds": [
+     "mainnet:GLOW:rFAKEA07WZoppBUL9szV43L2CPU67Hc42",
+     "mainnet:BRIK:rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+    ]
+   },
+   {
+    "hash": "7AEB738CF501EBBBFA030650DDF5583C5AD2D2D78523185D5872FE3F9EDB0105",
+    "ledger": 99200000,
+    "network": "mainnet",
+    "kind": "MAINNET_OBSERVED",
+    "at": "2026-10-24T08:04:04.720Z",
+    "from": {
+     "currency": "EMBR",
+     "issuer": "rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx"
+    },
+    "to": {
+     "currency": "BRIK",
+     "issuer": "rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+    },
+    "viaXrp": null,
+    "delivered": {
+     "value": "1612.27",
+     "currency": "BRIK"
+    },
+    "rate": 1.887897,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0Hm77CAFmDV3FRxtVZpuMpwaka",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK1dasT4KKChFMKqS4eeRyYrazak",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK22CDQBjNyi2uofygEzvVQH4qdF",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 19519,
+     "asksXrp": 6054
+    },
+    "explorer": "https://livenet.xrpl.org/transactions/7AEB738CF501EBBBFA030650DDF5583C5AD2D2D78523185D5872FE3F9EDB0105",
+    "spokeIds": [
+     "mainnet:EMBR:rFAKEA05Eb17ekA27wGsLAwBbNKieD8dx",
+     "mainnet:BRIK:rFAKEA02L2xCsk5EdaM28QogA9vQ5eDLU"
+    ]
+   }
+  ]
+ },
+ "replay": {
+  "mode": "REPLAY",
+  "sequence": [
+   {
+    "hash": "F9337DE189BA1FE2304B623B0B36166BE4812D9EDA25BB246DF9594804C48179",
+    "ledger": 6101500,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:00.000Z",
+    "from": {
+     "currency": "XRP",
+     "issuer": null
+    },
+    "to": {
+     "currency": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    },
+    "viaXrp": false,
+    "delivered": {
+     "value": "4830.39",
+     "currency": "QUIL"
+    },
+    "rate": 1.988708,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0L3bHVjDwPSLsBc3JBsG1axrFf",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK12zaMmSqELKt5Ajx7bDxLFeeFQ",
+      "role": "other"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 1314,
+     "asksXrp": 17893
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/F9337DE189BA1FE2304B623B0B36166BE4812D9EDA25BB246DF9594804C48179",
+    "seq": 0,
+    "offsetMs": 0,
+    "spokeIds": [
+     "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    ]
+   },
+   {
+    "hash": "33A7B7CFD126D52B3B58B5B4147FCE17FF16431F45E22E0DFEF936FA572A72D9",
+    "ledger": 6101503,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:01.500Z",
+    "from": {
+     "currency": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    },
+    "to": {
+     "currency": "PIKE",
+     "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "4663.65",
+     "currency": "PIKE"
+    },
+    "rate": 1.983295,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0ZNGXXJfEKeB9DmZ3Z8HCJNQd9",
+      "role": "titan"
+     },
+     {
+      "account": "rFAKEMK19MHE92aJcNoGx7Ci6pP6vnnXe",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK2UVaCr3i58FtXgzAejoeWNf39U",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 4829,
+     "asksXrp": 9564
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/33A7B7CFD126D52B3B58B5B4147FCE17FF16431F45E22E0DFEF936FA572A72D9",
+    "seq": 1,
+    "offsetMs": 1500,
+    "spokeIds": [
+     "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+     "testnet:PIKE:rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+    ]
+   },
+   {
+    "hash": "25CE3A9566E9A15E9D66AB8759A7CE57E71CA91768E8B128D4E3AB474928D498",
+    "ledger": 6101506,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:03.000Z",
+    "from": {
+     "currency": "PIKE",
+     "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+    },
+    "to": {
+     "currency": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "669.28",
+     "currency": "ONYX"
+    },
+    "rate": 1.910958,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0JkMWzuDFtSd7XqvohNWmAxr3y",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 11229,
+     "asksXrp": 2953
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/25CE3A9566E9A15E9D66AB8759A7CE57E71CA91768E8B128D4E3AB474928D498",
+    "seq": 2,
+    "offsetMs": 3000,
+    "spokeIds": [
+     "testnet:PIKE:rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM",
+     "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    ]
+   },
+   {
+    "hash": "BDB39B9AA88C1864F53DB761934C4C5C15E7F58A686C6082431AE25C3FFE68FD",
+    "ledger": 6101509,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:04.500Z",
+    "from": {
+     "currency": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    },
+    "to": {
+     "currency": "NOVA",
+     "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "3895.78",
+     "currency": "NOVA"
+    },
+    "rate": 2.907078,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0XPWncwNdQq3MS4DCYsS7sNUyZ",
+      "role": "titan"
+     },
+     {
+      "account": "rFAKEMK1WWHHoejydwSdoUkojzeeiyRiz",
+      "role": "rival"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 19407,
+     "asksXrp": 18035
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/BDB39B9AA88C1864F53DB761934C4C5C15E7F58A686C6082431AE25C3FFE68FD",
+    "seq": 3,
+    "offsetMs": 4500,
+    "spokeIds": [
+     "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+     "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    ]
+   },
+   {
+    "hash": "3FA9B93E88C8B0CB8AE85EE00A97183BF96E6976C6A73D66DD021E767F4F1C7C",
+    "ledger": 6101512,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:06.000Z",
+    "from": {
+     "currency": "XRP",
+     "issuer": null
+    },
+    "to": {
+     "currency": "XENO",
+     "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+    },
+    "viaXrp": false,
+    "delivered": {
+     "value": "3297.48",
+     "currency": "XENO"
+    },
+    "rate": 1.079545,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK09rj36PeV7HyZuSpaShUXs9oGt",
+      "role": "titan"
+     },
+     {
+      "account": "rFAKEMK1kZpR3LgyHshZxkzCJiRjNbo5g",
+      "role": "titan"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 8018,
+     "asksXrp": 9496
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/3FA9B93E88C8B0CB8AE85EE00A97183BF96E6976C6A73D66DD021E767F4F1C7C",
+    "seq": 4,
+    "offsetMs": 6000,
+    "spokeIds": [
+     "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+    ]
+   },
+   {
+    "hash": "58808EE4D9887926A2DA75EEE327161425449258AA53F5FD5AC1FAEDACC691F9",
+    "ledger": 6101515,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:07.500Z",
+    "from": {
+     "currency": "XENO",
+     "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+    },
+    "to": {
+     "currency": "WISP",
+     "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "5044.24",
+     "currency": "WISP"
+    },
+    "rate": 0.43701,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0dqHNpRyqHMFLs8F1Qh8UhHYU2",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK18z7rGd3gGBFjnt2iMTasVZCfm",
+      "role": "titan"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 8188,
+     "asksXrp": 13882
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/58808EE4D9887926A2DA75EEE327161425449258AA53F5FD5AC1FAEDACC691F9",
+    "seq": 5,
+    "offsetMs": 7500,
+    "spokeIds": [
+     "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+     "testnet:WISP:rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+    ]
+   },
+   {
+    "hash": "C1EEAFD63EAD220AD70EF3102B0ED21983954CEF37F36B4494F271F8A1480F1F",
+    "ledger": 6101518,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:09.000Z",
+    "from": {
+     "currency": "NOVA",
+     "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    },
+    "to": {
+     "currency": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "4106.05",
+     "currency": "QUIL"
+    },
+    "rate": 0.123748,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0yVqLBRStbmpEAQv42Bick4dK3",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 18693,
+     "asksXrp": 2998
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/C1EEAFD63EAD220AD70EF3102B0ED21983954CEF37F36B4494F271F8A1480F1F",
+    "seq": 6,
+    "offsetMs": 9000,
+    "spokeIds": [
+     "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi",
+     "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    ]
+   },
+   {
+    "hash": "C8255AAB28D51A2ED40346297F3B4B7123B08DEFE93D97DEF95EA2EFB05F826D",
+    "ledger": 6101521,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:10.500Z",
+    "from": {
+     "currency": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    },
+    "to": {
+     "currency": "PIKE",
+     "issuer": "rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "3335.85",
+     "currency": "PIKE"
+    },
+    "rate": 1.682487,
+    "partial": true,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0GeTHHSKSwY6wJ8eF2kwpfGRuu",
+      "role": "titan"
+     },
+     {
+      "account": "rFAKEMK1vjhfGCH3ednegKC87NdTYZ2RR",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK2tE5SWXd3E12JLStWTtuvBi9od",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 18061,
+     "asksXrp": 2650
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/C8255AAB28D51A2ED40346297F3B4B7123B08DEFE93D97DEF95EA2EFB05F826D",
+    "seq": 7,
+    "offsetMs": 10500,
+    "spokeIds": [
+     "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m",
+     "testnet:PIKE:rFAKEB16FNHE4xR2wzWLWvYzzD9yRJfBM"
+    ]
+   },
+   {
+    "hash": "1CA5656DF5300FEF746F08EBFEE432FE6486ABD0151B0C338894198E536A56E1",
+    "ledger": 6101524,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:12.000Z",
+    "from": {
+     "currency": "XRP",
+     "issuer": null
+    },
+    "to": {
+     "currency": "ONYX",
+     "issuer": "rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    },
+    "viaXrp": false,
+    "delivered": {
+     "value": "766.97",
+     "currency": "ONYX"
+    },
+    "rate": 1.187311,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0jVfWgbq3pWfukJZm2TvTbMNhi",
+      "role": "titan"
+     },
+     {
+      "account": "rFAKEMK1jTvK8dnYz8z4M7TEdse1F6w9n",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 6031,
+     "asksXrp": 4292
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/1CA5656DF5300FEF746F08EBFEE432FE6486ABD0151B0C338894198E536A56E1",
+    "seq": 8,
+    "offsetMs": 12000,
+    "spokeIds": [
+     "testnet:ONYX:rFAKEB15H7xk4QnM6tT78Vfcd67vDf28m"
+    ]
+   },
+   {
+    "hash": "BB9AE1D50617FDA97FEE4DF04D2351F9C41388460FFB68148B648345037E571F",
+    "ledger": 6101527,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:13.500Z",
+    "from": {
+     "currency": "QUIL",
+     "issuer": "rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3"
+    },
+    "to": {
+     "currency": "NOVA",
+     "issuer": "rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "2363.9",
+     "currency": "NOVA"
+    },
+    "rate": 1.27643,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK06XeJc23iaQfowHFMxq7PCrBBp",
+      "role": "rival"
+     },
+     {
+      "account": "rFAKEMK1QYvi4XNmXZxvZZTcw3mZkpJcR",
+      "role": "amm"
+     },
+     {
+      "account": "rFAKEMK2P6utCXvumsq1jRcPu42wXLt2z",
+      "role": "rival"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 19721,
+     "asksXrp": 15825
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/BB9AE1D50617FDA97FEE4DF04D2351F9C41388460FFB68148B648345037E571F",
+    "seq": 9,
+    "offsetMs": 13500,
+    "spokeIds": [
+     "testnet:QUIL:rFAKEB17UCpmEhEZ58pARY7h8rh4LbJo3",
+     "testnet:NOVA:rFAKEB14uVZvWiVK6DTVXnqdxZb8FaHpi"
+    ]
+   },
+   {
+    "hash": "0CFDA8DB0881808B4C23815649FBC9619F5BA2C7D06561BBDAA046305A7F0399",
+    "ledger": 6101530,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:15.000Z",
+    "from": {
+     "currency": "WISP",
+     "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+    },
+    "to": {
+     "currency": "XENO",
+     "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "2907.34",
+     "currency": "XENO"
+    },
+    "rate": 0.243398,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0pGyH7h7KbhREhXSGQzdCZ8VMc",
+      "role": "other"
+     },
+     {
+      "account": "rFAKEMK1Djnq3YwDx7WiMXeHWhsTncAMf",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 9323,
+     "asksXrp": 7526
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/0CFDA8DB0881808B4C23815649FBC9619F5BA2C7D06561BBDAA046305A7F0399",
+    "seq": 10,
+    "offsetMs": 15000,
+    "spokeIds": [
+     "testnet:WISP:rFAKEB23u4bmz18pTwhEaih9AZymT5Jna",
+     "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+    ]
+   },
+   {
+    "hash": "08FE8220BE4D90F1A0FEB6E1D40D1213CC5C37CBC647E094945D7E4BA56C1608",
+    "ledger": 6101533,
+    "network": "testnet",
+    "kind": "REPLAY",
+    "at": "2026-10-24T09:00:16.500Z",
+    "from": {
+     "currency": "XENO",
+     "issuer": "rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR"
+    },
+    "to": {
+     "currency": "WISP",
+     "issuer": "rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+    },
+    "viaXrp": true,
+    "delivered": {
+     "value": "1075.25",
+     "currency": "WISP"
+    },
+    "rate": 2.139344,
+    "partial": false,
+    "offerOwners": [
+     {
+      "account": "rFAKEMK0F3UzfFfRF2XLKmZjqboch9Tg9",
+      "role": "amm"
+     }
+    ],
+    "depthAfter": {
+     "bidsXrp": 16156,
+     "asksXrp": 9675
+    },
+    "explorer": "https://testnet.xrpl.org/transactions/08FE8220BE4D90F1A0FEB6E1D40D1213CC5C37CBC647E094945D7E4BA56C1608",
+    "seq": 11,
+    "offsetMs": 16500,
+    "spokeIds": [
+     "testnet:XENO:rFAKEB246haYwrf6Q2Vz9cCvY2vcQhELR",
+     "testnet:WISP:rFAKEB23u4bmz18pTwhEaih9AZymT5Jna"
+    ]
+   }
+  ]
+ }
+}

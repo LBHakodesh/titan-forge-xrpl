@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "strategy-response.schema.json",
+  "title": "StrategyResponse",
+  "type": "object",
+  "required": ["source", "authentic", "mode", "allocations", "recommendations"],
+  "properties": {
+    "source": { "$ref": "common.schema.json#/$defs/EngineSource" },
+    "authentic": { "type": "boolean" },
+    "mode": { "enum": ["SIMULATION", "REPLAY"] },
+    "allocations": {
+      "type": "array", "maxItems": 64,
+      "items": {
+        "type": "object", "required": ["marketId", "allocation"],
+        "properties": { "marketId": { "$ref": "common.schema.json#/$defs/MarketRef" }, "allocation": { "$ref": "allocation.schema.json" } },
+        "additionalProperties": false
+      }
+    },
+    "recommendations": { "type": "array", "maxItems": 64, "items": { "$ref": "recommendation.schema.json" } }
+  },
+  "additionalProperties": false
+}

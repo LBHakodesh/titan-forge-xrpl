@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rpc-response.schema.json",
+  "title": "RpcResponse",
+  "description": "One JSON line on the engine's stdout (or the HTTP response body). Exactly one of result/error.",
+  "type": "object",
+  "required": ["v", "id", "ok"],
+  "properties": {
+    "v": { "const": 1 },
+    "id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "ok": { "type": "boolean" },
+    "result": { "type": "object" },
+    "error": {
+      "type": "object", "required": ["code", "message"],
+      "properties": {
+        "code": { "enum": ["BAD_REQUEST", "UNSUPPORTED_VERSION", "UNKNOWN_METHOD", "NOT_READY", "MODE_VIOLATION", "TIMEOUT", "INTERNAL"] },
+        "message": { "type": "string", "maxLength": 1000 },
+        "retryable": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    { "properties": { "ok": { "const": true } }, "required": ["result"] },
+    { "properties": { "ok": { "const": false } }, "required": ["error"] }
+  ],
+  "additionalProperties": false
+}

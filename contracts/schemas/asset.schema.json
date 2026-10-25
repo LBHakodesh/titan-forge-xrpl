@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "asset.schema.json",
+  "title": "Asset",
+  "description": "One side of a pair: native XRP or an issued token.",
+  "oneOf": [
+    { "type": "object", "required": ["currency"], "properties": { "currency": { "const": "XRP" } }, "additionalProperties": false },
+    { "$ref": "token-ref.schema.json" }
+  ]
+}

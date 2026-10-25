@@ -1,0 +1,1 @@
+{"v":1,"id":"tf-1","method":"strategy","params":{"markets":[{"marketId":"currencies","capitalUsd":5000}],"mode":"SIMULATION"},"deadlineMs":2000}

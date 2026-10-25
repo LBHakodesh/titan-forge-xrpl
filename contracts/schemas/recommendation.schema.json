@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recommendation.schema.json",
+  "title": "Recommendation",
+  "description": "Advisory output of the intelligence engines. Never executed without Guardian approval. Known actions: reallocate, hold, add_ring, retire_ring, advance_stage, revert_stage, pause.",
+  "type": "object",
+  "required": ["source", "action", "rationale", "mode"],
+  "properties": {
+    "source": { "$ref": "common.schema.json#/$defs/EngineSource" },
+    "action": { "type": "string", "pattern": "^[a-z][a-z_]{1,31}$" },
+    "fromMarket": { "$ref": "common.schema.json#/$defs/MarketRef" },
+    "toMarket": { "$ref": "common.schema.json#/$defs/MarketRef" },
+    "amountUsd": { "$ref": "common.schema.json#/$defs/Usd" },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "mode": { "enum": ["SIMULATION", "REPLAY"] }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.schema.json",
+  "title": "Common",
+  "description": "Shared enums and primitives. Enums are DERIVED from public/domain.js; test/engine.test.mjs fails if they drift.",
+  "$defs": {
+    "Mode": { "type": "string", "enum": ["LIVE_TESTNET", "SIMULATION", "REPLAY", "MAINNET_OBSERVED"], "description": "Every number carries its mode. Hypothetical capital or fills are never LIVE_TESTNET." },
+    "RingId": { "type": "string", "enum": ["VELOCITY", "BRIDGE", "EARN", "MONEY", "DEEP", "CEILING"] },
+    "StageId": { "type": "string", "enum": ["entered", "spoke", "growing_spoke", "corridor", "mature", "standby"] },
+    "MarketId": { "type": "string", "enum": ["currencies", "securities", "real_estate", "precious_metals"] },
+    "TierId": { "type": "string", "enum": ["T1", "T2", "T3"] },
+    "ProfileId": { "type": "string", "enum": ["retail", "adv_retail", "pro_mm", "family_office", "institutional"] },
+    "MarketRef": { "type": "string", "minLength": 1, "maxLength": 64, "description": "A MarketId, or a launched token market as 'token:<CODE>'.", "pattern": "^([a-z_]+|token:[A-Za-z0-9]{3})$" },
+    "Usd": { "type": "number", "minimum": 0 },
+    "Timestamp": { "type": "string", "format": "date-time" },
+    "ClassicAddress": { "type": "string", "pattern": "^r[1-9A-HJ-NP-Za-km-z]{24,34}$" },
+    "CurrencyCode": { "type": "string", "pattern": "^([A-Za-z0-9?!@#$%^&*<>(){}\\[\\]|]{3}|[0-9A-F]{40})$", "description": "XRPL standard 3-char code (not 'XRP') or 160-bit hex code." },
+    "EngineSource": { "type": "string", "minLength": 1, "maxLength": 120 }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tx-evidence.schema.json",
+  "title": "TxEvidence",
+  "description": "Proof that a transaction was validated on XRPL Testnet. Explorer links must point at the Testnet explorer.",
+  "type": "object",
+  "required": ["hash", "result", "ledger", "validated", "explorer"],
+  "properties": {
+    "hash": { "type": "string", "pattern": "^[0-9A-F]{64}$" },
+    "result": { "type": "string", "pattern": "^(tes|tec|tef|tel|tem|ter)[A-Z_]+$" },
+    "ledger": { "type": "integer", "minimum": 1 },
+    "validated": { "type": "boolean" },
+    "explorer": { "type": "string", "format": "uri", "pattern": "^https://testnet\\.xrpl\\.org/transactions/[0-9A-F]{64}$" },
+    "mode": { "const": "LIVE_TESTNET" },
+    "step": { "type": "string" }
+  },
+  "additionalProperties": false
+}

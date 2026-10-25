@@ -1,0 +1,165 @@
+{
+  "note": "Captured automatically from real read-only vendor probes (POST /api/vendors/:id/probe). Never hand-edited or fabricated. No secrets.",
+  "samples": {
+    "xrpl": {
+      "vendor": "xrpl",
+      "verified": true,
+      "capturedAt": "2026-10-25T10:27:57.486Z",
+      "latencyMs": 335,
+      "mode": "MAINNET_OBSERVED",
+      "source": "wss://xrplcluster.com via lib/mainnet-observer.mjs (read allowlist)",
+      "probe": "server_info, ledger, book_offers, amm_info, account_offers, tx, feature",
+      "result": {
+        "network": {
+          "networkId": 0,
+          "buildVersion": "3.4.1",
+          "serverState": "full"
+        },
+        "validatedLedger": {
+          "index": 107891414,
+          "hash": "E38FEC50ECC0B78C814DEFB325E7F4471917F0D9536ABC6FFEB0D08DB01223DE",
+          "closeTime": "2026-10-25T10:27:51Z"
+        },
+        "bookOffers": {
+          "pair": "RLUSD (taker gets) / XRP (taker pays)",
+          "count": 5,
+          "top": [
+            {
+              "account": "rwDTJYSd2SR8t4or81Wb7zgFEyP9ZKhcnW",
+              "quality": "774875.4387732172",
+              "takerGets": "59.023329",
+              "takerGetsFunded": null,
+              "ownerFunds": "138.2385368320126",
+              "fullyFunded": true
+            },
+            {
+              "account": "rLhB6qhWbVsRSRePxPLhXJFtpk2uLqpsQD",
+              "quality": "774893.4521503294",
+              "takerGets": "0.61944",
+              "takerGetsFunded": null,
+              "ownerFunds": "220.978741441061",
+              "fullyFunded": true
+            },
+            {
+              "account": "rrhXifoGRLKEfjkjBA9QM6x9MGfJVLDy5p",
+              "quality": "774929.5159695336",
+              "takerGets": "19.522862",
+              "takerGetsFunded": null,
+              "ownerFunds": "8628.220614192663",
+              "fullyFunded": true
+            }
+          ]
+        },
+        "ammInfo": {
+          "account": "rhWTXC2m2gGGA9WozUaoMm6kLAVPb1tcS3",
+          "xrpDrops": "1840533640733",
+          "rlusd": "2378227.543248244",
+          "tradingFee": 214,
+          "lpTokenSupply": "1771786383.168214"
+        },
+        "accountOffers": {
+          "account": "rwDTJYSd2SR8t4or81Wb7zgFEyP9ZKhcnW",
+          "count": 2
+        },
+        "txMetadata": {
+          "hash": "341286F7920B8243616D73B17D92AE5F83814ACCE1E809E2EDE703AD6AEB94DB",
+          "type": "OfferCreate",
+          "result": "tesSUCCESS",
+          "affectedNodes": 10,
+          "validated": true,
+          "ledger": 107891413,
+          "explorer": "https://livenet.xrpl.org/transactions/341286F7920B8243616D73B17D92AE5F83814ACCE1E809E2EDE703AD6AEB94DB"
+        },
+        "amendments": {
+          "total": 107,
+          "enabled": 97,
+          "watched": {
+            "AMM": "enabled",
+            "AMMClawback": "enabled",
+            "Clawback": "enabled",
+            "DID": "enabled",
+            "PriceOracle": "enabled",
+            "PermissionedDomains": "enabled",
+            "PermissionedDEX": "enabled",
+            "TokenEscrow": "enabled",
+            "SingleAssetVault": "supported, not enabled",
+            "Batch": "not reported",
+            "LendingProtocol": "supported, not enabled",
+            "DynamicNFT": "enabled",
+            "Credentials": "enabled"
+          }
+        }
+      },
+      "testnetCheck": {
+        "mode": "LIVE_TESTNET",
+        "hash": "63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270",
+        "validated": true,
+        "result": "tesSUCCESS",
+        "ledger": 21773074,
+        "explorer": "https://testnet.xrpl.org/transactions/63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270"
+      }
+    },
+    "t54": {
+      "vendor": "t54",
+      "verified": true,
+      "capturedAt": "2026-10-25T10:27:57.828Z",
+      "latencyMs": 179,
+      "mode": "LIVE_TESTNET",
+      "source": "https://xrpl-facilitator-testnet.t54.ai/supported",
+      "probe": "GET /supported (public discovery, no payment)",
+      "result": {
+        "kinds": [
+          {
+            "x402Version": 2,
+            "scheme": "exact",
+            "network": "xrpl:1"
+          },
+          {
+            "x402Version": 2,
+            "scheme": "upto",
+            "network": "xrpl:1"
+          },
+          {
+            "x402Version": 2,
+            "scheme": "batch-settlement",
+            "network": "xrpl:1"
+          }
+        ],
+        "extensions": [
+          "x402Secure"
+        ],
+        "exactTestnetSupported": true,
+        "compatibleWithTgMerchant": "Yes: x402 v2, exact, xrpl:1 — same wire format as lib/x402."
+      }
+    },
+    "ledger": {
+      "vendor": "ledger",
+      "verified": true,
+      "capturedAt": "2026-10-25T10:27:58.016Z",
+      "latencyMs": 1520,
+      "mode": "SIMULATION",
+      "source": "cdn.jsdelivr.net (Ledger DMK ESM builds)",
+      "probe": "GET each pinned module, check its expected export",
+      "result": {
+        "dmk": {
+          "url": "https://cdn.jsdelivr.net/npm/@ledgerhq/device-management-kit@1.9.0/+esm",
+          "http": 200,
+          "bytes": 191992,
+          "exportFound": "DeviceManagementKitBuilder"
+        },
+        "webHid": {
+          "url": "https://cdn.jsdelivr.net/npm/@ledgerhq/device-transport-kit-web-hid@1.2.4/+esm",
+          "http": 200,
+          "bytes": 10870,
+          "exportFound": "webHidTransportFactory"
+        },
+        "signerXrp": {
+          "url": "https://cdn.jsdelivr.net/npm/@ledgerhq/device-signer-kit-xrp@0.2.0/+esm",
+          "http": 200,
+          "bytes": 8916,
+          "exportFound": "SignerXrpBuilder"
+        }
+      }
+    }
+  }
+}

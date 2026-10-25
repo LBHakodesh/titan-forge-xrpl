@@ -1,0 +1,28 @@
+{
+  "schema": "titan-forge/quicknode-stream-filter@1",
+  "title": "QuickNode Streams filter: XRPL transactions touching Titan Ghost maker / router accounts",
+  "status": "READY_TO_DEPLOY — NOT DEPLOYED. No stream has been created. Creating one is a separate, operator-approved step in the QuickNode dashboard or Streams REST API.",
+  "network": "XRP Ledger Testnet (the demo maker/router accounts live on Testnet; use Mainnet only for Titan Ghost's own public Mainnet addresses)",
+  "dataset": "Block (Ledger)",
+  "docs": [
+    "https://www.quicknode.com/docs/streams",
+    "https://www.quicknode.com/docs/streams/filters",
+    "https://www.quicknode.com/docs/streams/supported-chains"
+  ],
+  "addresses": {
+    "source": "GET /api/status at runtime -> accounts.<role>.address (public r-addresses only; seeds never leave the server)",
+    "roles": ["maker", "router", "router2", "router3"],
+    "placeholder": "__TF_ACCOUNTS__",
+    "render": "renderStreamFilter(statusJson) in lib/vendors/quicknode.mjs, or GET /api/vendors/quicknode/stream-filter on a running node"
+  },
+  "filterFunction": "function main(stream) {\n  // Titan Forge accounts (public addresses, filled in from GET /api/status at render time).\n  const WATCH = new Set(__TF_ACCOUNTS__);\n  const out = [];\n  const ledgers = Array.isArray(stream.data) ? stream.data : [stream.data];\n  for (const l of ledgers) {\n    if (!l) continue;\n    const txs = Array.isArray(l.transactions) ? l.transactions : Array.isArray(l) ? l : [];\n    for (const t of txs) {\n      const tx = t.tx_json || t.tx || t;\n      const meta = t.meta || t.metaData || {};\n      const touched = new Set([tx.Account, tx.Destination].filter(Boolean));\n      for (const n of meta.AffectedNodes || []) {\n        const node = n.ModifiedNode || n.CreatedNode || n.DeletedNode || {};\n        const f = node.FinalFields || node.NewFields || {};\n        if (f.Account) touched.add(f.Account);\n      }\n      const hit = [...touched].filter((a) => WATCH.has(a));\n      if (!hit.length) continue;\n      out.push({ hash: t.hash || tx.hash, ledger: l.ledger_index || t.ledger_index || null, type: tx.TransactionType, result: meta.TransactionResult || null, accounts: hit });\n    }\n  }\n  return out.length ? { titanForge: out } : null;\n}",
+  "destination": {
+    "type": "webhook",
+    "note": "Point at an authenticated HTTPS receiver. This node listens on 127.0.0.1 and exposes no webhook route today, so nothing would receive it yet."
+  },
+  "safety": [
+    "Read-only: a Stream only delivers ledger data. It cannot sign, submit or move funds.",
+    "Addresses are public r-addresses read from GET /api/status. No seeds, keys or tokens are in this template.",
+    "The input shape (stream.data[].transactions[] with tx_json/meta) should be confirmed with the dashboard's 'Test filter' against a real Testnet ledger before enabling."
+  ]
+}

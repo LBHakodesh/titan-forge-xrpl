@@ -1,0 +1,244 @@
+{
+  "title": "XDLC: XRPL Dynamic Liquidity Corridors",
+  "xls": "XLS-XXXX (unassigned)",
+  "category": "Amendment",
+  "authors": "GYW1313 (Titan Forge team)",
+  "status": {
+    "label": "Draft-Local (not submitted)",
+    "submitted": false,
+    "reviewed": false,
+    "implementedInXrpld": false,
+    "activated": false,
+    "note": "Proposed amendment drafted locally. Not submitted to XRPL-Standards, not reviewed, not implemented in xrpld, not activated on any network. The Titan Forge application-level corridor lifecycle is evidence of usefulness, not the amendment."
+  },
+  "modelVersion": "0.2.0-draft",
+  "design": "Neutral protocol: a corridor of provider liquidity pegged to an existing XRPL AMM that undercuts it by ImprovementBps at every depth level. Any organization can provide liquidity; GYW1313 (Titan Ghost, TG Intelligence) is one participant, off-ledger.",
+  "capabilities": [
+    {
+      "id": "C1",
+      "name": "AMM-pegged corridor liquidity",
+      "summary": "For a pair with an XLS-30 AMM, the payment engine synthesizes a corridor quote at the AMM's current spot quality (including its trading fee) improved by ImprovementBps (>= 1 bp), at every depth level. No repricing transactions, no directory entries for quotes, no oracle."
+    },
+    {
+      "id": "C2",
+      "name": "Wallet-held commitments",
+      "summary": "Providers keep funds in their own accounts; a ledger hold makes committed funds unspendable by any other path (the accountHolds / xrpLiquid change). Flexible (Tier 1-like) or term (Tier 2-like)."
+    },
+    {
+      "id": "C3",
+      "name": "Activation-start terms",
+      "summary": "LockDuration starts when the corridor becomes ACTIVE, or at commit time if already ACTIVE. Before activation, withdrawal is free. Providers can join while FORMING or ACTIVE."
+    },
+    {
+      "id": "C4",
+      "name": "Prorated early-exit fee to a tenure-weighted fee pool",
+      "summary": "fee = withdrawn x ExitFeeBps x remaining/term (fixed at commit, cap 1000 bps, rounded down), charged atomically in CorridorWithdraw, distributed to the providers who stay by tenure through an O(1) accumulator; claim on withdraw or via CorridorClaim."
+    },
+    {
+      "id": "C5",
+      "name": "Tenure fill priority",
+      "summary": "At the same corridor level, commitments fill in (TenureStart, CommitmentID) order, bounded per step."
+    },
+    {
+      "id": "C6",
+      "name": "Provider limits",
+      "summary": "Per commitment MinRate (base side) or MaxRate (Asset2 side) as the worst acceptable price, and MaxPerLevel; checked on executed amounts."
+    },
+    {
+      "id": "C7",
+      "name": "Deterministic volatility pause",
+      "summary": "A corridor stops quoting while the AMM price deviates more than PauseBps from a reference taken from AMM state in an earlier ledger (one candidate per ledger, promoted in a later ledger)."
+    },
+    {
+      "id": "C8",
+      "name": "Optional permissioned providers",
+      "summary": "A corridor may reference a Permissioned Domain (XLS-80); only members may commit. Takers are not restricted (corridor quotes sit in the open book)."
+    }
+  ],
+  "removedCapabilities": [
+    {
+      "name": "Group-funding threshold with automatic release",
+      "why": "Commander decision: terms start at activation and exit is priced, not prohibited. Nothing is locked before activation, so there is nothing to release. An optional activation gate remains."
+    },
+    {
+      "name": "Operator-placed offers bounded by the participant",
+      "why": "Corridor quotes are synthesized by the payment engine, so no operator places offers for providers. Bounded delegation, if ever needed, belongs to a general amendment."
+    }
+  ],
+  "offLedger": [
+    "TG Intelligence",
+    "which corridors to fund and how much capital",
+    "Titan Ghost risk and inventory management",
+    "customer tooling",
+    "any other operator's strategy software"
+  ],
+  "candidateLedgerEntries": [
+    {
+      "name": "LiquidityCorridor",
+      "reserve": "one owner reserve (corridor owner); fee pools held by a corridor pseudo-account (AMM / Vault precedent)"
+    },
+    {
+      "name": "CorridorCommitment",
+      "reserve": "one owner reserve (provider); one per (corridor, account, asset)"
+    }
+  ],
+  "candidateTransactions": [
+    {
+      "name": "CorridorCreate",
+      "signer": "owner"
+    },
+    {
+      "name": "CorridorCommit",
+      "signer": "provider"
+    },
+    {
+      "name": "CorridorWithdraw",
+      "signer": "provider"
+    },
+    {
+      "name": "CorridorClaim",
+      "signer": "provider"
+    },
+    {
+      "name": "CorridorAdvance",
+      "signer": "anyone (close: owner)"
+    },
+    {
+      "name": "CorridorDelete",
+      "signer": "owner"
+    }
+  ],
+  "newResultCodes": [
+    "tecCORRIDOR_STAGE",
+    "tecCORRIDOR_LIMIT",
+    "tecCORRIDOR_BOUND",
+    "tecCORRIDOR_ASSET",
+    "tecCORRIDOR_TERMS",
+    "tecCORRIDOR_NO_OP"
+  ],
+  "stages": [
+    "FORMING",
+    "ACTIVE",
+    "MATURED",
+    "CLOSED"
+  ],
+  "caps": {
+    "BPS": 10000,
+    "MIN_IMPROVEMENT_BPS": 1,
+    "MAX_IMPROVEMENT_BPS": 500,
+    "MAX_EXIT_FEE_BPS": 1000,
+    "MAX_PAUSE_BPS": 5000,
+    "MAX_LOCK_DURATION": 126230400,
+    "MAX_PARTICIPANTS": 512,
+    "DIR_PAGE_SIZE": 32,
+    "MAX_CORRIDORS_PER_BOOK": 4,
+    "MAX_CORRIDOR_LEVELS_PER_STEP": 16,
+    "MAX_COMMITMENTS_PER_LEVEL": 8,
+    "MAX_STEP_ITERATIONS": 64,
+    "MAX_TICKETS_PER_TX": 250,
+    "AMM_FEE_DEN": 100000,
+    "MAX_AMM_FEE": 1000,
+    "ACC_SCALE": "1000000000000000000"
+  },
+  "invariants": {
+    "count": 22,
+    "ids": [
+      "INV-1",
+      "INV-2",
+      "INV-3",
+      "INV-4",
+      "INV-5",
+      "INV-6",
+      "INV-7",
+      "INV-8",
+      "INV-9",
+      "INV-10",
+      "INV-11",
+      "INV-12",
+      "INV-13",
+      "INV-14",
+      "INV-15",
+      "INV-16",
+      "INV-17",
+      "INV-18",
+      "INV-19",
+      "INV-20",
+      "INV-21",
+      "INV-22"
+    ]
+  },
+  "gapAnalysis": {
+    "total": 20,
+    "amendmentRequired": 7,
+    "noAmendment": 8,
+    "otherAmendment": 3,
+    "removed": 2
+  },
+  "amendmentNecessaryFor": [
+    "G3 Liquidity that re-prices itself to the AMM at every depth (pegged / dynamic quotes)",
+    "G5 Self-custodial commitment: funds stay in the provider account but cannot be spent elsewhere",
+    "G6 Term commitment with a priced early exit (prorated fee) paid to the providers who stay",
+    "G7 Fill priority by tenure among providers at the same corridor level",
+    "G8 Provider-set limits on synthesized liquidity (worst price, max per depth level)",
+    "G9 Volatility guard without an oracle",
+    "G14 Lifecycle stage as consensus state"
+  ],
+  "vectors": {
+    "count": 80,
+    "groups": {
+      "gating": 1,
+      "preflight": 6,
+      "create": 3,
+      "commit": 16,
+      "holds": 3,
+      "lifecycle": 7,
+      "quote": 19,
+      "withdraw": 18,
+      "delete": 2,
+      "account": 1,
+      "issuer": 1,
+      "replay": 3
+    }
+  },
+  "tests": {
+    "file": "test/xdlc-spec.test.mjs",
+    "vectorTests": 80,
+    "propertyAndControlTests": 10,
+    "total": 90,
+    "seededRandomTransactions": 10000
+  },
+  "openQuestions": [
+    "Volatility pause reference: earlier-ledger AMM snapshot (chosen) vs. reading the parent ledger directly vs. a time-weighted reference; and whether BookStep may write the corridor SLE when the corridor did not fill.",
+    "Should the corridor also quote when the AMM is not the best non-corridor source (i.e. peg to the best of AMM and CLOB)? v1 pegs only to the AMM; a best-CLOB peg is future work with manipulation concerns.",
+    "Level definition in multi-path payments: one corridor level per Flow iteration (like AMM offers) vs. the model's spot-step levels.",
+    "Precision and storage type of the accumulator indices (model: 10^18 fixed point in arbitrary precision; xrpld: Number / 128-bit / STNumber?).",
+    "Exit fee while the AMM is unusable (model: waived when missing, empty or frozen) and whether an LP could empty the AMM to free providers from fees.",
+    "Issuer transfer fees (TransferRate) on exit fees and claims; frozen fee-pool pseudo-account lines.",
+    "Per-ledger fill caps per commitment (MaxPerLedger) as additional manipulation protection.",
+    "Whether ineligible commitments (MinRate not met) should count toward MAX_COMMITMENTS_PER_LEVEL (model: they do; a griefing vector mitigated by MinCommit and reserves)."
+  ],
+  "biggestRisk": "Payment-engine complexity and consensus risk: a second synthetic liquidity source inside BookStep, plus hold-awareness in every funding path.",
+  "excludedFromConsensus": [
+    "AI scoring",
+    "market recommendations",
+    "external price oracles",
+    "TG Intelligence / Titan Ghost proprietary logic",
+    "capital allocation decisions"
+  ],
+  "docs": [
+    "docs/XDLC_AMENDMENT_PROPOSAL.md",
+    "docs/XDLC_PROTOCOL_GAP_ANALYSIS.md",
+    "docs/XDLC_SECURITY_INVARIANTS.md",
+    "docs/XDLC_DETERMINISTIC_TESTS.md"
+  ],
+  "referenceModel": {
+    "path": "lib/xdlc-spec/model.mjs",
+    "tests": "test/xdlc-spec.test.mjs",
+    "note": "Executable specification model in JavaScript. Not xrpld code."
+  },
+  "verifiedFacts": {
+    "mainnetFeatures": "Read-only `feature` via the Titan Forge Mainnet observer (wss://xrplcluster.com), validated ledger 107895208, 2026-10-25 14:35 UTC: AMM, AMMClawback, BatchV1_1, PermissionDelegationV1_1, PermissionedDomains, PermissionedDEX, Credentials, TokenEscrow, PriceOracle enabled; SingleAssetVault, LendingProtocol, Sponsor, DynamicMPT not enabled; no Hooks, Smart Escrow or WASM feature listed.",
+    "rippledPrecedent": "XRPLF/rippled develop @ 1f46f75: src/libxrpl/tx/paths/ contains AMMLiquidity.cpp and AMMOffer.cpp; BookStep tries a synthetic AMM offer once per iteration before CLOB offers and skips AMM for permissioned-domain books."
+  },
+  "researchAccessed": "2026-10-25"
+}

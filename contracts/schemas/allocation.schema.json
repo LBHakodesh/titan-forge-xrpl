@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "allocation.schema.json",
+  "title": "Allocation",
+  "description": "Shape returned by engine.allocate() (today: allocateRings() in public/domain.js). Always hypothetical: SIMULATION or REPLAY.",
+  "type": "object",
+  "required": ["mode", "capitalUsd", "deployedUsd", "idleUsd", "dailyEarnUsd", "yieldBpsOnDeployed", "rings"],
+  "properties": {
+    "mode": { "enum": ["SIMULATION", "REPLAY"] },
+    "capitalUsd": { "$ref": "common.schema.json#/$defs/Usd" },
+    "deployedUsd": { "type": "number", "minimum": -0.000001 },
+    "idleUsd": { "type": "number", "minimum": -0.000001 },
+    "dailyEarnUsd": { "type": "number", "minimum": 0 },
+    "yieldBpsOnDeployed": { "type": "number", "minimum": 0 },
+    "rings": { "type": "array", "maxItems": 6, "items": { "$ref": "ring-metrics.schema.json" } },
+    "source": { "$ref": "common.schema.json#/$defs/EngineSource" }
+  },
+  "additionalProperties": false
+}

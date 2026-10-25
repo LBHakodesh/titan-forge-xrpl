@@ -1,0 +1,1 @@
+{"markets":[{"marketId":"currencies","capitalUsd":100000,"flowScale":1,"ringsActive":6},{"marketId":"token:BBL","capitalUsd":5000,"ringsActive":1,"stage":"spoke"}],"hurdleBps":1,"mode":"SIMULATION"}

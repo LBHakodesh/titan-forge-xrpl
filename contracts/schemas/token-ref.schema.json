@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "token-ref.schema.json",
+  "title": "TokenRef",
+  "description": "ProjectId / TokenRef: identifies an issued XRPL Testnet token and (optionally) the Titan Forge launch that created it.",
+  "type": "object",
+  "required": ["currency", "issuer"],
+  "properties": {
+    "currency": { "$ref": "common.schema.json#/$defs/CurrencyCode", "not": { "const": "XRP" } },
+    "issuer": { "$ref": "common.schema.json#/$defs/ClassicAddress" },
+    "launchId": { "type": ["string", "null"], "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "network": { "const": "testnet" }
+  },
+  "additionalProperties": false
+}

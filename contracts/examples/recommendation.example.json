@@ -1,0 +1,1 @@
+{"source":"Wake/CFIE/DMSIE (demo adapter)","action":"reallocate","fromMarket":"securities","toMarket":"currencies","amountUsd":1000,"rationale":"Illustrative: higher marginal yield in currencies.","mode":"SIMULATION"}

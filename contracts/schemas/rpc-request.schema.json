@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rpc-request.schema.json",
+  "title": "RpcRequest",
+  "description": "One JSON line on the engine's stdin (or one HTTP POST body).",
+  "type": "object",
+  "required": ["v", "id", "method", "params"],
+  "properties": {
+    "v": { "const": 1 },
+    "id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "method": { "enum": ["info", "health", "quote", "strategy"] },
+    "params": { "type": "object" },
+    "deadlineMs": { "type": "integer", "minimum": 1 }
+  },
+  "additionalProperties": false
+}

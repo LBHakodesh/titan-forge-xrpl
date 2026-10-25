@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "quote-response.schema.json",
+  "title": "QuoteResponse",
+  "type": "object",
+  "required": ["source", "authentic", "side", "ring", "price", "size", "expiry", "mode"],
+  "properties": {
+    "source": { "$ref": "common.schema.json#/$defs/EngineSource" },
+    "authentic": { "type": "boolean" },
+    "side": { "enum": ["bid", "ask"] },
+    "ring": { "$ref": "common.schema.json#/$defs/RingId" },
+    "price": { "type": "number", "exclusiveMinimum": 0, "description": "Quote-asset units per base unit." },
+    "size": { "type": "number", "exclusiveMinimum": 0 },
+    "expiry": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "mode": { "$ref": "common.schema.json#/$defs/Mode", "description": "Must equal the request mode." }
+  },
+  "additionalProperties": false
+}

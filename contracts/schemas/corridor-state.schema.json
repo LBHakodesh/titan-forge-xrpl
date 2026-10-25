@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "corridor-state.schema.json",
+  "title": "CorridorState",
+  "description": "Titan Ghost application-level corridor lifecycle for one token (not an XRPL-native feature).",
+  "type": "object",
+  "required": ["stage", "ringsActive", "rings", "mode"],
+  "properties": {
+    "token": { "$ref": "token-ref.schema.json" },
+    "launchId": { "type": "string" },
+    "stage": { "$ref": "common.schema.json#/$defs/StageId" },
+    "ringsActive": { "type": "integer", "minimum": 0, "maximum": 6 },
+    "rings": { "type": "array", "maxItems": 6, "items": { "$ref": "ring-metrics.schema.json" } },
+    "mode": { "$ref": "common.schema.json#/$defs/Mode" },
+    "at": { "$ref": "common.schema.json#/$defs/Timestamp" }
+  },
+  "additionalProperties": false
+}

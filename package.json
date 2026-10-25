@@ -1,0 +1,21 @@
+{
+  "name": "titan-forge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "start": "./start.sh",
+    "check": "node scripts/browser-check.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xrpl": "^4.7.0"
+  },
+  "type": "module"
+}

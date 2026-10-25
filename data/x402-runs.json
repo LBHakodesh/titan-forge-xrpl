@@ -1,0 +1,140 @@
+[
+  {
+    "id": "run-44dd51e5",
+    "at": "2026-10-24T00:11:06.835Z",
+    "mode": "LIVE_TESTNET",
+    "resource": "wake",
+    "ok": true,
+    "status": 200,
+    "latencyMs": 4802,
+    "steps": [
+      {
+        "step": "REQUEST",
+        "ok": true,
+        "at": "2026-10-24T00:11:02.034Z",
+        "detail": {
+          "resource": "wake",
+          "participantId": "demo-router",
+          "hasPayment": false,
+          "entitlement": {
+            "decision": "x402",
+            "reason": "No registered participant: premium data is available via optional x402 pay-per-request. Registering is free and has no minimum capital."
+          }
+        }
+      },
+      {
+        "step": "402",
+        "ok": true,
+        "at": "2026-10-24T00:11:02.035Z",
+        "detail": {
+          "status": 402,
+          "header": "PAYMENT-REQUIRED"
+        }
+      },
+      {
+        "step": "REQUIREMENTS",
+        "ok": true,
+        "at": "2026-10-24T00:11:02.035Z",
+        "detail": {
+          "scheme": "exact",
+          "network": "xrpl:1",
+          "asset": "XRP",
+          "amount": "50000",
+          "payTo": "rLXCW…oFGP",
+          "maxTimeoutSeconds": 60,
+          "invoiceId": "tf-1d0410fc-67e1-4149-b9dd-c7ef0d7a9233"
+        }
+      },
+      {
+        "step": "AUTHORIZATION",
+        "ok": true,
+        "at": "2026-10-24T00:11:06.834Z",
+        "detail": {
+          "payer": "rno84…TdBH",
+          "role": "router",
+          "form": "signedTxBlob (ledger.signOffline)",
+          "signedPayload": "[redacted]"
+        }
+      },
+      {
+        "step": "VERIFICATION",
+        "ok": true,
+        "at": "2026-10-24T00:11:06.834Z",
+        "detail": {
+          "isValid": true,
+          "payer": "rno84…TdBH",
+          "checks": "envelope, decode, type, destination, network binding, amount, safety, LastLedgerSequence, sequence, InvoiceID, signature, replay"
+        }
+      },
+      {
+        "step": "SETTLEMENT",
+        "ok": true,
+        "at": "2026-10-24T00:11:06.835Z",
+        "detail": {
+          "success": true,
+          "evidenceKind": "LIVE_TESTNET_VALIDATED",
+          "transaction": "63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270",
+          "explorer": "https://testnet.xrpl.org/transactions/63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270",
+          "ledger": 21773074,
+          "validated": true
+        }
+      },
+      {
+        "step": "DELIVERY",
+        "ok": true,
+        "at": "2026-10-24T00:11:06.835Z",
+        "detail": {
+          "status": 200,
+          "header": "PAYMENT-RESPONSE",
+          "paid": true
+        }
+      }
+    ],
+    "challenge": {
+      "x402Version": 2,
+      "resource": {
+        "url": "/api/x402/data/wake",
+        "description": "Wake Intelligence recommendations",
+        "mimeType": "application/json",
+        "serviceName": "Titan Forge demo data (TA-LON)"
+      },
+      "accepts": [
+        {
+          "scheme": "exact",
+          "network": "xrpl:1",
+          "amount": "50000",
+          "asset": "XRP",
+          "payTo": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP",
+          "maxTimeoutSeconds": 60,
+          "extra": {
+            "areFeesSponsored": false,
+            "assetTransferMethod": "sequence",
+            "invoiceId": "tf-1d0410fc-67e1-4149-b9dd-c7ef0d7a9233"
+          }
+        }
+      ]
+    },
+    "result": {
+      "paid": true,
+      "evidence": {
+        "kind": "LIVE_TESTNET_VALIDATED",
+        "transaction": "63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270",
+        "explorer": "https://testnet.xrpl.org/transactions/63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270",
+        "ledger": 21773074
+      },
+      "settlement": {
+        "success": true,
+        "payer": "rno84…TdBH",
+        "transaction": "63DA627435F660DF27BA4EFB22A7D1D612CFEECDC7D94BD644D5EC9DBA358270",
+        "network": "xrpl:1",
+        "amount": "50000"
+      },
+      "dataSummary": [
+        "mode",
+        "engine",
+        "adapterNote",
+        "scenarios"
+      ]
+    }
+  }
+]

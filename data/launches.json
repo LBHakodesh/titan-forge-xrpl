@@ -1,0 +1,548 @@
+[
+  {
+    "id": "ddc2b683-88c6-4407-a07f-d08ec90b2754",
+    "name": "Brooklyn Bullies",
+    "code": "BBL",
+    "supply": 1000000,
+    "category": "community",
+    "description": "",
+    "alias": "",
+    "mode": "LIVE_TESTNET",
+    "status": "live",
+    "stage": "spoke",
+    "createdAt": "2026-10-23T22:51:51.384Z",
+    "organic": false,
+    "steps": [
+      {
+        "key": "validate",
+        "label": "Validate name, ticker and policy",
+        "status": "done",
+        "startedAt": "2026-10-23T22:51:51.385Z",
+        "detail": {
+          "ok": true
+        }
+      },
+      {
+        "key": "trust_maker",
+        "label": "Maker opens trustline to issuer",
+        "status": "done",
+        "startedAt": "2026-10-23T22:51:51.385Z",
+        "hash": "30450236BC5219D5AC56DAD87E4B90DB3CC9A6FCA2B76506D0FF71571B776E6E",
+        "result": "tesSUCCESS",
+        "ledger": 21771678,
+        "explorer": "https://testnet.xrpl.org/transactions/30450236BC5219D5AC56DAD87E4B90DB3CC9A6FCA2B76506D0FF71571B776E6E"
+      },
+      {
+        "key": "trust_taker",
+        "label": "Counterparty opens trustline",
+        "status": "done",
+        "startedAt": "2026-10-23T22:51:55.912Z",
+        "hash": "2C77A4B30B609D2E02E05C9ACD1747EB657E855CA11AED0047F87ECC501D96AC",
+        "result": "tesSUCCESS",
+        "ledger": 21771680,
+        "explorer": "https://testnet.xrpl.org/transactions/2C77A4B30B609D2E02E05C9ACD1747EB657E855CA11AED0047F87ECC501D96AC"
+      },
+      {
+        "key": "issue",
+        "label": "Issuer issues supply to maker",
+        "status": "done",
+        "startedAt": "2026-10-23T22:52:03.027Z",
+        "hash": "A45957680701D12FC4C22B91D4935EE70F1E0699CCEF0C930406394B8987C18F",
+        "result": "tesSUCCESS",
+        "ledger": 21771682,
+        "explorer": "https://testnet.xrpl.org/transactions/A45957680701D12FC4C22B91D4935EE70F1E0699CCEF0C930406394B8987C18F"
+      },
+      {
+        "key": "ask",
+        "label": "Maker posts ask: 1000 @ 0.01 XRP",
+        "status": "done",
+        "startedAt": "2026-10-23T22:52:10.146Z",
+        "hash": "0B88A7E09B12D90BD2CAC1B5298B526F423DF0338084D083646E80069CADD12C",
+        "result": "tesSUCCESS",
+        "ledger": 21771684,
+        "explorer": "https://testnet.xrpl.org/transactions/0B88A7E09B12D90BD2CAC1B5298B526F423DF0338084D083646E80069CADD12C"
+      },
+      {
+        "key": "bid",
+        "label": "Maker posts bid: 100 @ 0.008 XRP",
+        "status": "done",
+        "startedAt": "2026-10-23T22:52:17.262Z",
+        "hash": "7883A7B280EB651C4366019668F3E151523E276764C0A639C1B100F6E2E72405",
+        "result": "tesSUCCESS",
+        "ledger": 21771686,
+        "explorer": "https://testnet.xrpl.org/transactions/7883A7B280EB651C4366019668F3E151523E276764C0A639C1B100F6E2E72405"
+      },
+      {
+        "key": "fill",
+        "label": "Controlled counterparty buys 100",
+        "status": "done",
+        "startedAt": "2026-10-23T22:52:23.084Z",
+        "hash": "EDA257921AEEC6815CBEC96F525F3B69EBC248469541929511745990050CCFFB",
+        "result": "tesSUCCESS",
+        "ledger": 21771688,
+        "explorer": "https://testnet.xrpl.org/transactions/EDA257921AEEC6815CBEC96F525F3B69EBC248469541929511745990050CCFFB"
+      },
+      {
+        "key": "verify",
+        "label": "Verify balances and order book on validated ledger",
+        "status": "done",
+        "startedAt": "2026-10-23T22:52:30.202Z",
+        "detail": {
+          "takerTokens": 100,
+          "makerTokens": 999900,
+          "book": {
+            "asks": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 900,
+                "priceXrp": 0.01
+              }
+            ],
+            "bids": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 100,
+                "priceXrp": 0.008
+              }
+            ]
+          },
+          "fillHash": "EDA257921AEEC6815CBEC96F525F3B69EBC248469541929511745990050CCFFB",
+          "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP"
+        }
+      }
+    ],
+    "completedAt": "2026-10-23T22:52:30.537Z",
+    "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP",
+    "fillHash": "EDA257921AEEC6815CBEC96F525F3B69EBC248469541929511745990050CCFFB",
+    "book": {
+      "asks": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 900,
+          "priceXrp": 0.01
+        }
+      ],
+      "bids": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 100,
+          "priceXrp": 0.008
+        }
+      ]
+    }
+  },
+  {
+    "id": "5f85f9bb-0721-4ee9-95a5-713698af1a14",
+    "name": "London Lantern",
+    "code": "LDN",
+    "supply": 2000000,
+    "category": "currency",
+    "description": "",
+    "alias": "Commander",
+    "mode": "LIVE_TESTNET",
+    "status": "live",
+    "stage": "spoke",
+    "createdAt": "2026-10-23T23:10:33.951Z",
+    "organic": false,
+    "steps": [
+      {
+        "key": "validate",
+        "label": "Validate name, ticker and policy",
+        "status": "done",
+        "startedAt": "2026-10-23T23:10:33.952Z",
+        "detail": {
+          "ok": true
+        }
+      },
+      {
+        "key": "trust_maker",
+        "label": "Maker opens trustline to issuer",
+        "status": "done",
+        "startedAt": "2026-10-23T23:10:33.952Z",
+        "hash": "8E79BE88CE3FDE5C6D9272E3937C2FBD37644D6D2C070AB6BBD93A3E8673A1DB",
+        "result": "tesSUCCESS",
+        "ledger": 21772017,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/8E79BE88CE3FDE5C6D9272E3937C2FBD37644D6D2C070AB6BBD93A3E8673A1DB"
+      },
+      {
+        "key": "trust_taker",
+        "label": "Counterparty opens trustline",
+        "status": "done",
+        "startedAt": "2026-10-23T23:10:41.151Z",
+        "hash": "0C6FF20B58C89BAA92397C13DDE51AB494BD1AA41F93912620977C371FC5C1F1",
+        "result": "tesSUCCESS",
+        "ledger": 21772019,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/0C6FF20B58C89BAA92397C13DDE51AB494BD1AA41F93912620977C371FC5C1F1"
+      },
+      {
+        "key": "issue",
+        "label": "Issuer issues supply to maker",
+        "status": "done",
+        "startedAt": "2026-10-23T23:10:47.038Z",
+        "hash": "AFC0C80275422C082E31DD4CEB32C70736B6D7DD07A932958BF3F768BBC623B6",
+        "result": "tesSUCCESS",
+        "ledger": 21772021,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/AFC0C80275422C082E31DD4CEB32C70736B6D7DD07A932958BF3F768BBC623B6"
+      },
+      {
+        "key": "ask",
+        "label": "Maker posts ask: 1000 @ 0.01 XRP",
+        "status": "done",
+        "startedAt": "2026-10-23T23:10:54.230Z",
+        "hash": "CA7CCDCE8FCA62EC2E10C5855B71AF6F45CB92987407C45C470295FCC0A8C63B",
+        "result": "tesSUCCESS",
+        "ledger": 21772023,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/CA7CCDCE8FCA62EC2E10C5855B71AF6F45CB92987407C45C470295FCC0A8C63B"
+      },
+      {
+        "key": "bid",
+        "label": "Maker posts bid: 100 @ 0.008 XRP",
+        "status": "done",
+        "startedAt": "2026-10-23T23:11:01.427Z",
+        "hash": "FFABC0615DB57FA4436EAC6E6A5A8B390F4238F5A97734A9FE54D49133562E55",
+        "result": "tesSUCCESS",
+        "ledger": 21772025,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/FFABC0615DB57FA4436EAC6E6A5A8B390F4238F5A97734A9FE54D49133562E55"
+      },
+      {
+        "key": "fill",
+        "label": "Controlled counterparty buys 100",
+        "status": "done",
+        "startedAt": "2026-10-23T23:11:08.618Z",
+        "hash": "3826CBA9D86E9668B87820DA11B4FED2BD99876038A66544B8BFDAB1205579BB",
+        "result": "tesSUCCESS",
+        "ledger": 21772027,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/3826CBA9D86E9668B87820DA11B4FED2BD99876038A66544B8BFDAB1205579BB"
+      },
+      {
+        "key": "verify",
+        "label": "Verify balances and order book on validated ledger",
+        "status": "done",
+        "startedAt": "2026-10-23T23:11:14.505Z",
+        "detail": {
+          "takerTokens": 100,
+          "makerTokens": 1999900,
+          "book": {
+            "asks": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 900,
+                "priceXrp": 0.01
+              }
+            ],
+            "bids": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 100,
+                "priceXrp": 0.008
+              }
+            ]
+          },
+          "fillHash": "3826CBA9D86E9668B87820DA11B4FED2BD99876038A66544B8BFDAB1205579BB",
+          "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP"
+        }
+      }
+    ],
+    "completedAt": "2026-10-23T23:11:14.852Z",
+    "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP",
+    "fillHash": "3826CBA9D86E9668B87820DA11B4FED2BD99876038A66544B8BFDAB1205579BB",
+    "book": {
+      "asks": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 900,
+          "priceXrp": 0.01
+        }
+      ],
+      "bids": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 100,
+          "priceXrp": 0.008
+        }
+      ]
+    }
+  },
+  {
+    "id": "8a2b8570-db74-4d29-9721-abba0ed33de7",
+    "name": "Brooklyn Bullies",
+    "code": "BKB",
+    "supply": 1000000,
+    "category": "community",
+    "description": "Test",
+    "alias": "LB_Hak",
+    "mode": "LIVE_TESTNET",
+    "status": "live",
+    "stage": "spoke",
+    "createdAt": "2026-10-24T22:11:26.198Z",
+    "organic": false,
+    "steps": [
+      {
+        "key": "validate",
+        "label": "Validate name, ticker and policy",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:26.199Z",
+        "detail": {
+          "ok": true
+        }
+      },
+      {
+        "key": "trust_maker",
+        "label": "Maker opens trustline to issuer",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:26.200Z",
+        "hash": "8B2BC953C8DCCB9F1FBE3DC7D599F2B0B930BB9D1A76D2498B5EAF1EB9AFAC5C",
+        "result": "tesSUCCESS",
+        "ledger": 21797447,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/8B2BC953C8DCCB9F1FBE3DC7D599F2B0B930BB9D1A76D2498B5EAF1EB9AFAC5C"
+      },
+      {
+        "key": "trust_taker",
+        "label": "Counterparty opens trustline",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:32.477Z",
+        "hash": "2EC2C9BA3C1CFE0F6605180D9FBDC8C75DFD0D37D2028387E2C6E467919DCDC4",
+        "result": "tesSUCCESS",
+        "ledger": 21797449,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/2EC2C9BA3C1CFE0F6605180D9FBDC8C75DFD0D37D2028387E2C6E467919DCDC4"
+      },
+      {
+        "key": "issue",
+        "label": "Issuer issues supply to maker",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:38.816Z",
+        "hash": "846C23B4C7FA01988C8D72075FDDD999485526EA411DFF3666594EF971FF2E68",
+        "result": "tesSUCCESS",
+        "ledger": 21797451,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/846C23B4C7FA01988C8D72075FDDD999485526EA411DFF3666594EF971FF2E68"
+      },
+      {
+        "key": "ask",
+        "label": "Maker posts ask: 1000 @ 0.01 XRP",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:45.118Z",
+        "hash": "2273FE3320F0DECD79B3185D7213935AB3CF27357F383855FEE9C74C3E3D43E1",
+        "result": "tesSUCCESS",
+        "ledger": 21797453,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/2273FE3320F0DECD79B3185D7213935AB3CF27357F383855FEE9C74C3E3D43E1"
+      },
+      {
+        "key": "bid",
+        "label": "Maker posts bid: 100 @ 0.008 XRP",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:50.221Z",
+        "hash": "1E02F20736E6A5E0BF10524B4E8924F4F526171730952FFEEA17EAC7F739D4E3",
+        "result": "tesSUCCESS",
+        "ledger": 21797455,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/1E02F20736E6A5E0BF10524B4E8924F4F526171730952FFEEA17EAC7F739D4E3"
+      },
+      {
+        "key": "fill",
+        "label": "Controlled counterparty buys 100",
+        "status": "done",
+        "startedAt": "2026-10-24T22:11:56.324Z",
+        "hash": "ED0D63A68D1E4FD9F73D0629ABA02D760C2136A0C270B9D43D7AE1508618C241",
+        "result": "tesSUCCESS",
+        "ledger": 21797457,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/ED0D63A68D1E4FD9F73D0629ABA02D760C2136A0C270B9D43D7AE1508618C241"
+      },
+      {
+        "key": "verify",
+        "label": "Verify balances and order book on validated ledger",
+        "status": "done",
+        "startedAt": "2026-10-24T22:12:03.840Z",
+        "detail": {
+          "takerTokens": 100,
+          "makerTokens": 999900,
+          "book": {
+            "asks": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 900,
+                "priceXrp": 0.01
+              }
+            ],
+            "bids": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 100,
+                "priceXrp": 0.008
+              }
+            ]
+          },
+          "fillHash": "ED0D63A68D1E4FD9F73D0629ABA02D760C2136A0C270B9D43D7AE1508618C241",
+          "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP"
+        }
+      }
+    ],
+    "completedAt": "2026-10-24T22:12:04.181Z",
+    "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP",
+    "fillHash": "ED0D63A68D1E4FD9F73D0629ABA02D760C2136A0C270B9D43D7AE1508618C241",
+    "book": {
+      "asks": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 900,
+          "priceXrp": 0.01
+        }
+      ],
+      "bids": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 100,
+          "priceXrp": 0.008
+        }
+      ]
+    }
+  },
+  {
+    "id": "e17e8f6c-33b5-4163-9676-234800538423",
+    "name": "KINSMER",
+    "code": "KIN",
+    "supply": 30000000,
+    "category": "community",
+    "description": "KINSMER",
+    "alias": "",
+    "mode": "LIVE_TESTNET",
+    "status": "live",
+    "stage": "spoke",
+    "createdAt": "2026-10-25T02:22:46.331Z",
+    "organic": false,
+    "steps": [
+      {
+        "key": "validate",
+        "label": "Validate name, ticker and policy",
+        "status": "done",
+        "startedAt": "2026-10-25T02:22:46.332Z",
+        "detail": {
+          "ok": true
+        }
+      },
+      {
+        "key": "trust_maker",
+        "label": "Maker opens trustline to issuer",
+        "status": "done",
+        "startedAt": "2026-10-25T02:22:46.333Z",
+        "hash": "3D0545018FE6FAE5B779A00B4578D09C4DA36CDFE9ADC4D96FE5631E94F16FDE",
+        "result": "tesSUCCESS",
+        "ledger": 21802123,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/3D0545018FE6FAE5B779A00B4578D09C4DA36CDFE9ADC4D96FE5631E94F16FDE"
+      },
+      {
+        "key": "trust_taker",
+        "label": "Counterparty opens trustline",
+        "status": "done",
+        "startedAt": "2026-10-25T02:22:53.645Z",
+        "hash": "CA2B270A56D65B111E48856DC6FBE181E9ED790385D89BFB0E588F17420E7CE3",
+        "result": "tesSUCCESS",
+        "ledger": 21802125,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/CA2B270A56D65B111E48856DC6FBE181E9ED790385D89BFB0E588F17420E7CE3"
+      },
+      {
+        "key": "issue",
+        "label": "Issuer issues supply to maker",
+        "status": "done",
+        "startedAt": "2026-10-25T02:23:00.460Z",
+        "hash": "93823548AA7D500356A568D391BC497B04FBEE2D959D9419A2F244BE049C7C3E",
+        "result": "tesSUCCESS",
+        "ledger": 21802127,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/93823548AA7D500356A568D391BC497B04FBEE2D959D9419A2F244BE049C7C3E"
+      },
+      {
+        "key": "ask",
+        "label": "Maker posts ask: 1000 @ 0.01 XRP",
+        "status": "done",
+        "startedAt": "2026-10-25T02:23:06.356Z",
+        "hash": "18BC1565D6A3F893E6A61FE3AFE83724D1C7926650CC027F4F6A0FA3DFA3E0CC",
+        "result": "tesSUCCESS",
+        "ledger": 21802129,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/18BC1565D6A3F893E6A61FE3AFE83724D1C7926650CC027F4F6A0FA3DFA3E0CC"
+      },
+      {
+        "key": "bid",
+        "label": "Maker posts bid: 100 @ 0.008 XRP",
+        "status": "done",
+        "startedAt": "2026-10-25T02:23:14.697Z",
+        "hash": "8D4F7440DE778E02FAFBCFDD8C9A33ED6C48B3C856DA0D3B6748DECBF9D33010",
+        "result": "tesSUCCESS",
+        "ledger": 21802131,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/8D4F7440DE778E02FAFBCFDD8C9A33ED6C48B3C856DA0D3B6748DECBF9D33010"
+      },
+      {
+        "key": "fill",
+        "label": "Controlled counterparty buys 100",
+        "status": "done",
+        "startedAt": "2026-10-25T02:23:19.801Z",
+        "hash": "DB234EC83084DAC2398384EAFE9D75815585D025CC9A979DC5E0EDCBD3469C41",
+        "result": "tesSUCCESS",
+        "ledger": 21802133,
+        "validated": true,
+        "explorer": "https://testnet.xrpl.org/transactions/DB234EC83084DAC2398384EAFE9D75815585D025CC9A979DC5E0EDCBD3469C41"
+      },
+      {
+        "key": "verify",
+        "label": "Verify balances and order book on validated ledger",
+        "status": "done",
+        "startedAt": "2026-10-25T02:23:25.926Z",
+        "detail": {
+          "takerTokens": 100,
+          "makerTokens": 29999900,
+          "book": {
+            "asks": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 900,
+                "priceXrp": 0.01
+              }
+            ],
+            "bids": [
+              {
+                "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+                "qty": 100,
+                "priceXrp": 0.008
+              }
+            ]
+          },
+          "fillHash": "DB234EC83084DAC2398384EAFE9D75815585D025CC9A979DC5E0EDCBD3469C41",
+          "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP"
+        }
+      }
+    ],
+    "completedAt": "2026-10-25T02:23:26.226Z",
+    "issuer": "rLXCWBHdR489cqwtcwai6QHEdFSkhFoFGP",
+    "fillHash": "DB234EC83084DAC2398384EAFE9D75815585D025CC9A979DC5E0EDCBD3469C41",
+    "book": {
+      "asks": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 900,
+          "priceXrp": 0.01
+        }
+      ],
+      "bids": [
+        {
+          "account": "rXECiBECp1FhKPAKziUw1QDNRYYDMpgXG",
+          "qty": 100,
+          "priceXrp": 0.008
+        }
+      ]
+    }
+  }
+]

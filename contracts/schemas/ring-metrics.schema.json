@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ring-metrics.schema.json",
+  "title": "RingMetrics",
+  "type": "object",
+  "required": ["id", "allocUsd", "dailyEarnUsd", "marginalBps", "utilization"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/RingId" },
+    "allocUsd": { "$ref": "common.schema.json#/$defs/Usd" },
+    "dailyEarnUsd": { "type": "number", "minimum": 0 },
+    "marginalBps": { "type": "number", "minimum": 0 },
+    "utilization": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "additionalProperties": false
+}
