@@ -15,7 +15,7 @@ export const PRESENTER = Object.freeze({
   military: Object.freeze(['Enlisted Infantry', 'Commissioned Infantry Officer', 'Branch-transferred to the Signal Corps']),
   certification: 'CISSP',
   education: Object.freeze(['MS, Cybersecurity', 'BS, Information Systems Management', 'PhD candidate, Financial Cybersecurity (expected end of 2027)']),
-  dissertation: 'Dissertation topic: to be added',
+  dissertation: 'How to mitigate the threat of the rise of attacks across blockchain transactions related to the maturation of emerging technologies and their nefarious deployment',
 });
 
 // Playback modes. Default = presenter-narrated: voice muted (M toggles it on), no auto-advance: each scene holds on its

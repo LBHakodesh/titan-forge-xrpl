@@ -223,7 +223,7 @@ test('pitch: presenter scene follows the open, is silent and shows the exact cre
   assert.equal(PRESENTER.military.join(' → '), 'Enlisted Infantry → Commissioned Infantry Officer → Branch-transferred to the Signal Corps');
   assert.equal(PRESENTER.certification, 'CISSP');
   assert.deepEqual(PRESENTER.education, ['MS, Cybersecurity', 'BS, Information Systems Management', 'PhD candidate, Financial Cybersecurity (expected end of 2027)']);
-  assert.equal(PRESENTER.dissertation, 'Dissertation topic: to be added');
+  assert.equal(PRESENTER.dissertation, 'How to mitigate the threat of the rise of attacks across blockchain transactions related to the maturation of emerging technologies and their nefarious deployment');
   const html = renderArt(p, null);
   for (const t of [PRESENTER.name, ...PRESENTER.military, 'CISSP', ...PRESENTER.education, PRESENTER.dissertation]) assert.ok(html.includes(`>${t.replace(/&/g, '&amp;')}<`), t);
   assert.equal((html.match(/class="chev"/g) || []).length, 2);
